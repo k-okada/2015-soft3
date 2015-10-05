@@ -1,0 +1,8 @@
+prefix=/home/mech-user/2015winter/soft3/2015-soft3/20150930/install
+
+Name: begineer_tutorials
+Description: Description of begineer_tutorials
+Version: 0.0.0
+Cflags: -I/home/mech-user/2015winter/soft3/2015-soft3/20150930/install/include
+Libs: -L/home/mech-user/2015winter/soft3/2015-soft3/20150930/install/lib 
+Requires: 
