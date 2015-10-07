@@ -12,7 +12,7 @@ void chatterCallback(const beginner_tutorials::Hello::ConstPtr& msg)
 int main(int argc,char **argv){
   ros::init(argc,argv,"listener2");
   ros::NodeHandle n;
-  ros::Subscriber sub = n.subscribe("chatter",1000,chatterCallback);
+  ros::Subscriber sub = n.subscribe("chatter2",1000,chatterCallback);
   ros::spin();
   return 0;
 }

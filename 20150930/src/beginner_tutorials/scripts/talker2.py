@@ -16,7 +16,7 @@ def talker2():
                 hello.pos.x = 0;
                 hello.pos.y = 1;
                 hello.pos.z = 2;
-		pub.publish(hello)
+		pub.publish(hello);
 		rospy.sleep(1.0)
 
 if __name__ == '__main__':
