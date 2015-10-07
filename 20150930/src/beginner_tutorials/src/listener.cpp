@@ -1,6 +1,5 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
-#include "beginner_tutorials/Hello.h"
 
 void chatterCallback(const std_msgs::String::ConstPtr& msg)
 {
