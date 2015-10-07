@@ -2,7 +2,7 @@
 #include "std_msgs/String.h"
 #include "beginner_tutorials/Hello.h"
 
-void chatter_callback(const beginner_tutorials::Hello::ConstPtr& msg){
+void chatterCallback(const beginner_tutorials::Hello::ConstPtr& msg){
     ROS_INFO("I heard : [%s %f %f %f]", msg->hello.c_str(),
             msg->pos.x, msg->pos.y, msg->pos.z);
 }
@@ -10,7 +10,7 @@ void chatter_callback(const beginner_tutorials::Hello::ConstPtr& msg){
 int main(int argc, char** argv){
     ros::init(argc, argv, "listener2");
     ros::NodeHandle n;
-    ros::Subscriber sub = n.subscribe("chatter2", 1000, chatter_callback);
+    ros::Subscriber sub = n.subscribe("chatter2", 1000, chatterCallback);
     ros::spin();
     return 0;
 }
