@@ -14,8 +14,6 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
 )
 
-add_message_files(FILES Hello.msg)
-generate_messages(DEPENDENCIES geometry_msgs)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -106,6 +104,8 @@ generate_messages(DEPENDENCIES geometry_msgs)
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
+add_message_files(FILES Hello.msg)
+generate_messages(DEPENDENCIES geometry_msgs)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES beginner_tutorials
