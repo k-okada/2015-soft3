@@ -2,7 +2,7 @@
 #include "std_msgs/String.h"
 #include "beginner_tutorials/Hello.h"
 
-void chatterCallback(const std_msgs::String::ConstPtr& msg){
+void chatterCallback(const beginner_tutorials::Hello::ConstPtr& msg){
   ROS_INFO("I heard: [%s %f %f %f]", msg->hello.c_str(), msg->pos.x, msg->pos.y, msg->pos.z);
 }
 
