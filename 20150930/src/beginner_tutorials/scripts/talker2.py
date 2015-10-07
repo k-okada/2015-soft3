@@ -9,7 +9,7 @@ def talker2():
 	pub = rospy.Publisher('chatter2',Hello)
 	rospy.init_node('talker')
 	while not rospy.is_shutdown():
-		str = "Hello world %s"%rospy.get_time()
+		str = "hello world %s"%rospy.get_time()
 		rospy.loginfo(str)
                 hello = Hello();
                 hello.hello = "world"
