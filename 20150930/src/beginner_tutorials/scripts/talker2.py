@@ -21,4 +21,4 @@ def talker2():
 if __name__ =='__main__':
     try:
         talker2()
-    except rospy.ROSinterruptException : pass
+    except rospy.ROSInterruptException : pass
