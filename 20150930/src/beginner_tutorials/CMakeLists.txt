@@ -85,7 +85,6 @@ find_package(catkin REQUIRED COMPONENTS
 
 add_message_files(FILES Hello.msg)
 generate_messages(DEPENDENCIES geometry_msgs)
-
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES beginner_tutorials
