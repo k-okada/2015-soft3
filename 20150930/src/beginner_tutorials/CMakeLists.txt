@@ -5,12 +5,27 @@ project(beginner_tutorials)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+<<<<<<< HEAD
   geometry_msgs
+=======
+<<<<<<< HEAD
+  geometry_msgs
+=======
+>>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
+>>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
   message_generation
   message_runtime
   roscpp
   rospy
+<<<<<<< HEAD
   std_msgs
+=======
+<<<<<<< HEAD
+  std_msgs
+=======
+  geometry_msgs
+>>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
+>>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
 )
 
 ## System dependencies are found with CMake's conventions
@@ -46,12 +61,26 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * uncomment the generate_messages entry below
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
 ## Generate messages in the 'msg' folder
 # add_message_files(
 #   FILES
 #   Message1.msg
 #   Message2.msg
 # )
+<<<<<<< HEAD
+=======
+=======
+#Generate messages in the 'msg' folder
+add_message_files(
+  FILES
+  Hello.msg
+)
+>>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
+>>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -68,10 +97,24 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
 # generate_messages(
 #   DEPENDENCIES
 #   geometry_msgs#   std_msgs
 # )
+<<<<<<< HEAD
+=======
+=======
+generate_messages(
+  DEPENDENCIES
+  geometry_msgs 
+  # Or other packages containing msgs
+)
+>>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
+>>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
 
 ###################################
 ## catkin specific configuration ##
@@ -82,12 +125,28 @@ find_package(catkin REQUIRED COMPONENTS
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
+<<<<<<< HEAD
 add_message_files(FILES Hello.msg)
 generate_messages(DEPENDENCIES geometry_msgs)
+=======
+<<<<<<< HEAD
+add_message_files(FILES Hello.msg)
+generate_messages(DEPENDENCIES geometry_msgs)
+
+>>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES beginner_tutorials
 #  CATKIN_DEPENDS geometry_msgs message_generation message_runtime roscpp rospy std_msgs
+<<<<<<< HEAD
+=======
+=======
+catkin_package(
+#  INCLUDE_DIRS include
+#  LIBRARIES beginner_tutorials
+ CATKIN_DEPENDS message_generation message_runtime roscpp rospy
+>>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
+>>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
 #  DEPENDS system_lib
 )
 
