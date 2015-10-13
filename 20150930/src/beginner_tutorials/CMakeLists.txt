@@ -9,10 +9,14 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
   geometry_msgs
 =======
 >>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
 >>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
+=======
+>>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
+>>>>>>> 20151007
   message_generation
   message_runtime
   roscpp
@@ -21,11 +25,16 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
   std_msgs
 =======
   geometry_msgs
 >>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
 >>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
+=======
+  geometry_msgs
+>>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
+>>>>>>> 20151007
 )
 
 ## System dependencies are found with CMake's conventions
@@ -62,9 +71,12 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
+=======
+>>>>>>> 20151007
 ## Generate messages in the 'msg' folder
 # add_message_files(
 #   FILES
@@ -72,7 +84,10 @@ find_package(catkin REQUIRED COMPONENTS
 #   Message2.msg
 # )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 20151007
 =======
 #Generate messages in the 'msg' folder
 add_message_files(
@@ -80,7 +95,10 @@ add_message_files(
   Hello.msg
 )
 >>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
+<<<<<<< HEAD
 >>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
+=======
+>>>>>>> 20151007
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -98,15 +116,21 @@ add_message_files(
 
 ## Generate added messages and services with any dependencies listed here
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
+=======
+>>>>>>> 20151007
 # generate_messages(
 #   DEPENDENCIES
 #   geometry_msgs#   std_msgs
 # )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 20151007
 =======
 generate_messages(
   DEPENDENCIES
@@ -114,7 +138,10 @@ generate_messages(
   # Or other packages containing msgs
 )
 >>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
+<<<<<<< HEAD
 >>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
+=======
+>>>>>>> 20151007
 
 ###################################
 ## catkin specific configuration ##
@@ -128,25 +155,35 @@ generate_messages(
 <<<<<<< HEAD
 add_message_files(FILES Hello.msg)
 generate_messages(DEPENDENCIES geometry_msgs)
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 add_message_files(FILES Hello.msg)
 generate_messages(DEPENDENCIES geometry_msgs)
 
 >>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
+=======
+
+>>>>>>> 20151007
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES beginner_tutorials
 #  CATKIN_DEPENDS geometry_msgs message_generation message_runtime roscpp rospy std_msgs
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 20151007
 =======
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES beginner_tutorials
  CATKIN_DEPENDS message_generation message_runtime roscpp rospy
 >>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
+<<<<<<< HEAD
 >>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
+=======
+>>>>>>> 20151007
 #  DEPENDS system_lib
 )
 

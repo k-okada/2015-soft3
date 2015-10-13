@@ -33,6 +33,7 @@
   <!-- Examples: -->
   <!-- Use build_depend for packages you need at compile time: -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
@@ -57,6 +58,8 @@
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 20151007
   <!-- <build_depend>message_generation</build_depend> -->
   <!-- Use buildtool_depend for build tool packages: -->
   <!--   <buildtool_depend>catkin</buildtool_depend> -->
@@ -73,8 +76,11 @@
   <run_depend>message_runtime</run_depend>
   <run_depend>roscpp</run_depend>
   <run_depend>rospy</run_depend>
+<<<<<<< HEAD
 >>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
 >>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
+=======
+>>>>>>> 20151007
 
 
   <!-- The export tag contains other, unspecified, tags -->
@@ -83,6 +89,7 @@
 
   </export>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </package>
 =======
 <<<<<<< HEAD
@@ -91,3 +98,6 @@
 </package>
 >>>>>>> f85868987627cc611d5ecb263bc4c7cb6570803c
 >>>>>>> dc94483b6adf15fe2393a79cf02bbeac4e198e22
+=======
+</package>
+>>>>>>> 20151007
