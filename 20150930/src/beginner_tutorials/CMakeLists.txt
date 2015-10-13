@@ -53,10 +53,10 @@ find_package(catkin REQUIRED COMPONENTS
 #   Message2.msg
 # )
 #Generate messages in the 'msg' folder
-add_message_files(
-  FILES
-  Hello.msg
-)
+# add_message_files(
+#   FILES
+#   Hello.msg
+# )
 ## Generate services in the 'srv' folder
 # add_service_files(
 #   FILES
@@ -76,11 +76,11 @@ add_message_files(
 #   DEPENDENCIES
 #   geometry_msgs#   std_msgs
 # )
-generate_messages(
-  DEPENDENCIES
-  geometry_msgs 
-  # Or other packages containing msgs
-)
+# generate_messages(
+#   DEPENDENCIES
+#   geometry_msgs 
+#   # Or other packages containing msgs
+# )
 ###################################
 ## catkin specific configuration ##
 ###################################
