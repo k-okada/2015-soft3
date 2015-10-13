@@ -108,7 +108,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 
 add_message_files(FILES Hello.msg)
-generate_message(DEPENDENCIES geometry_msgs)
+generate_messages(DEPENDENCIES geometry_msgs)
 
 catkin_package(
 #  INCLUDE_DIRS include
