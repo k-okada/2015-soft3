@@ -5,7 +5,7 @@ from std_msgs.msg import String
 from beginner_tutorials.msg import Hello
 
 def talker2():
-    pub = rospy.Publisher('chatter',Hello)
+    pub = rospy.Publisher('chatter2',Hello)
     rospy.init_node('talker')
     while not rospy.is_shutdown():
         str = "hello world %s"%rospy.get_time()
