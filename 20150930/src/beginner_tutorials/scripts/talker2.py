@@ -17,7 +17,7 @@ def talker2():
         hello.pos.z = 2;
         pub.publish(hello)
         rospy.sleep(1.0)
-if __name__ = '__main__':
+if __name__ == '__main__':
     try:
         talker2()
     except rospy.ROSInterruptException: pass
