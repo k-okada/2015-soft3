@@ -5,7 +5,8 @@ project(beginner_tutorials)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  geometry_msgs message_generation
+  geometry_msgs
+  message_generation
   message_runtime
   roscpp
   rospy
@@ -13,8 +14,8 @@ find_package(catkin REQUIRED COMPONENTS
   actionlib actionlib_msgs
 )
 
-add_service_files(FILES AddTwoInts.srv)
 add_action_files(FILES DoDishes.action)
+add_service_files(FILES AddTwoInts.srv)
 generate_messages(DEPENDENCIES geometry_msgs actionlib_msgs)
 
 ## System dependencies are found with CMake's conventions
@@ -201,17 +202,14 @@ target_link_libraries(listener ${catkin_LIBRARIES})
 
 add_executable(add_two_ints_server src/add_two_ints_server.cpp)
 target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
+add_dependencies(add_two_ints_server ${PROJECT_NAME}_generate_messages_cpp)
 add_executable(add_two_ints_clinet src/add_two_ints_client.cpp)
 target_link_libraries(add_two_ints_clinet ${catkin_LIBRARIES})
-add_dependencies(add_two_ints_server ${PROJECT_NAME}_generate_message_cpp)
-add_dependencies(add_two_ints_clinet ${PROJECT_NAME}_generate_message_cpp)
+add_dependencies(add_two_ints_clinet ${PROJECT_NAME}_generate_messages_cpp)
 
 add_executable(simple_action_client src/simple_action_client.cpp)
-add_executable(simple_action_server src/simple_action_server.cpp)
 target_link_libraries(simple_action_client ${catkin_LIBRARIES})
+add_executable(simple_action_server src/simple_action_server.cpp)
 target_link_libraries(simple_action_server ${catkin_LIBRARIES})
-add_dependencies(simple_action_client ${PROJECT_NAME}_generate_message_cpp)
-add_dependencies(simple_action_server ${PROJECT_NAME}_generate_message_cpp)
-
-add_executable(keyop src/test.cpp)
-target_link_libraries(keyop ${catkin_LIBRARIES})
+add_dependencies(simple_action_server ${PROJECT_NAME}_generate_messages_cpp)
+add_dependencies(simple_action_client ${PROJECT_NAME}_generate_messages_cpp)
