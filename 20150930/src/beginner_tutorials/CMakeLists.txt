@@ -73,6 +73,10 @@ find_package(catkin REQUIRED COMPONENTS
 #   geometry_msgs#   std_msgs
 # )
 
+add_message_files(FILES Hello.msg)
+generate_messages(DEPENDENCIES geometry_msgs)
+
+
 ###################################
 ## catkin specific configuration ##
 ###################################
