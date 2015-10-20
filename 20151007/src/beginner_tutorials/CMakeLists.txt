@@ -28,7 +28,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Declare ROS messages, services and actions ##
 ################################################
 add_action_files(FILES DoDishes.action)
-
+add_service_files(FILES AddTwoInts.srv)
 ## To declare and build messages, services or actions from within this
 ## package, follow these steps:
 ## * Let MSG_DEP_SET be the set of packages whose message types you use in
@@ -87,7 +87,7 @@ add_action_files(FILES DoDishes.action)
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
-add_service_files(FILES AddTwoInts.srv)
+
 generate_messages(DEPENDENCIES geometry_msgs actionlib_msgs)
 
 
@@ -191,4 +191,4 @@ target_link_libraries(simple_action_client ${catkin_LIBRARIES})
 add_executable(simple_action_server src/simple_action_server.cpp)
 target_link_libraries(simple_action_server ${catkin_LIBRARIES})
 add_dependencies(simple_action_server ${PROJECT_NAME}_genarate_message_cpp)
-add_dependencies(simple_action_server ${PROJECT_NAME}_generate_message_cpp)
+add_dependencies(simple_action_client ${PROJECT_NAME}_generate_message_cpp)
