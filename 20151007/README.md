@@ -52,10 +52,45 @@ ros::spinOnce()
 操作難しい
 
 #Question3
-保留
+Subscriptions:
+  /keyop/teleop [unknown type]
+  /clock [rosgraph_msgs/Clock]
+
+Publications:
+ /mobile_base/commands/velocity [geometry_msgs/Twist]
+ /rosout [rosgraph_msgs/Log]
+ /mobile_base/commands/motor_power [kobuki_msgs/MotorPower]
+
+Services:
+ /keyop/get_loggers
+ /keyop/set_logger_level
 
 #Question4
-保留
+  #include"ros/ros.h"
+  #include"geometry_msgs/Twist.h"
+
+  int main(int argc, char** argv)
+  {
+      if(argc != 4)
+      {
+          ROS_INFO("error");
+          return 1;
+      }
+      ros::init(argc, argv, "keyop");
+      ros::NodeHandle n;
+      ros::Publisher pub = n.advertise<geometry_msgs::Twist>("mobile_base/commands/velocity", 1000);
+
+      geometry_msgs::Twist twist;
+      twist.linear.x = atof(argv[1]);
+      twist.linear.y = atof(argv[2]);
+      twist.linear.z = atof(argv[3]);
+      twist.angular.x = 0.0;
+      twist.angular.y = 0.0;
+      twist.angular.z = 0.0;
+      pub.publish(twist);
+      ros::spinOnce();
+      return 0;
+  }
 
 #Question5
 保留
