@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env eusgl
 
 (defun unittest-error (code msg1 form &optional (msg2))
@@ -21,6 +22,20 @@
 ;; 3
 (assert (eq (X #'list 1 nil) '(1)) "mondai 3")
 ;;
+=======
+#!/usr/bin/env irteusgl
+
+(load "lib/llib/unittest.l")
+(init-unit-test)
+(send *unit-test* :clear-result)
+;; DO NOT EDIT BEFORE THIS LINE
+
+;; 1)
+;; 太陽，地球，月のモデルをつくり，太陽の周りを地球が，地球の周りを月が回っているアニメーションを作成せよ
+
+;; DO NOT EDIT AFTER THIS LINE
+(send *unit-test* :print-result)
+>>>>>>> 60c076c14d771e7645afe09990ec5e7b35035a68
 (exit 1)
 
 

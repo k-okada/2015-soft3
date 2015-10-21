@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>enshu_20151021</name>
+  <name>enshu_20151014</name>
   <version>0.0.0</version>
-  <description>The enshu_20151021 package</description>
+  <description>The enshu_20151014 package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->
@@ -19,7 +19,7 @@
   <!-- Url tags are optional, but mutiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-  <!-- <url type="website">http://wiki.ros.org/enshu_20151021</url> -->
+  <!-- <url type="website">http://wiki.ros.org/enshu_20151014</url> -->
 
 
   <!-- Author tags are optional, mutiple are allowed, one per tag -->
@@ -49,8 +49,4 @@
     <!-- Other tools can request additional information be placed here -->
 
   </export>
-<<<<<<< HEAD
 </package>
-=======
-</package>
->>>>>>> 60c076c14d771e7645afe09990ec5e7b35035a68

@@ -1,5 +1,9 @@
-<<<<<<< HEAD
-#!/usr/bin/env eusgl
+#!/usr/bin/env irteusgl
+
+(load "lib/llib/unittest.l")
+(init-unit-test)
+(send *unit-test* :clear-result)
+;; DO NOT EDIT BEFORE THIS LINE
 
 (defun unittest-error (code msg1 form &optional (msg2))
   (format *error-output* "~C[1;3~Cm~A unittest-error: ~A"
@@ -31,21 +35,11 @@
 (assert (eq (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 ;;
-=======
-#!/usr/bin/env irteusgl
-
-(load "lib/llib/unittest.l")
-(init-unit-test)
-(send *unit-test* :clear-result)
-;; DO NOT EDIT BEFORE THIS LINE
-
-;; 3)
-;; ascaded-linkを使ったモデルを作成せよ．ロボットに限らず可動構造を持つものであれば（例えば家具等）何でもよい．
-
 ;; DO NOT EDIT AFTER THIS LINE
 (send *unit-test* :print-result)
->>>>>>> 60c076c14d771e7645afe09990ec5e7b35035a68
 (exit 1)
+
+
 
 
 

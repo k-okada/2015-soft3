@@ -13,7 +13,7 @@ if __name__ == '__main__':
     print "Requesting dishwasher %d"%(goal.dishwasher_id)
     # Fill in the goal here
     client. send_goal(goal)
-    client.wqit_for_result(rospy.Duration.from_sec(5.0))
+    client.wait_for_result(rospy.Duration.from_sec(5.0))
 
     result = client.get_result()
     print "Requesting dishwasher %d"%(result.total_dishes_cleaned)
