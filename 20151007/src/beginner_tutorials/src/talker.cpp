@@ -1,4 +1,4 @@
-/*
+/* 
  * Copyright (C) 2008, Morgan Quigley and Willow Garage, Inc.
  *
  * Redistribution and use in source and binary forms, with or without
