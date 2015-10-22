@@ -3,7 +3,6 @@
 import roslib; roslib.load_manifest('beginner_tutorials')
 import rospy
 import actionlib
-
 from beginner_tutorials.msg import *
 
 class DoDishesServer:
@@ -12,6 +11,7 @@ class DoDishesServer:
         self.server.start()
 
     def execute(self, goal):
+        # Do lots of awesome groundbreaking robot stuff here
         print "Requesting dishwasher %d"%(goal.dishwasher_id)
         result = self.server.get_default_result()
         result.total_dishes_cleaned = 100
