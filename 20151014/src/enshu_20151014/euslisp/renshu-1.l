@@ -10,7 +10,7 @@
 ;; 2
 (assert (eq (X 13 (/ 1 0)) 13) "mondai 2")
 ;; 3
-(assert (eq (X #'list 1 nil) '(1)) "mondai 3")
+(assert (equal (X #'list 1 nil) '(1)) "mondai 3")
 ;;
 
 ;; DO NOT EDIT AFTER THIS LINE
