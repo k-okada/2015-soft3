@@ -11,8 +11,8 @@
   (do ((i 0 (+ i 1)))
       ((= i n ) t)
       (princ '.)
-      )
-  )
+      ))
+  
 (defun dot-2 (n)
   (cond ((= n 0 ) )
 	(t (princ '.)

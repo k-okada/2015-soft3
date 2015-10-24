@@ -20,7 +20,7 @@
 (lisp::install-error-handler 'unittest-error)
 
 ;;
-;;  (remove nil lst)をしてもlst自体が変わるわけでわないので、setqによりlst自体が変わるようにした
+;;  (remove nil lst)をしてもlst自体が変わるわけでわないので、setqによりlst自体が変わるようにした。
 (defun summit (lst)
   (setq lst (remove nil lst))
   (apply #'+ lst))
