@@ -6,11 +6,69 @@
 
 2) 操作した。  
 
-3) メッセージ型がgeometry_msgs/Twistのトピックkobuki_keyop/cmd_velにロボットの速度を送ることで、ロボットが動く。  
+3) keyopのソースコードでは、メッセージ型がgeometry_msgs/Twistのトピックkeyop/cmd_velにロボットの速度を送っているようだが、そのトピック名をkeyop.launchでmobile_base/commands/velocityにリマップしている。つまり、mobile_base/commands/velocityにロボットの速度を送れば、ロボットが動く。  
 
 4) 以下のようなプログラムを書けば良い。  
 
-```
+```cpp:my_keyop.cpp
+#include "ros/ros.h"
+#include "geometry_msgs/Twist.h"
+
+#include <sstream>
+
+int main(int argc, char **argv)
+{
+  ros::init(argc, argv, "my_keyop");
+  ros::NodeHandle n;
+  ros::Publisher vel_pub = n.advertise<geometry_msgs::Twist>("mobile_base/commands/velocity", 1);
+  geometry_msgs::Twist cmd;
+  cmd.linear.x = 0.0;
+  cmd.linear.y = 0.0;
+  cmd.linear.z = 0.0;
+  cmd.angular.x = 0.0;
+  cmd.angular.y = 0.0;
+  cmd.angular.z = 0.0;
+
+  std::cout << "Reading from keyboard" << std::endl;
+  std::cout << "---------------------------" << std::endl;
+  std::cout << "k/j : linear velocity incr/decr." << std::endl;
+  std::cout << "h/l : angular velocity incr/decr." << std::endl;
+  std::cout << "r : reset linear/angular velocities." << std::endl;
+  std::cout << "q : quit." << std::endl;
+  std::cout << "Please hit enter after each command." << std::endl;
+
+  while(ros::ok())
+  {
+    char c = 'i';
+
+    vel_pub.publish(cmd);
+    std::cin >> c;
+    switch (c)
+    {
+      case 'k':
+        cmd.linear.x += 0.05;
+        break;
+      case 'j':
+        cmd.linear.x -= 0.05;
+        break;
+      case 'h':
+        cmd.angular.z += 0.33;
+        break;
+      case 'l':
+        cmd.angular.z -= 0.33;
+        break;
+      case 'r':
+        cmd.linear.x = 0;
+        cmd.angular.z = 0;
+        break;
+      case 'q':
+        ros::shutdown();
+        break;
+    }
+  }
+
+  return 0;
+}
 ```
 
 5)
