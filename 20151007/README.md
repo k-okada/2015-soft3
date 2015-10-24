@@ -62,9 +62,78 @@ mech-user@test1-pc:~/2015-soft3/20151007$ find ./ -name *DoDishes*
 ./src/beginner_tutorials/action/DoDishes.action
 ./src/beginner_tutorials/action/DoDishes.action~
 
-
+要するにmsgファイルとlisp、python、Cのincludeファイルができている。
 
 2)
 した
 
 3)
+必要なトピック、メッセージは以下の通り
+
+mech-user@test1-pc:~/2015-soft3/20151007$ rosnode info /keyop
+--------------------------------------------------------------------------------
+Node [/keyop]
+Publications: 
+ * /mobile_base/commands/velocity [geometry_msgs/Twist]
+ * /rosout [rosgraph_msgs/Log]
+ * /mobile_base/commands/motor_power [kobuki_msgs/MotorPower]
+
+Subscriptions: 
+ * /keyop/teleop [unknown type]
+ * /clock [rosgraph_msgs/Clock]
+
+Services: 
+ * /keyop/get_loggers
+ * /keyop/set_logger_level
+
+
+contacting node http://test1-pc:52768/ ...
+Pid: 9419
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base/commands/velocity
+    * to: /gazebo
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base/commands/motor_power
+    * to: /gazebo
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://test1-pc:44906/)
+    * direction: inbound
+    * transport: TCPROS
+
+実際に速度データを送受信してそうなのは/mobile_base/commands/velocityな模様
+
+4)
+------------------------------
+
+#!/usr/bin/env python                                                          
+
+import roslib
+import rospy
+import sys
+from geometry_msgs.msg import Twist
+
+def set_vel(x,y,t):
+    pub = rospy.Publisher('mobile_base/commands/velocity', Twist)
+    rospy.init_node('MYkeyop')
+    set_vel = Twist()
+    set_vel.linear.x = x
+    set_vel.linear.y = y
+    set_vel.angular.z = t
+    while(1):
+        pub.publish(set_vel)
+        rospy.sleep(0.1)
+if __name__ == '__main__':
+    params = map(lambda x: float(x), sys.argv[1:])
+    set_vel(params[0],params[1],params[2])
+
+-----------------------------
+
+
+5)
