@@ -25,7 +25,7 @@
   (setq lst (remove nil lst))
   (apply #'+ lst))
 
-(assert (eq (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
+(assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 ;;終了条件がないために無限に回ってしまっていたので終了条件を加えた
 (defun summit (lst)
@@ -35,7 +35,7 @@
      ((null x) (summit (cdr lst)))
      (t (+ x (summit (cdr lst)))))))
 
-(assert (eq (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
+(assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 ;;
 ;; DO NOT EDIT AFTER THIS LINE
