@@ -112,4 +112,7 @@ kobuki_msgs/WheelDropEvent
 
 kobuki_msgsがこれだけのmessageをハンドルしていることもわかる。
 
-###
+###4keyop.launchと同じことができるプログラムを作れ
+rosrun rqt_graph rqt_graphを用いて、keyopがgazeboに送っているtopicを探すと、どうやら/mobile_base/events/velocity/であることがわかる。このトピックを送信するパブリッシャを作ってやれば良い。また、メッセージの型はrostopic type <topic>で検索して、6次元のTwist型なるメッセージで送信されていることもわかった。
+
+プログラムはこのリポジトリのtalker.pyにある。宿題と同居させているため、この課題に関する箇所はシャープ２つでコメントアウトしてある。

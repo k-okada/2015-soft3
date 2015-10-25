@@ -7,5 +7,5 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH="/home/mech-user/soft3/2015-soft3/20151007/devel/lib/x86_64-linux-gnu:/opt/ros/indigo/lib/x86_64-linux-gnu:/home/mech-user/soft3/2015-soft3/20151007/devel/lib:/opt/ros/indigo/lib:/usr/local/lib"
+export LD_LIBRARY_PATH="/home/mech-user/soft3/2015-soft3/20151007/devel/lib/x86_64-linux-gnu:/opt/ros/indigo/lib/x86_64-linux-gnu:/home/mech-user/soft3/2015-soft3/20151007/devel/lib:/opt/ros/indigo/lib:/usr/local/lib:/opt/ros/indigo/lib/python2.7/dist-packages:/opt/ros/indigo/lib/python2.7/dist-packages:/opt/ros/indigo/lib/python2.7/dist-packages"
 export PKG_CONFIG_PATH="/home/mech-user/soft3/2015-soft3/20151007/devel/lib/x86_64-linux-gnu/pkgconfig:/opt/ros/indigo/lib/x86_64-linux-gnu/pkgconfig:/home/mech-user/soft3/2015-soft3/20151007/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig:/usr/local/lib/pkgconfig"
