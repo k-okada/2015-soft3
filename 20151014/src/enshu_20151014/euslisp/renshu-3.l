@@ -19,20 +19,23 @@
 
 (lisp::install-error-handler 'unittest-error)
 
-;; 
+;;
+;;removeによってリストlstの内容が変わるわけではないので、返り値を使う必要がある 
 (defun summit (lst)
-  (remove nil lst)
-  (apply #'+ lst))
+  (apply #'+ (remove nil lst)))
 
-(assert (eq (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
+(assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
+;;lstの要素がない場合、carによって最初の要素を得ようとしたときにエラーが発生するので場合分けをしてやる必要がある
 (defun summit (lst)
-  (let ((x (car lst)))
-    (if (null x)
-        (summit (cdr lst))
-      (+ x (summit (cdr lst))))))
+  (if (null lst)
+      0
+    (let  ((x (car lst)))
+      (if (null x)
+	  (summit (cdr lst))
+	(+ x (summit (cdr lst)))))))
 
-(assert (eq (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
+(assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 ;;
 ;; DO NOT EDIT AFTER THIS LINE
