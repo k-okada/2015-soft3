@@ -3,27 +3,24 @@
 [[36mbeginner_tutorials[0m] [1m[34m==>[0m '[1m/home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/build_env.sh /usr/bin/make --jobserver-fds=3,5 -j[0m' [30m[1min[0m '[1m/home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials[0m'[0m
 [  0%] [  0%] Built target geometry_msgs_generate_messages_py
 Built target actionlib_msgs_generate_messages_py
-[  0%] [  0%] Built target _beginner_tutorials_generate_messages_check_deps_DoDishesGoal
-Built target _beginner_tutorials_generate_messages_check_deps_DoDishesActionResult
-[  0%] [  0%] [  0%] Built target _beginner_tutorials_generate_messages_check_deps_AddTwoInts
+[  0%] Built target _beginner_tutorials_generate_messages_check_deps_DoDishesActionResult
+[  0%] [  0%] [  0%] Built target _beginner_tutorials_generate_messages_check_deps_DoDishesGoal
 Built target _beginner_tutorials_generate_messages_check_deps_DoDishesAction
-Built target _beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal
-[  0%] Built target _beginner_tutorials_generate_messages_check_deps_DoDishesFeedback
-[  0%] Built target _beginner_tutorials_generate_messages_check_deps_DoDishesResult
-[  0%] [  0%] [  0%] Built target actionlib_msgs_generate_messages_lisp
-Built target geometry_msgs_generate_messages_lisp
-Built target actionlib_msgs_generate_messages_cpp
-[  0%] [  3%] Built target geometry_msgs_generate_messages_cpp
-Built target listener
-[  3%] Built target _beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback
-[  6%] Built target talker
-[ 40%] Built target beginner_tutorials_generate_messages_py
-[ 90%] [ 93%] Built target beginner_tutorials_generate_messages_lisp
-Built target beginner_tutorials_generate_messages_cpp
-[35m[1mScanning dependencies of target simple_action_client
-[0m[ 93%] Built target beginner_tutorials_generate_messages
-[ 96%] [100%] Built target simple_action_server
-[32mBuilding CXX object CMakeFiles/simple_action_client.dir/src/simple_action_client.cpp.o
-[0m[31m[1mLinking CXX executable /home/mech-user/soft3/2015-soft3/20151007/devel/lib/beginner_tutorials/simple_action_client
-[0m[100%] Built target simple_action_client
+Built target _beginner_tutorials_generate_messages_check_deps_AddTwoInts
+[  0%] [  0%] Built target _beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal
+Built target _beginner_tutorials_generate_messages_check_deps_DoDishesFeedback
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] [  0%] Built target geometry_msgs_generate_messages_cpp
+Built target _beginner_tutorials_generate_messages_check_deps_DoDishesResult
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  3%] [  3%] [  6%] Built target listener
+Built target _beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback
+Built target talker
+[ 90%] [ 90%] [ 93%] Built target beginner_tutorials_generate_messages_cpp
+Built target beginner_tutorials_generate_messages_lisp
+Built target beginner_tutorials_generate_messages_py
+[ 93%] Built target beginner_tutorials_generate_messages
+[ 96%] [100%] Built target simple_action_client
+Built target simple_action_server
 [[36mbeginner_tutorials[0m] [32m<==[0m '[1m/home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/build_env.sh /usr/bin/make --jobserver-fds=3,5 -j[0m' finished with return code '[1m0[0m'[0m

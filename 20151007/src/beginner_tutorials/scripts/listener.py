@@ -7,7 +7,8 @@ def callback(data):
 
 def listener():
     rospy.init_node('listener', anonymous = True)
-    rospy.Subscriber("chatter", String, callback)
+#    rospy.Subscriber("chatter", String, callback)
+    rospy.Subscriber("mobile_base/events/velocity", String, callback)
     rospy.spin()
 
 if __name__ == '__main__':
