@@ -19,5 +19,4 @@ class DoDishesServer:
 if __name__=='__main__':
     rospy.init_node('do_dishes_server')
     server=DoDishesServer()
-    server=DoDishesServer()
     rospy.spin()

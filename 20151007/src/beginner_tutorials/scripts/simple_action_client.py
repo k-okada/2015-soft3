@@ -14,7 +14,7 @@ if __name__=='__main__':
     goal=DoDishesGoal()
     goal.dishwasher_id=1
     print "Requesting dishwasher %d"%(goal.dishwasher_id)
-    
+    #Fill in the goal here
     client.send_goal(goal)
     client.wait_for_result(rospy.Duration.from_sec(5.0))
     
