@@ -8,7 +8,6 @@ from geometry_msgs.msg import Twist
 def talker():
     pub = rospy.Publisher('chatter',String)
     ##pub = rospy.Publisher('mobile_base/commands/velocity',Twist)
-
     rospy.init_node('talker')
     while not rospy.is_shutdown():
         str = "hello world %s" % rospy.get_time()
