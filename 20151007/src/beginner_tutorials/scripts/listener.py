@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from std_msgs.msg import String
-
+##this would not be executed
 def callback(data):
     rospy.loginfo(rospy.get_name() + ": I heard %s" % data.data)
     
