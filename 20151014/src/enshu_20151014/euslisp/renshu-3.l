@@ -24,14 +24,14 @@
   (setq lst (remove nil lst))
   (apply #'+ lst))
 
-(assert (eq (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
+(assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 (defun summit (lst)
   (let ((x (car lst)))
     (+ (if (null x) 0 x) (if (consp (cdr lst)) (summit (cdr lst)) 0))))
       
 
-(assert (eq (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
+(assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 ;;
 ;; DO NOT EDIT AFTER THIS LINE
