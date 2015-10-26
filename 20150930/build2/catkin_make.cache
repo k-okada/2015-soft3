@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/vagrant/workspace/ut/2015-soft3/20150930/devel -DCMAKE_INSTALL_PREFIX=/home/vagrant/workspace/ut/2015-soft3/20150930/install -G Unix Makefiles

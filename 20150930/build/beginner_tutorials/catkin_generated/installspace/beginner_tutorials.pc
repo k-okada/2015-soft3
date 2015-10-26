@@ -1,0 +1,8 @@
+prefix=/home/vagrant/workspace/ut/2015-soft3/20150930/install
+
+Name: beginner_tutorials
+Description: Description of beginner_tutorials
+Version: 0.0.0
+Cflags: -I/home/vagrant/workspace/ut/2015-soft3/20150930/install/include
+Libs: -L/home/vagrant/workspace/ut/2015-soft3/20150930/install/lib 
+Requires: 

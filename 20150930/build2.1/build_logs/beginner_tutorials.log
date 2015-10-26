@@ -1,0 +1,17 @@
+[[36mbeginner_tutorials[0m] [1m[34m==>[0m '[1m/home/vagrant/workspace/ut/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make cmake_check_build_system[0m' [30m[1min[0m '[1m/home/vagrant/workspace/ut/2015-soft3/20150930/build/beginner_tutorials[0m'[0m
+[[36mbeginner_tutorials[0m] [32m<==[0m '[1m/home/vagrant/workspace/ut/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make cmake_check_build_system[0m' finished with return code '[1m0[0m'[0m
+[[36mbeginner_tutorials[0m] [1m[34m==>[0m '[1m/home/vagrant/workspace/ut/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make --jobserver-fds=3,5 -j[0m' [30m[1min[0m '[1m/home/vagrant/workspace/ut/2015-soft3/20150930/build/beginner_tutorials[0m'[0m
+[  0%] Built target _beginner_tutorials_generate_messages_check_deps_Hello
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_py
+[ 16%] Built target listener
+[ 33%] [32mBuilding CXX object CMakeFiles/listener2.dir/src/listener2.cpp.o
+[0m/home/vagrant/workspace/ut/2015-soft3/20150930/src/beginner_tutorials/src/listener2.cpp:3:38: fatal error: beginner_tutorials/Hello.h: No such file or directory
+ #include "beginner_tutorials/Hello.h"
+                                      ^
+compilation terminated.
+make[2]: *** [CMakeFiles/listener2.dir/src/listener2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/listener2.dir/all] Error 2
+make: *** [all] Error 2
+[[36mbeginner_tutorials[0m] [1m[31m<==[0m '[1m/home/vagrant/workspace/ut/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make --jobserver-fds=3,5 -j[0m' [31mfailed with return code[0m '[1m2[0m'[0m

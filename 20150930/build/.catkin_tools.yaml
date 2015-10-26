@@ -1,0 +1,6 @@
+devel_space: /home/vagrant/workspace/ut/2015-soft3/20150930/devel
+install: false
+install_space: /home/vagrant/workspace/ut/2015-soft3/20150930/install
+profile: default
+source_space: /home/vagrant/workspace/ut/2015-soft3/20150930/src
+workspace: /home/vagrant/workspace/ut/2015-soft3/20150930
