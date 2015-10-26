@@ -1,19 +1,31 @@
 1)
+
 1-1) 複数のpackageが共存する環境でのビルドを容易に行える。例えば、自動的にpackageを探す機能がある。
+
 1-2) サービスファイルやメッセージファイルのコンパイルが必要だから
+
 1-3) ros::spin()はnodeがシャットダウンされるまで繰り返しros::spinOnce()を呼び続ける
+
 1-4) ActionClientとActionServerが内部で通信を行うために以下のようなファイルが生成される
 DoDishesAction.msg
+
 DoDishesActionGoal.msg
+
 DoDishesActionResult.msg
+
 DoDishesActionFeedback.msg
+
 DoDishesGoal.msg
+
 DoDishesResult.msg
+
 DoDishesFeedback.msg
 
 
 2) 実行した
+
 3) rostopic listの結果
+```
 /camera/depth/camera_info
 /camera/depth/image_raw
 /camera/depth/points
@@ -57,9 +69,11 @@ DoDishesFeedback.msg
 /mobile_base/sensors/core
 /mobile_base/sensors/imu_data
 /mobile_base_nodelet_manager/bond
-
+```
 
 4) 
+
 5)　実行した
+
 6)命令の実行中にでもその命令の実行状態を知ることができる
 
