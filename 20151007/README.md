@@ -11,6 +11,7 @@
 4) 以下のようなプログラムを書けば良い。  
 
 ```cpp:my_keyop.cpp
+
 #include "ros/ros.h"
 #include "geometry_msgs/Twist.h"
 
@@ -33,9 +34,10 @@ int main(int argc, char **argv)
   std::cout << "---------------------------" << std::endl;
   std::cout << "k/j : linear velocity incr/decr." << std::endl;
   std::cout << "h/l : angular velocity incr/decr." << std::endl;
+  std::cout << "c : send current linear/angular velocities." << std::endl;
   std::cout << "r : reset linear/angular velocities." << std::endl;
   std::cout << "q : quit." << std::endl;
-  std::cout << "Please hit enter after each command." << std::endl;
+  std::cout << "Hit enter after each command." << std::endl;
 
   while(ros::ok())
   {
@@ -56,6 +58,8 @@ int main(int argc, char **argv)
         break;
       case 'l':
         cmd.angular.z -= 0.33;
+        break;
+      case 'c':
         break;
       case 'r':
         cmd.linear.x = 0;
