@@ -19,18 +19,15 @@
 
 (lisp::install-error-handler 'unittest-error)
 
-;; 
+;; (remove nil lst)を行っても、lstは変わりません。
 (defun summit (lst)
-  (remove nil lst)
+  (setq lst (remove nil lst))
   (apply #'+ lst))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
-
+;;lstが最後に因子一個のlistになった時、評価がうまく行きません
 (defun summit (lst)
-  (let ((x (car lst)))
-    (if (null x)
-        (summit (cdr lst))
-      (+ x (summit (cdr lst))))))
+  (+ (or (car lst) 0) (summit (cdr lst))) 0)
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
