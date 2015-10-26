@@ -136,6 +136,10 @@ include_directories(
 
 ## Declare a C++ executable
 # add_executable(beginner_tutorials_node src/beginner_tutorials_node.cpp)
+add_executable(talker src/talker.cpp)
+target_link_libraries(talker ${catkin_LIBRARIES})
+add_executable(listener src/listener.cpp)
+target_link_libraries(listener ${catkin_LIBRARIES})
 add_executable(add_two_ints_server src/add_two_ints_server.cpp)
 target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
 add_executable(add_two_ints_client src/add_two_ints_client.cpp)
