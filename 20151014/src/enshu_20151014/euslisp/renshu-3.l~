@@ -21,7 +21,7 @@
 
 ;; 
 (defun summit (lst)
-  (setq lst (remove nil lst)) ;; removeしてもlstの中身は変わらない  
+  (setq lst (remove nil lst)) ;; removeしてもlstの中身は変わらない 
   (apply #'+ lst))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
