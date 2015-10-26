@@ -92,7 +92,6 @@ find_package(catkin REQUIRED COMPONENTS
 #   cfg/DynReconf1.cfg
 #   cfg/DynReconf2.cfg
 # )
-
 ###################################
 ## catkin specific configuration ##
 ###################################
@@ -105,7 +104,6 @@ find_package(catkin REQUIRED COMPONENTS
 
 add_message_files(FILES Hello.msg)
 generate_messages(DEPENDENCIES geometry_msgs)
-
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES beginner_tutorials
@@ -193,7 +191,6 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-
 
 add_executable(listener src/listener.cpp)
 target_link_libraries(listener ${catkin_LIBRARIES})
