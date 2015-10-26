@@ -27,4 +27,32 @@
 ./devel/include/beginner_tutorials/DoDishesResult.h
 ./build/beginner_tutorials/catkin_generated/stamps/beginner_tutorials/DoDishes.action.stamp
 
-2)UNDER CONSTRUCTION
+2)操作しました。
+3)topic名:mobile_base/commands/velocity
+  messageの型:geometry_msgs/Twist
+4)以下のようなプログラムを作りました。(vel_publisher.py)
+"""
+#!/usr/bin/env python
+import rospy
+from geometry_msgs.msg import Twist
+
+rospy.init_node('vel_publisher')
+pub = rospy.Publisher('/mobile_base/commands/velocity', Twist, queue_size = 10)
+
+while not rospy.is_shutdown():
+    vel = Twist()
+    direction = raw_input('f, b, l, r, q: ')
+    if 'f' in direction:
+        vel.linear.x = 0.5
+    if 'b' in direction:
+        vel.linear.x = -0.5
+    if 'l' in direction:
+        vel.angular.z = 1.0
+    if 'r' in direction:
+        vel.angular.z = -1.0
+    if 'q' in direction:
+        break
+    print vel
+    pub.publish(vel)
+"""
+
