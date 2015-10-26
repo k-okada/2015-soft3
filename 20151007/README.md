@@ -105,5 +105,7 @@ srcの中にtest.cppという名前で入っていますが、一応ここにも
 できました
 
 #problem 6
-actionlibのサーバーがたったってどうやったらわかるんだ…
-あとで更新します…
+/move_base/status [actionlib_msgs/GoalStatusArray] 1 publisher
+/move_base/cancel [actionlib_msgs/GoalID] 1 subscriber
+この２つのようなactionlibを用いたmsgが発行されているのがわかる。
+つまり、move_base側はclientからGOALとしてGoalIDをもらい、今のGOALへの進捗状況であるGoadStatusArrayをFeedbackとして返している
