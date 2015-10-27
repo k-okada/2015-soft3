@@ -20,12 +20,12 @@
 (lisp::install-error-handler 'unittest-error)
 
 ;;
-(defun summit1 (lst)
+(defun summit (lst)
   (apply #'+ (remove nil lst)))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
-(defun summit2 (lst)
+(defun summit (lst)
   (if (null lst)
     0
     (let ((x (car lst)))

@@ -8,8 +8,8 @@
 
 ;; 1
 (defun dot-1 (n)
-  (do '(i 1 (+ i 1))
-      ((> i n) 'done)
+  (do ((i 1 (+ i 1)))
+      ((> i n) nil)
       (format t "."))
   t)
 (defun dot-2 (n)
