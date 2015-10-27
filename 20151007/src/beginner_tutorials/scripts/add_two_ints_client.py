@@ -6,24 +6,25 @@ import sys
 import rospy
 from beginner_tutorials.srv import *
 
-def add_two_ints_client(x, y):
-    rospy.wait_for_service('add_two_ints')
+def add_two_ints_client(x,y):
+    rospy.wait_for_service('add_two_ints');
     try:
         add_two_ints = rospy.ServiceProxy('add_two_ints', AddTwoInts)
-        resp1 = add_two_ints(x, y)
+        resp1 = add_two_ints(x,y) #add_two_ints declared in the previous line
         return resp1.sum
     except rospy.ServiceException, e:
-        print "Service call failes: %s"%e
-        
+        print "Service call failed: {0}".format(e)
+
 def usage():
-    return "%s [x y]"%sys.argv[0]
-            
-if __name__ == "__main__":
+    return "{0} [x y]".format(sys.argv[0])
+
+
+if __name__ == '__main__':
     if len(sys.argv) == 3:
         x = int(sys.argv[1])
         y = int(sys.argv[2])
     else:
         print usage()
-        sys.exit(1)
-    print "Requesting %s+%s"%(x, y)
-    print "%s + %s = %s"%(x, y, add_two_ints_client(x, y))
+        sys.exit()
+    print "Requesting {0} + {1}".format(x,y)
+    print "{0} + {1} = {2}".format(x,y,add_two_ints_client(x,y))
