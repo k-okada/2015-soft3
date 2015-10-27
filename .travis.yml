@@ -19,8 +19,9 @@ install:
   - sudo sh -c 'echo "deb http://packages.ros.org/ros-shadow-fixed/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
   - wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
   - sudo apt-get update -qq
-  - sudo apt-get install -qq -y ros-hydro-desktop ros-hydro-roscpp-tutorials ros-hydro-rostest python-catkin-tools
+  - sudo apt-get install -qq -y ros-hydro-desktop ros-hydro-roscpp-tutorials ros-hydro-rostest ros-hydro-catkin python-catkin-tools
   - sudo apt-get install -qq -y ros-hydro-roseus
+  - source /opt/ros/hydro/setup.bash
 before_script:
   - ls
   - for dir in 20*; do echo "checking $dir"; pkg_dir=`catkin_topological_order $dir`; pkg="${pkg_dir% *}"; src="${pkg_dir##* }"; if [ -e "$dir/$src" ] ; then cp $dir/check*.* $dir/$src; fi; done;
