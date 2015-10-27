@@ -9,7 +9,7 @@
 	CMakeをビルドシステムとして採用しているので、メッセージとサービスのために自動生成されるpythonコードを確実に作るため。
 
 1-3)ros::Spin()とros::SpinOnce()の違い
-	 ros::Spinはノードがシャットダウンされるまでコールバックされるが、ros::SpinOnceはその時に待機している全てのコールバックを呼ぶ。
+	 ros::Spinはノードがシャットダウンされるまでコールバックされるが、ros::SpinOnceはその時に待機している全てのコールバックを呼んで終わる。
 
 1-4)actionファイルをコンパイルするとどのようなファイルができるか。
 /home/mech-user/.local/share/Trash/files/DoDishesAction.2.msg
@@ -155,10 +155,33 @@ Connections:
 
 
 4)
-何をすればいいのか、何を行っているのか全くわかりませんでした。もう少し期日まで粘ってみます。
+ファイルはscriptの中にあります
+#!/usr/bin/env python                                                           
+import rospy
+from geometry_msgs.msg import Twist
+
+rospy.init_node('my_keyop')
+pub = rospy.Publisher('/mobile_base/commands/velocity', Twist, queue_size=10)
+r = rospy.Rate(10)
+while not rospy.is_shutdown():
+    vel = Twist()
+    x = raw_input('q,w,e,r:')
+    if 'q' in x:
+        vel.linear.x = 1.0
+    if 'w' in x:
+        vel.linear.x = -1.0
+    if 'e' in x:
+        vel.angular.z = 1.0
+    if 'r' in x:
+        vel.angular.z = -1.0
+    if 'p' in x:
+	break
+    pub.publish(vel)
+    r.sleep()
 
 5)
-amcl_demo.launchまでできた。
+amcl_demo.launchまでできた??
 
 6)
-自分で作ったmapの通りに動いてくれるようである。
+自分で作ったmapの通りに動いてくれるようである??
+よくわかりませんでした。

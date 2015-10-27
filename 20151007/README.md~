@@ -6,11 +6,10 @@
 	 catkin_makeではdevelに格納される
 
 1-2)pythonはコンパイルの必要がないインタプリタ言語だがなぜmakeをするのか
-	ROSでは独立したパッケージが互いに依存しており、それぞれの異なる規約におけるビルドや実行のプロセスを簡略化するため。
-？？よくわかりませんでした。
+	CMakeをビルドシステムとして採用しているので、メッセージとサービスのために自動生成されるpythonコードを確実に作るため。
 
 1-3)ros::Spin()とros::SpinOnce()の違い
-	 ros::Spinはノードがシャットダウンされるまでコールバックされるが、ros::SpinOnceはその時に待機している全てのコールバックを呼ぶ。
+	 ros::Spinはノードがシャットダウンされるまでコールバックされるが、ros::SpinOnceはその時に待機している全てのコールバックを呼んで終わる。
 
 1-4)actionファイルをコンパイルするとどのようなファイルができるか。
 /home/mech-user/.local/share/Trash/files/DoDishesAction.2.msg
@@ -112,4 +111,54 @@
 /home/mech-user/work/win15/2015-soft3/20151007/src/beginner_tutorials/action/DoDishes.action
 /home/mech-user/work/win15/2015-soft3/20151007/src/beginner_tutorials/action/DoDishes.action~
 
-	
+2)turtlebot_simulatorを実行してロボットを操作
+ロボットからの視点ではないのでどこを向いているかわからず難しかった。スピード調節も難しかった。
+
+3)
+<topic>
+--------------------------------------------------------------------------------
+Node [/keyop]
+Publications: 
+ * /mobile_base/commands/velocity [geometry_msgs/Twist]
+ * /rosout [rosgraph_msgs/Log]
+ * /mobile_base/commands/motor_power [kobuki_msgs/MotorPower]
+
+Subscriptions: 
+ * /keyop/teleop [unknown type]
+ * /clock [rosgraph_msgs/Clock]
+
+Services: 
+ * /keyop/get_loggers
+ * /keyop/set_logger_level
+
+/mobile_base/commands/velocityを/keyopから/gazeboに渡している
+
+contacting node http://test1-pc:42063/ ...
+Pid: 15837
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base/commands/velocity
+    * to: /gazebo
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base/commands/motor_power
+    * to: /gazebo
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://test1-pc:48007/)
+    * direction: inbound
+    * transport: TCPROS
+
+
+4)
+何をすればいいのか、何を行っているのか全くわかりませんでした。もう少し期日まで粘ってみます。
+
+5)
+amcl_demo.launchまでできた。
+
+6)
+自分で作ったmapの通りに動いてくれるようである。
