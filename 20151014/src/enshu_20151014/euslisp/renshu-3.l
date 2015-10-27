@@ -21,16 +21,27 @@
 
 ;; 
 (defun summit (lst)
-  (remove nil lst)
-  (apply #'+ lst))
+;;  (remove nil lst)
+;;  (apply #'+ lst))
+;;関数プログラミング言語では副作用を伴う操作を原則的に避けるので、removeでlstは変更されていない
+  (apply #'+ (remove nil lst)));;変更後
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
-(defun summit (lst)
+
+
+;;(defun summit (lst)
+;;  (let ((x (car lst)))
+;;    (if (null x);;lstにnilが含まれていてもlstが空でもtとなるので無限ループ
+;;        (summit (cdr lst))
+;;      (+ x (summit (cdr lst))))))
+
+(defun summit (lst);;変更後
+  (if (not lst) 0
   (let ((x (car lst)))
     (if (null x)
         (summit (cdr lst))
-      (+ x (summit (cdr lst))))))
+      (+ x (summit (cdr lst)))))))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
