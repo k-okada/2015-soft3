@@ -189,6 +189,3 @@ add_executable(simple_action_server src/simple_action_server.cpp)
 target_link_libraries(simple_action_server ${catkin_LIBRARIES})
 add_dependencies(simple_action_server ${PROJECT_NAME}_generate_messages_cpp)
 add_dependencies(simple_action_client ${PROJECT_NAME}_generate_messages_cpp)
-
-add_executable(keyop_test src/keyop_test.cpp)
-target_link_libraries(keyop_test ${catkin_LIBRARIES})
