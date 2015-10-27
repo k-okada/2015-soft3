@@ -1,0 +1,28 @@
+[[36mbeginner_tutorials[0m] [1m[34m==>[0m '[1m/home/mech-user/work/win15/2015-soft3/20151007/build/beginner_tutorials/build_env.sh /usr/bin/make cmake_check_build_system[0m' [30m[1min[0m '[1m/home/mech-user/work/win15/2015-soft3/20151007/build/beginner_tutorials[0m'[0m
+[[36mbeginner_tutorials[0m] [32m<==[0m '[1m/home/mech-user/work/win15/2015-soft3/20151007/build/beginner_tutorials/build_env.sh /usr/bin/make cmake_check_build_system[0m' finished with return code '[1m0[0m'[0m
+[[36mbeginner_tutorials[0m] [1m[34m==>[0m '[1m/home/mech-user/work/win15/2015-soft3/20151007/build/beginner_tutorials/build_env.sh /usr/bin/make --jobserver-fds=3,5 -j[0m' [30m[1min[0m '[1m/home/mech-user/work/win15/2015-soft3/20151007/build/beginner_tutorials[0m'[0m
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] [  0%] [  0%] Built target _beginner_tutorials_generate_messages_check_deps_DoDishesFeedback
+Built target _beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal
+Built target _beginner_tutorials_generate_messages_check_deps_DoDishesResult
+[  0%] [  0%] Built target _beginner_tutorials_generate_messages_check_deps_DoDishesGoal
+Built target _beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback
+[  0%] Built target _beginner_tutorials_generate_messages_check_deps_DoDishesAction
+[  0%] [  0%] [  0%] [  0%] Built target geometry_msgs_generate_messages_lisp
+Built target geometry_msgs_generate_messages_py
+Built target actionlib_msgs_generate_messages_lisp
+Built target actionlib_msgs_generate_messages_py
+[  0%] Built target _beginner_tutorials_generate_messages_check_deps_AddTwoInts
+[  0%] Built target _beginner_tutorials_generate_messages_check_deps_DoDishesActionResult
+[  3%] Built target listener
+[  6%] Built target talker
+[ 31%] [ 56%] Built target beginner_tutorials_generate_messages_lisp
+Built target beginner_tutorials_generate_messages_cpp
+[ 87%] Built target beginner_tutorials_generate_messages_py
+[ 87%] [ 90%] [ 96%] [ 96%] Built target beginner_tutorials_generate_messages
+[100%] Built target add_two_ints_server
+Built target simple_action_client
+Built target add_two_ints_client
+Built target simple_action_server
+[[36mbeginner_tutorials[0m] [32m<==[0m '[1m/home/mech-user/work/win15/2015-soft3/20151007/build/beginner_tutorials/build_env.sh /usr/bin/make --jobserver-fds=3,5 -j[0m' finished with return code '[1m0[0m'[0m

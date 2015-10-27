@@ -1,0 +1,33 @@
+(defclass lab
+  :super propertied-object
+  :slots (members))
+(defmethod lab
+  (:add-member (m) (push m members))
+  (:print-info
+   ()
+   (send-all members :print-info)))
+
+(defmethod labmember
+  (:init
+   (&optional n)
+   (send self :set-name n)
+   self)
+  (:self-name (n) (setq name n))
+  (:get-name () name))
+
+(defclass student
+  :super labmember
+  :slots (grade))
+(defmethod student
+  (:init
+   (&rest args)
+   (send-super* :init args)
+   (setq grade 0)
+   self)
+  (:set-grade (g) (setq grade g))
+  (:get-grade () grade)
+  (:print-info
+   ()
+   (formoat t "Student name = ~A, grade = ~A~%"
+	    name grade))
+)
