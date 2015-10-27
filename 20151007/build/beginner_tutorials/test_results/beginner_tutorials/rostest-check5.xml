@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="7.044">
+  <testcase classname="rostest.runner.RosTest" name="testactionlib" time="7.0435"></testcase>
+  <system-out><![CDATA[[ROSTEST]setup[./check5.test] run_id[8b338518-726d-11e5-941b-e8b1fce891d5] starting
+[1mstarted roslaunch server http://test1-pc:37104/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: indigo
+ * /rosversion: 1.11.10
+ * /test/hz: 5.0
+ * /test/hzerror: 1.0
+ * /test/test_duration: 5.0
+ * /test/topic: do_dishes/status
+
+NODES
+  /
+    action_client (beginner_tutorials/simple_action_client.py)
+    action_server (beginner_tutorials/simple_action_server.py)
+
+[ROSTEST]setup[./check5.test] run_id[8b338518-726d-11e5-941b-e8b1fce891d5] done
+[ROSTEST]Running test [actionlib]
+[1mROS_MASTER_URI=http://test1-pc:49491/[0m
+[1msetting /run_id to 8b338518-726d-11e5-941b-e8b1fce891d5[0m
+[1mprocess[rosout-1]: started with pid [21322][0m
+started core service [/rosout]
+[1mprocess[action_server-2]: started with pid [21339][0m
+[1mprocess[action_client-3]: started with pid [21340][0m
+[ROSTEST]running test actionlib
+[1mprocess[test-4]: started with pid [21341][0m
+[1m[action_client-3] process has finished cleanly
+log file: /home/mech-user/.ros/log/8b338518-726d-11e5-941b-e8b1fce891d5/action_client-3*.log[0m
+[1m[test-4] process has finished cleanly
+log file: /home/mech-user/.ros/log/8b338518-726d-11e5-941b-e8b1fce891d5/test-4*.log[0m
+[ROSTEST]test [actionlib] finished
+[ROSTEST]test [actionlib] results are in [/home/mech-user/2015-soft3/20151007/build/beginner_tutorials/test_results/beginner_tutorials/rosunit-actionlib.xml]
+[ROSTEST]test [actionlib] results summary: 0 errors, 0 failures, 1 tests
+[ROSTEST][ROSTEST] test [actionlib] done
+[ROSTEST]tearDown[./check5.test]
+shutting down processing monitor...
+[action_server-2] killing on exit
+[rosout-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown ./check5.test complete
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

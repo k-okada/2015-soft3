@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="5.936">
+  <testcase classname="__main__.HzTest" name="test_hz" time="5.9356"></testcase>
+  <system-out><![CDATA[Hz: 1.0
+Hz Error: 0.5
+Topic: chatter
+Test Duration: 5.0
+Waiting for messages
+Starting rate measurement
+Done waiting, validating results
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

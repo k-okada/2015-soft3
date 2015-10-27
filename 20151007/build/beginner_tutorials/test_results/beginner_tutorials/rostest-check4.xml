@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="1.122">
+  <testcase classname="rostest.runner.RosTest" name="testadd_two_ints" time="1.1221"></testcase>
+  <system-out><![CDATA[[ROSTEST]setup[./check4.test] run_id[86b4281c-726d-11e5-9f9a-e8b1fce891d5] starting
+[1mstarted roslaunch server http://test1-pc:49956/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: indigo
+ * /rosversion: 1.11.10
+
+NODES
+  /
+    server (beginner_tutorials/add_two_ints_server)
+
+[ROSTEST]setup[./check4.test] run_id[86b4281c-726d-11e5-9f9a-e8b1fce891d5] done
+[ROSTEST]Running test [add_two_ints]
+[1mROS_MASTER_URI=http://test1-pc:49751/[0m
+[1msetting /run_id to 86b4281c-726d-11e5-9f9a-e8b1fce891d5[0m
+[1mprocess[rosout-1]: started with pid [21244][0m
+started core service [/rosout]
+[1mprocess[server-2]: started with pid [21261][0m
+[ROSTEST]removing previous test results file [/home/mech-user/2015-soft3/20151007/build/beginner_tutorials/test_results/beginner_tutorials/rosunit-add_two_ints.xml]
+[ROSTEST]running test add_two_ints
+[1mprocess[client-3]: started with pid [21272][0m
+[1m[client-3] process has finished cleanly
+log file: /home/mech-user/.ros/log/86b4281c-726d-11e5-9f9a-e8b1fce891d5/client-3*.log[0m
+[ROSTEST]test [add_two_ints] finished
+[ROSTEST]test [add_two_ints] results are in [/home/mech-user/2015-soft3/20151007/build/beginner_tutorials/test_results/beginner_tutorials/rosunit-add_two_ints.xml]
+[ROSTEST]test [add_two_ints] results summary: 0 errors, 0 failures, 1 tests
+[ROSTEST][ROSTEST] test [add_two_ints] done
+[ROSTEST]tearDown[./check4.test]
+shutting down processing monitor...
+[server-2] killing on exit
+[rosout-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown ./check4.test complete
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

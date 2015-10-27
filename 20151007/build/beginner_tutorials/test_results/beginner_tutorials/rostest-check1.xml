@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="7.250">
+  <testcase classname="rostest.runner.RosTest" name="testtalker_listener" time="7.2496"></testcase>
+  <system-out><![CDATA[[ROSTEST]setup[./check1.test] run_id[3c66a6fe-726d-11e5-966e-e8b1fce891d5] starting
+[1mstarted roslaunch server http://test1-pc:41004/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: indigo
+ * /rosversion: 1.11.10
+ * /test/hz: 1.0
+ * /test/hzerror: 0.5
+ * /test/test_duration: 5.0
+ * /test/topic: chatter
+
+NODES
+  /
+    listener (beginner_tutorials/listener.py)
+    talker (beginner_tutorials/talker.py)
+
+[ROSTEST]setup[./check1.test] run_id[3c66a6fe-726d-11e5-966e-e8b1fce891d5] done
+[ROSTEST]Running test [talker_listener]
+[1mROS_MASTER_URI=http://test1-pc:55433/[0m
+[1msetting /run_id to 3c66a6fe-726d-11e5-966e-e8b1fce891d5[0m
+[1mprocess[rosout-1]: started with pid [20821][0m
+started core service [/rosout]
+[1mprocess[talker-2]: started with pid [20838][0m
+[1mprocess[listener-3]: started with pid [20839][0m
+[ROSTEST]running test talker_listener
+[1mprocess[test-4]: started with pid [20842][0m
+[1m[test-4] process has finished cleanly
+log file: /home/mech-user/.ros/log/3c66a6fe-726d-11e5-966e-e8b1fce891d5/test-4*.log[0m
+[ROSTEST]test [talker_listener] finished
+[ROSTEST]test [talker_listener] results are in [/home/mech-user/2015-soft3/20151007/build/beginner_tutorials/test_results/beginner_tutorials/rosunit-talker_listener.xml]
+[ROSTEST]test [talker_listener] results summary: 0 errors, 0 failures, 1 tests
+[ROSTEST][ROSTEST] test [talker_listener] done
+[ROSTEST]tearDown[./check1.test]
+shutting down processing monitor...
+[listener-3] killing on exit
+[talker-2] killing on exit
+[rosout-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown ./check1.test complete
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
