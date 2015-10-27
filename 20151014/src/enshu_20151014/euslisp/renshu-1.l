@@ -16,7 +16,3 @@
 ;; DO NOT EDIT AFTER THIS LINE
 (send *unit-test* :print-result)
 (exit 1)
-
-
-
-
