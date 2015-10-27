@@ -1,1 +1,0 @@
-set(ORDERED_PATHS "/opt/ros/indigo/share/euslisp/jskeus/eus/include")

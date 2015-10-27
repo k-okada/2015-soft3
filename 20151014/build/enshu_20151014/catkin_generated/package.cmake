@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "enshu_20151014")
-set(enshu_20151014_MAINTAINER "k-okada <k-okada@todo.todo>")
-set(enshu_20151014_DEPRECATED "")
-set(enshu_20151014_VERSION "0.0.0")
-set(enshu_20151014_BUILD_DEPENDS "euslisp")
-set(enshu_20151014_RUN_DEPENDS "euslisp")
-set(enshu_20151014_BUILDTOOL_DEPENDS "catkin")
