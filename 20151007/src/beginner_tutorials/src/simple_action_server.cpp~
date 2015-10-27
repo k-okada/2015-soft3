@@ -1,0 +1,5 @@
+#include <beginner_tutorials/DoDishesAction.h>
+#include <actionlib/server/simple_action_server.h>
+
+typedef actionlib::SimpleActionServer<beginner_tutorials::DoDishesAction> Server;
+
