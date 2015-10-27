@@ -8,8 +8,14 @@
 
 ;; 1
 (defun dot-1 (n)
+  (do ((i 0 (+ i 1)))
+      ((> i n))
+      (print .))
   t)
 (defun dot-2 (n)
+  (if (n == 0)
+      ((print .) (dot-2(n-1)))
+    (print .))
   t)
 ;; 
 (assert (dot-1 3) "mondai 1")
