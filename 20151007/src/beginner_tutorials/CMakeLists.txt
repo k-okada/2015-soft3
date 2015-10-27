@@ -85,7 +85,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 
-#add_service_files(FILES AddTwoInts.srv)
+add_service_files(FILES AddTwoInts.srv)
 add_action_files(FILES DoDishes.action)
 generate_messages(DEPENDENCIES geometry_msgs actionlib_msgs)
 catkin_package(

@@ -10,9 +10,9 @@ def handle_add_two_ints(req):
 
 def add_two_ints_server():
     rospy.init_node('add_two_ints_server')
-    s = rospy.Service('add_tow_ints', AddTwoInts, handle_add_two_ints)
-    print "Rready to add two ints."
+    s = rospy.Service('add_two_ints', AddTwoInts, handle_add_two_ints)
+    print "Ready to add two ints."
     rospy.spin()
 
-if __name__=='__main__':
+if __name__ == "__main__":
     add_two_ints_server()
