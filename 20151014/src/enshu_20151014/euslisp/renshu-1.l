@@ -13,7 +13,7 @@
 <<<<<<< HEAD
 (assert (equal (apply #'list 1 nil) '(1)) "mondai 3")
 =======
-(assert (equal (X #'list 1 nil) '(1)) "mondai 3")
+(assert (equal (apply #'list 1 nil) '(1)) "mondai 3")
 >>>>>>> upstream/master
 ;;
 
