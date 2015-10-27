@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="0.005">
-  <testcase classname="__main__.TestClient" name="test_check" time="0.0045"></testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
