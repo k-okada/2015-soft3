@@ -5,6 +5,7 @@
 (send *unit-test* :clear-result)
 ;; DO NOT EDIT BEFORE THIS LINE
 
+
 ;; 1
 (assert (eq (car (car (cdr '(a (b c) d)))) 'b) "mondai 1")
 ;; 2
