@@ -39,6 +39,3 @@
 (send *unit-test* :print-result)
 (exit 1)
 
-
-
-

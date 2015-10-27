@@ -5,15 +5,14 @@
 (send *unit-test* :clear-result)
 ;; DO NOT EDIT BEFORE THIS LINE
 
-;; 1
-;;(assert (eq (car (car (cdr '(a (b c) d)))) 'b) "mondai 1")
-;; 2
-(assert (eq (or 13 (/ 1 0)) 13) "mondai 2")
-;; 3
-(assert (equal (apply #'list 1 nil) '(1)) "mondai 3")
-;;
+;; 4)
+;; cascaded-linkを使ったモデルを用いてアニメーションさせてみよ．その際必ず２つ以上の物体を画面に配置し，assoc/dissocが行われること．
 
 ;; DO NOT EDIT AFTER THIS LINE
 (send *unit-test* :print-result)
 (exit 1)
+
+
+
+
 
