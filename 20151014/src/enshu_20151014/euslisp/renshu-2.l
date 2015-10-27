@@ -1,4 +1,3 @@
-
 #!/usr/bin/env irteusgl
 
 (load "lib/llib/unittest.l")
