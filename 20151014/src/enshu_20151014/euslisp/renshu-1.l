@@ -10,11 +10,7 @@
 ;; 2
 (assert (eq (or 13 (/ 1 0)) 13) "mondai 2" )
 ;; 3
-<<<<<<< HEAD
 (assert (equal (apply #'list 1 nil) '(1)) "mondai 3")
-=======
-(assert (equal (apply #'list 1 nil) '(1)) "mondai 3")
->>>>>>> upstream/master
 ;;
 
 ;; DO NOT EDIT AFTER THIS LINE
