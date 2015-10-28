@@ -16,7 +16,7 @@
   (if (> 1 n)
       'done
     (progn (format t ".")
-	   (show-period2 (- n 1)))))
+	   (dot-2 (- n 1)))))
 
 ;; 
 (assert (dot-1 3) "mondai 1")
