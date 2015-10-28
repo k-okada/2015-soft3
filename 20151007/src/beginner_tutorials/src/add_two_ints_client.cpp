@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
      ROS_INFO("Sum: %ld", (long int)srv.response.sum);
      }
    else {
-     ROS_ERROR("Failed to cll service add_two\ints");
+     ROS_ERROR("Failed to cll service add_two_ints");
      return 1;
      }
 
