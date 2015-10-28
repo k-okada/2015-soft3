@@ -28,7 +28,7 @@
     (dolist (x lst i)
       (if (eql x 'a)
 	  (setq i (+ i 1))))
-    (format t "~A" i)))
+    i))
 
 (defun hasa-2 (lst)
   (+
