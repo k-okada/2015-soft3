@@ -155,7 +155,7 @@ Connections:
 
 
 4)
-ファイルはscriptの中にあります
+ファイルはscriptの中にあります。金山くんのを参考にいたしました。（許可取得済み）
 #!/usr/bin/env python                                                           
 import rospy
 from geometry_msgs.msg import Twist

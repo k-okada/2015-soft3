@@ -1,27 +1,22 @@
-#!/usr/bin/env python                                                           
-import roslib
+#!/usr/bin/env python
 import rospy
 from geometry_msgs.msg import Twist
 
-def my_keyop():
+rospy.init_node('my_keyop')
+pub = rospy.Publisher('/mobile_base/commands/velocity', Twist, queue_size = 10)
+r = rospy.Rate(10)
+while not rospy.is_shutdown():
     vel = Twist()
-    pub = rospy.Publisher('/mobile_base/commands/velocity', Twist, 10)
-    while not rospy.is_shutdown():
-        if raw_input('>>>') == 'q':
-            vel.linear.x += 1.0
-        if raw_input('>>>') == 'w':
-            vel.linear.x -= 1.0
-        if raw_input('>>>') == 'e':
-            vel.angular.z += 1.0
-        if raw_input('>>>') == 'r':
-            vel.angular.z -= 1.0
-        pub.publish(vel)
-
-if __name__ == '__main__':
-    try:
-        my_keyop()
-    except rospy.ROSInterruptException: pass
-
-
-
-
+    x = raw_input('q,w,e,r,p:')
+    if 'q' in x:
+        vel.linear.x = 1.0
+    if 'w' in x:
+        vel.linear.x = -1.0
+    if 'e' in x:
+        vel.angular.z = 1.0
+    if 'r' in x:
+        vel.angular.z = -1.0
+    if 'p' in x:
+        break
+    pub.publish(vel)
+    r.sleep()
