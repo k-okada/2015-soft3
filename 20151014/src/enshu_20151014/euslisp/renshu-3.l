@@ -21,16 +21,17 @@
 
 ;; 
 (defun summit (lst)
-  (remove nil lst)
+  (setq lst (remove nil lst))
   (apply #'+ lst))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 (defun summit (lst)
   (let ((x (car lst)))
-    (if (null x)
+    (if (atom lst) 0
+      (if (null x)
         (summit (cdr lst))
-      (+ x (summit (cdr lst))))))
+	(+ x (summit (cdr lst)))))))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
