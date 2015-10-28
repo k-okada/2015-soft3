@@ -18,7 +18,7 @@ def add_two_ints_client(x,y):
 def usage():
     return "%s [x y]"%sys.argv[0]
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     if len(sys.argv) == 3:
         x = int(sys.argv[1])
         y = int(sys.argv[2])
