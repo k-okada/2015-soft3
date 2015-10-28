@@ -1,5 +1,5 @@
-#!usr/bin/env python
-import roslib;roslib.load_manifest('beginner_tutorials')
+#! /usr/bin/env python
+import roslib; roslib.load_manifest('beginner_tutorials')
 import rospy
 import actionlib
 from beginner_tutorials.msg import *
@@ -11,7 +11,7 @@ class DoDishesServer:
 
     def execute(self,goal):
         print "Requesting dishwasher %d"%(goal.dishwasher_id)
-        result=self.server.get_default_result()
+        result = self.server.get_default_result()
         result.total_dishes_cleaned=100
         print "Returning dishes_cleaned %d"%(result.total_dishes_cleaned)
         self.server.set_succeeded(result)
