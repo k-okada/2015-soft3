@@ -11,8 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
-  actionlib actionlib_msgs
-
+  actionlib
+  actionlib_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -33,10 +33,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## * Let MSG_DEP_SET be the set of packages whose message types you use in
 ##   your messages/services/actions (e.g. std_msgs, actionlib_msgs, ...).
 ## * In the file package.xml:
+##   * add a build_depend tag for "message_generation"
 ##   * add a build_depend and a run_depend tag for each package in MSG_DEP_SET
-##   * If MSG_DEP_SET isn't empty the following dependencies might have been
-##     pulled in transitively but can be declared for certainty nonetheless:
-##     * add a build_depend tag for "message_generation"
+##   * If MSG_DEP_SET isn't empty the following dependency has been pulled in
+##     but can be declared for certainty nonetheless:
 ##     * add a run_depend tag for "message_runtime"
 ## * In this file (CMakeLists.txt):
 ##   * add "message_generation" and every package in MSG_DEP_SET to
@@ -61,30 +61,41 @@ find_package(catkin REQUIRED COMPONENTS
 #   Service1.srv
 #   Service2.srv
 # )
+
 add_service_files(FILES AddTwoInts.srv)
-add_action_files(FILES DoDishes.action)
-
-add_executable(simple_action_client src/simple_action_client.cpp)
-add_executable(simple_action_server src/simple_action_server.cpp)
-target_link_libraries(simple_action_client ${catkin_LIBRARIES})
-target_link_libraries(simple_action_server ${catkin_LIBRARIES})
-add_dependencies(simple_action_server ${PROJECT_NAME}_generate_messages_cpp)
-add_dependencies(simple_action_client ${PROJECT_NAME}_generate_messages_cpp)
-
-
 ## Generate actions in the 'action' folder
 # add_action_files(
 #   FILES
 #   Action1.action
 #   Action2.action
 # )
+add_action_files(FILES DoDishes.action)
 
-# Generate added messages and services with any dependencies listed here
- generate_messages(
-   DEPENDENCIES
-   geometry_msgs  # std_msgs
-   actionlib_msgs
- )
+## Generate added messages and services with any dependencies listed here
+generate_messages(DEPENDENCIES geometry_msgs actionlib_msgs)
+
+################################################
+## Declare ROS dynamic reconfigure parameters ##
+################################################
+
+## To declare and build dynamic reconfigure parameters within this
+## package, follow these steps:
+## * In the file package.xml:
+##   * add a build_depend and a run_depend tag for "dynamic_reconfigure"
+## * In this file (CMakeLists.txt):
+##   * add "dynamic_reconfigure" to
+##     find_package(catkin REQUIRED COMPONENTS ...)
+##   * uncomment the "generate_dynamic_reconfigure_options" section below
+##     and list every .cfg file to be processed
+
+## Generate dynamic reconfigure parameters in the 'cfg' folder
+# generate_dynamic_reconfigure_options(
+#   cfg/DynReconf1.cfg
+#   cfg/DynReconf2.cfg
+# )
+
+
+
 
 ###################################
 ## catkin specific configuration ##
@@ -113,17 +124,22 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-## Declare a cpp library
+## Declare a C++ library
 # add_library(beginner_tutorials
 #   src/${PROJECT_NAME}/beginner_tutorials.cpp
 # )
 
-## Declare a cpp executable
+## Add cmake target dependencies of the library
+## as an example, code may need to be generated before libraries
+## either from message generation or dynamic reconfigure
+# add_dependencies(beginner_tutorials ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+## Declare a C++ executable
 # add_executable(beginner_tutorials_node src/beginner_tutorials_node.cpp)
 
-## Add cmake target dependencies of the executable/library
-## as an example, message headers may need to be generated before nodes
-# add_dependencies(beginner_tutorials_node beginner_tutorials_generate_messages_cpp)
+## Add cmake target dependencies of the executable
+## same as for the library above
+# add_dependencies(beginner_tutorials_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(beginner_tutorials_node
@@ -183,6 +199,7 @@ target_link_libraries(talker ${catkin_LIBRARIES})
 add_executable(listener src/listener.cpp)
 target_link_libraries(listener ${catkin_LIBRARIES})
 
+
 add_executable(add_two_ints_server src/add_two_ints_server.cpp)
 target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
 add_executable(add_two_ints_client src/add_two_ints_client.cpp)
@@ -191,8 +208,11 @@ add_dependencies(add_two_ints_server ${PROJECT_NAME}_generate_messages_cpp)
 add_dependencies(add_two_ints_client ${PROJECT_NAME}_generate_messages_cpp)
 
 add_executable(simple_action_client src/simple_action_client.cpp)
-add_executable(simple_action_server src/simple_action_server.cpp)
 target_link_libraries(simple_action_client ${catkin_LIBRARIES})
+add_executable(simple_action_server src/simple_action_server.cpp)
 target_link_libraries(simple_action_server ${catkin_LIBRARIES})
 add_dependencies(simple_action_server ${PROJECT_NAME}_generate_messages_cpp)
 add_dependencies(simple_action_client ${PROJECT_NAME}_generate_messages_cpp)
+
+
+
