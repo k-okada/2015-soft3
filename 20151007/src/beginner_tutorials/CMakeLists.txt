@@ -11,6 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  actionlib
+  actionlib_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -67,11 +69,17 @@ find_package(catkin REQUIRED COMPONENTS
 #   Action2.action
 # )
 
+add_action_files(
+	FILES DoDishes.action
+)
+
+
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
 #   DEPENDENCIES
 #   geometry_msgs#   std_msgs
 # )
+#generate_messages(DEPENDENCIES geometry_msgs actionlib_msgs)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -102,6 +110,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
+
+add_service_files(FILES AddTwoInts.srv)
+generate_messages(DEPENDENCIES geometry_msgs actionlib_msgs)
+
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES beginner_tutorials
@@ -189,3 +201,22 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+add_executable(talker src/talker.cpp)
+target_link_libraries(talker ${catkin_LIBRARIES})
+add_executable(listener src/listener.cpp)
+target_link_libraries(listener ${catkin_LIBRARIES})
+
+add_executable(add_two_ints_server src/add_two_ints_server.cpp)
+target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
+add_executable(add_two_ints_client src/add_two_ints_client.cpp)
+target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
+add_dependencies(add_two_ints_server ${PROJECT_NAME}_generate_message_cpp)
+add_dependencies(add_two_ints_client ${PROJECT_NAME}_generate_message_cpp)
+
+add_executable(simple_action_client src/simple_action_client.cpp)
+target_link_libraries(simple_action_client ${catkin_LIBRARIES})
+add_executable(simple_action_server src/simple_action_server.cpp)
+target_link_libraries(simple_action_server ${catkin_LIBRARIES})
+add_dependencies(simple_action_client ${PROJECT_NAME}_generate_messages_cpp)
+add_dependencies(simple_action_server ${PROJECT_NAME}_generate_messages_cpp)
