@@ -4,14 +4,14 @@
 typedef actionlib::SimpleActionServer<beginner_tutorials::DoDishesAction> Server;
 
 void execute(const beginner_tutorials::DoDishesGoalConstPtr& goal, Server* as) {
- as->setSucceeded();
+  as->setSucceeded();
 }
 
 int main(int argc, char** argv) {
- ros::init(argc, argv, "do_dishes_server");
- ros::NodeHandle n;
- Server server(n, "do_dishes", boost::bind(&execute, _1, &server), false);
- server.start();
- ros::spin();
- return 0;
+  ros::init(argc, argv, "do_dishes_server");
+  ros::NodeHandle n;
+  Server server(n, "do_dishes", boost::bind(&execute, _1, &server), false);
+  server.start();
+  ros::spin();
+  return 0;
 } 
