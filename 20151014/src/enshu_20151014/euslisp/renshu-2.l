@@ -21,8 +21,8 @@
 	   (dot-2 (- n 1))))
   t)
 ;; 
-(assert (dot-1 3) "mondai 1")
-(assert (dot-2 3) "mondai 1")
+;(assert (dot-1 3) "mondai 1")
+;(assert (dot-2 3) "mondai 1")
 
 ;; 2
 (defun hasa-1 (lst)
