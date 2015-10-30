@@ -40,9 +40,9 @@ topic名 [message名]
 4)
 "src/mykeyop.cpp"にあります。
 
-5,6)
-mapが生成されずできていません。
-[ WARN] [1445824700.596883548, 77.010000000]: MessageFilter [target=odom ]: Dropped 100.00% of messages so far. Please turn the [ros.gmapping.message_notifier] rosconsole logger to DEBUG for more information.
-というエラーがroslaunch turtlebot_gazebo gmapping_demo.launchで出てきてしまいます。
+5)
+mapが生成されなかったのですが、ソフトウェアの更新をしたところきちんと生成されました。
+amcl_demo.launchまでやりました。
 
-
+6)
+どこで確認すればよいのかわかりませんでした。
