@@ -8,9 +8,9 @@
 ;; 1
 (assert (eq (car (car (cdr '(a (b c) d)))) 'b) "mondai 1")
 ;; 2
-(assert (eq (or 13 (/ 1 0)) 13) "mondai 2")
+(assert (equal (or 13 (/ 1 0)) 13) "mondai 2")
 ;; 3
-(assert (equal (car #'list 1 nil) '(1)) "mondai 3")
+(assert (equal (apply #'list 1 nil) '(1)) "mondai 3")
 ;;
 
 ;; DO NOT EDIT AFTER THIS LINE
