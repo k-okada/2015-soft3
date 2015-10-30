@@ -18,14 +18,14 @@
 (send SUN :assoc earth)
 (send earth :assoc moon)
 (objects (list earth sun moon))
-(setq i 0)
-(do-until-key
+;;(setq i 0)
+(dotimes (i 720)
  ;(send earth :locate #f(0 0 0))
  (send SUN :rotate (deg2rad 3) :z)
  (send earth :rotate (deg2rad 5) :z)
  (send *irtviewer* :draw-objects)
  (x::window-main-one)
- (incf i))
+; (incf i))
  )
 
 
