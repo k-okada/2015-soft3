@@ -6,13 +6,13 @@ from geometry_msgs.msg import Twist
 import sys, select, termios, tty
 def getKey():
     tty.setraw(sys.stdin.fileno())
-    select.select([sys.stdin], [],[],0)
+    select.select([sys.stdin], [], [], 0)
     key = sys.stdin.read(1)
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, setting)
     return key
 
 move = {
-    'v' : lambda : (1,0,0),
+    'w' : lambda : (1,0,0),
     'a' : lambda : (0,1,0),
     's' : lambda : (-1,0,0),
     'd' : lambda : (0,-1,0),
@@ -22,7 +22,7 @@ move = {
 if __name__ == '__main__':
     print """
 Reading from keyboard
-__________________________________
+____________________________
 Use 'wsad' to translate
 Use 'e' to yaw
 Press 'Enter' to run
@@ -32,15 +32,16 @@ Press 'q' to quit
 
     try:
         rospy.init_node('send_velocity', anonymous = True)
-        pub = rospy.Publisher('cmd_vel', Twist, queue_size = 100);
+        pub = rospy.Publisher('cmd_vel', Twist, queue_size=100);
         r = rospy.Rate(10) # 10hz
-        while not rospy.is_shutdown():
+        while not rospy.is_shutdown() :
             key = getKey()
             print key
             if key in ['q', 27]:
                 break
             elif key in move.keys() :
                 print key,move[key]()
+                cmd = Twist()
                 cmd.linear.x = move[key]()[0]
                 cmd.linear.y = move[key]()[1]
                 cmd.angular.z = move[key]()[2]
