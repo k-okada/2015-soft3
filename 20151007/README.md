@@ -60,34 +60,43 @@ uint8 state
 
 
 4)
+10.0で直進、5.0で回転するkeyop.pyです
+
 #!/usr/bin/env python
 import rospy
+import sys
+
+from std_msgs.msg import String
+from geometry_msgs.msg import Vector3
 from geometry_msgs.msg import Twist
 from kobuki_msgs.msg import MotorPower
 
-def move():
-    pub1=rospy.Publisher('mobile_base/commands/velocity',Twist,queue_size=29)
-    pub2=rospy.Publisher('mobile_base/commands/motor_power',MotorPower,queue_size=32)
+
+def mykeyop():
+    pubTwist = rospy.Publisher('mobile_base/commands/velocity', Twist, queue_size=30)
+    pubMotorPower = rospy.Publisher('mobile_base/commands/motor_power', MotorPower, queue_size=30)
     rospy.init_node('my_keyop')
-    MotorPower.state=1
-    pub2.publish(MotorPower)
-    while not rospy.is_shutdown():
-        Twist.linear=[0.2,0.0,0.0]
-        Twist.angular=[0.0,0.0,0.1]
     
-        pub1.publish(Twist)
-        rospy.sleep(0.1)
+    pubMotorPower.publish(1)
+    v=10.0
+    w=5.0
+    
+    while not rospy.is_shutdown():
 
 
+        speed =  Vector3(v, 0., 0.)
+        ang_speed = Vector3(0., 0., w)
+        twist = Twist(speed,ang_speed)
+        pubTwist.publish(twist)
+        print twist
+        rospy.sleep(1.0)
 
-if __name__=='__main__':
+if __name__ == '__main__':
     try:
-        move()
+        mykeyop()
     except rospy.ROSInterruptException:
         pass
 
-とりあえず指定した速度で動きそうなものを書きました。
-でもうまく実行できませんですね。。
 
 5)出来ました。
 
