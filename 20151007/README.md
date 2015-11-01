@@ -1,13 +1,18 @@
 1-1)
+catkin_makeはワークスペース最上位のディレクトリで実行するだけで開発環境に適したビルドのためのパッケージ設定、パッケージのビルド、インストールを一気に行ってくれる。最後の2つはmakeで行えるが、順番にひとつずつ、適切なディレクトリに移動して実行しなければならない。
+http://wiki.ros.org/ja/catkin/Tutorials/using_a_workspaceを参照した
 
 1-2)
-コンパイルの必要はなくとも、ソースコード中の関数などを読み込んで全て定義する必要があるから
+メッセージやサービスのためのpythonコードを生成しなければならないため
+http://wiki.ros.org/ja/ROS/Tutorials/WritingPublisherSubscriber(python)を参照した
 
 1-3)
 ros::spin()はコールバックを終了までずっと待つが、ros::spinOnce()はそれが呼ばれた一瞬だけしか待たない。Onceならある一定時間だけコールバックを待つ、ということができそう。
+http://wiki.ros.org/roscpp/Overview/Callbacks%20and%20Spinningを参照した
+
 
 1-4)
-いろいろ
+以下のようなファイルが生成されていた。
 mech-user@test1-pc:~/2015-soft3/20151007$ find ./ -name *DoDishes*
 ./devel/share/common-lisp/ros/beginner_tutorials/msg/DoDishesAction.lisp
 ./devel/share/common-lisp/ros/beginner_tutorials/msg/_package_DoDishesActionFeedback.lisp
@@ -110,6 +115,8 @@ Connections:
 実際に速度データを送受信してそうなのは/mobile_base/commands/velocityな模様
 
 4)
+コマンドライン引数からvx,vy,omegaを指定するものを書いた。
+
 ------------------------------
 
 #!/usr/bin/env python                                                          
@@ -136,4 +143,5 @@ if __name__ == '__main__':
 -----------------------------
 
 
-5)
+5)した。ただしソフトウェアを更新する前はバグが出てできなかった。
+6)/move_base/feedbackというようなtopicができているので、このactionlibが起動しているのだと思われる。詳しく調べるというのはよくわからなかった。
