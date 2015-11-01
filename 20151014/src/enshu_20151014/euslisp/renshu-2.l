@@ -8,21 +8,16 @@
 
 ;; 1
 (defun dot-1 (n)
-  (do ((i 0 (+ i 1)))
-      ((> i (- n 1)) 'done)
-      (print "."))
+  (dotimes (i n) (format t "."))
   t)
+
 (defun dot-2 (n)
-  (setq j 0)
-  (if (> j (- n 1))
-      'done
-    (progn (print ".")
-	   (+ j 1)
-	   (dot-2 (- n 1))))
+  (if (< n 1) 'done
+    (progn (format t ".") (dot-2 (- n 1))))
   t)
 ;; 
-;(assert (dot-1 3) "mondai 1")
-;(assert (dot-2 3) "mondai 1")
+(assert (dot-1 3) "mondai 1")
+(assert (dot-2 3) "mondai 1")
 
 ;; 2
 (defun hasa-1 (lst)
