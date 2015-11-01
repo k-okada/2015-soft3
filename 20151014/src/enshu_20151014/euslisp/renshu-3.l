@@ -27,21 +27,13 @@
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 (defun summit (lst)
-  (let ((x (car lst)))
-    (if (atom lst) 0
-      (if (null x)
-        (summit (cdr lst))
-	(+ x (summit (cdr lst)))))))
-
+  (if lst
+      (+ (or (car lst) 0) (summit (cdr lst)))
+    0)) 		 
+		 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 ;;
 ;; DO NOT EDIT AFTER THIS LINE
 (send *unit-test* :print-result)
 (exit 1)
-
-
-
-
-
-
