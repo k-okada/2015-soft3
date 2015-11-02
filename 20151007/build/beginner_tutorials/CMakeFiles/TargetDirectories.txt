@@ -20,6 +20,7 @@
 /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles/beginner_tutorials_genlisp.dir
 /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles/beginner_tutorials_genpy.dir
 /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles/clean_test_results.dir
+/home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles/download_extra_data.dir
 /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles/doxygen.dir
 /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
 /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_lisp.dir

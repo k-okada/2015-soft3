@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mech-user/soft3/2015-soft3/20151007/src
+CMAKE_SOURCE_DIR = /home/mech-user/soft3/2015-soft3/20151007/src/beginner_tutorials
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mech-user/soft3/2015-soft3/20151007/build
+CMAKE_BINARY_DIR = /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,14 +120,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mech-user/soft3/2015-soft3/20151007/build/CMakeFiles /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles/progress.marks
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mech-user/soft3/2015-soft3/20151007/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/clean
+	$(MAKE) -f CMakeFiles/Makefile2 clean
 .PHONY : clean
 
 # The main clean target
@@ -136,543 +136,597 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/rule
+#=============================================================================
+# Target rules for targets named _beginner_tutorials_generate_messages_check_deps_AddTwoInts
 
-# Convenience name for target.
-_beginner_tutorials_generate_messages_check_deps_AddTwoInts: beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/rule
+# Build rule for target.
+_beginner_tutorials_generate_messages_check_deps_AddTwoInts: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _beginner_tutorials_generate_messages_check_deps_AddTwoInts
 .PHONY : _beginner_tutorials_generate_messages_check_deps_AddTwoInts
 
 # fast build rule for target.
 _beginner_tutorials_generate_messages_check_deps_AddTwoInts/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/build.make beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/build
+	$(MAKE) -f CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/build.make CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts.dir/build
 .PHONY : _beginner_tutorials_generate_messages_check_deps_AddTwoInts/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesAction.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesAction.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesAction.dir/rule
+#=============================================================================
+# Target rules for targets named _beginner_tutorials_generate_messages_check_deps_DoDishesAction
 
-# Convenience name for target.
-_beginner_tutorials_generate_messages_check_deps_DoDishesAction: beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesAction.dir/rule
+# Build rule for target.
+_beginner_tutorials_generate_messages_check_deps_DoDishesAction: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _beginner_tutorials_generate_messages_check_deps_DoDishesAction
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesAction
 
 # fast build rule for target.
 _beginner_tutorials_generate_messages_check_deps_DoDishesAction/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesAction.dir/build.make beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesAction.dir/build
+	$(MAKE) -f CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesAction.dir/build.make CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesAction.dir/build
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesAction/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback.dir/rule
+#=============================================================================
+# Target rules for targets named _beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback
 
-# Convenience name for target.
-_beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback: beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback.dir/rule
+# Build rule for target.
+_beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback
 
 # fast build rule for target.
 _beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback.dir/build.make beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback.dir/build
+	$(MAKE) -f CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback.dir/build.make CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback.dir/build
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesActionFeedback/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal.dir/rule
+#=============================================================================
+# Target rules for targets named _beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal
 
-# Convenience name for target.
-_beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal: beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal.dir/rule
+# Build rule for target.
+_beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal
 
 # fast build rule for target.
 _beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal.dir/build.make beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal.dir/build
+	$(MAKE) -f CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal.dir/build.make CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal.dir/build
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesActionGoal/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionResult.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionResult.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionResult.dir/rule
+#=============================================================================
+# Target rules for targets named _beginner_tutorials_generate_messages_check_deps_DoDishesActionResult
 
-# Convenience name for target.
-_beginner_tutorials_generate_messages_check_deps_DoDishesActionResult: beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionResult.dir/rule
+# Build rule for target.
+_beginner_tutorials_generate_messages_check_deps_DoDishesActionResult: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _beginner_tutorials_generate_messages_check_deps_DoDishesActionResult
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesActionResult
 
 # fast build rule for target.
 _beginner_tutorials_generate_messages_check_deps_DoDishesActionResult/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionResult.dir/build.make beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionResult.dir/build
+	$(MAKE) -f CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionResult.dir/build.make CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesActionResult.dir/build
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesActionResult/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesFeedback.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesFeedback.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesFeedback.dir/rule
+#=============================================================================
+# Target rules for targets named _beginner_tutorials_generate_messages_check_deps_DoDishesFeedback
 
-# Convenience name for target.
-_beginner_tutorials_generate_messages_check_deps_DoDishesFeedback: beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesFeedback.dir/rule
+# Build rule for target.
+_beginner_tutorials_generate_messages_check_deps_DoDishesFeedback: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _beginner_tutorials_generate_messages_check_deps_DoDishesFeedback
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesFeedback
 
 # fast build rule for target.
 _beginner_tutorials_generate_messages_check_deps_DoDishesFeedback/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesFeedback.dir/build.make beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesFeedback.dir/build
+	$(MAKE) -f CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesFeedback.dir/build.make CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesFeedback.dir/build
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesFeedback/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesGoal.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesGoal.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesGoal.dir/rule
+#=============================================================================
+# Target rules for targets named _beginner_tutorials_generate_messages_check_deps_DoDishesGoal
 
-# Convenience name for target.
-_beginner_tutorials_generate_messages_check_deps_DoDishesGoal: beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesGoal.dir/rule
+# Build rule for target.
+_beginner_tutorials_generate_messages_check_deps_DoDishesGoal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _beginner_tutorials_generate_messages_check_deps_DoDishesGoal
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesGoal
 
 # fast build rule for target.
 _beginner_tutorials_generate_messages_check_deps_DoDishesGoal/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesGoal.dir/build.make beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesGoal.dir/build
+	$(MAKE) -f CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesGoal.dir/build.make CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesGoal.dir/build
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesGoal/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesResult.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesResult.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesResult.dir/rule
+#=============================================================================
+# Target rules for targets named _beginner_tutorials_generate_messages_check_deps_DoDishesResult
 
-# Convenience name for target.
-_beginner_tutorials_generate_messages_check_deps_DoDishesResult: beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesResult.dir/rule
+# Build rule for target.
+_beginner_tutorials_generate_messages_check_deps_DoDishesResult: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _beginner_tutorials_generate_messages_check_deps_DoDishesResult
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesResult
 
 # fast build rule for target.
 _beginner_tutorials_generate_messages_check_deps_DoDishesResult/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesResult.dir/build.make beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesResult.dir/build
+	$(MAKE) -f CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesResult.dir/build.make CMakeFiles/_beginner_tutorials_generate_messages_check_deps_DoDishesResult.dir/build
 .PHONY : _beginner_tutorials_generate_messages_check_deps_DoDishesResult/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_cpp
 
-# Convenience name for target.
-actionlib_generate_messages_cpp: beginner_tutorials/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+# Build rule for target.
+actionlib_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_cpp
 .PHONY : actionlib_generate_messages_cpp
 
 # fast build rule for target.
 actionlib_generate_messages_cpp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make beginner_tutorials/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+	$(MAKE) -f CMakeFiles/actionlib_generate_messages_cpp.dir/build.make CMakeFiles/actionlib_generate_messages_cpp.dir/build
 .PHONY : actionlib_generate_messages_cpp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_lisp
 
-# Convenience name for target.
-actionlib_generate_messages_lisp: beginner_tutorials/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+# Build rule for target.
+actionlib_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_lisp
 .PHONY : actionlib_generate_messages_lisp
 
 # fast build rule for target.
 actionlib_generate_messages_lisp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make beginner_tutorials/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+	$(MAKE) -f CMakeFiles/actionlib_generate_messages_lisp.dir/build.make CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/actionlib_generate_messages_py.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/actionlib_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_py
 
-# Convenience name for target.
-actionlib_generate_messages_py: beginner_tutorials/CMakeFiles/actionlib_generate_messages_py.dir/rule
+# Build rule for target.
+actionlib_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_py
 .PHONY : actionlib_generate_messages_py
 
 # fast build rule for target.
 actionlib_generate_messages_py/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/actionlib_generate_messages_py.dir/build.make beginner_tutorials/CMakeFiles/actionlib_generate_messages_py.dir/build
+	$(MAKE) -f CMakeFiles/actionlib_generate_messages_py.dir/build.make CMakeFiles/actionlib_generate_messages_py.dir/build
 .PHONY : actionlib_generate_messages_py/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_cpp
 
-# Convenience name for target.
-actionlib_msgs_generate_messages_cpp: beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+# Build rule for target.
+actionlib_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_cpp
 .PHONY : actionlib_msgs_generate_messages_cpp
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_cpp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_lisp
 
-# Convenience name for target.
-actionlib_msgs_generate_messages_lisp: beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+# Build rule for target.
+actionlib_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_lisp
 .PHONY : actionlib_msgs_generate_messages_lisp
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_lisp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
 .PHONY : actionlib_msgs_generate_messages_lisp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_py
 
-# Convenience name for target.
-actionlib_msgs_generate_messages_py: beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+# Build rule for target.
+actionlib_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_py
 .PHONY : actionlib_msgs_generate_messages_py
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_py/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make beginner_tutorials/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+	$(MAKE) -f CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
 .PHONY : actionlib_msgs_generate_messages_py/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/rule
+#=============================================================================
+# Target rules for targets named beginner_tutorials_gencpp
 
-# Convenience name for target.
-beginner_tutorials_gencpp: beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/rule
+# Build rule for target.
+beginner_tutorials_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials_gencpp
 .PHONY : beginner_tutorials_gencpp
 
 # fast build rule for target.
 beginner_tutorials_gencpp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/build.make beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/build
+	$(MAKE) -f CMakeFiles/beginner_tutorials_gencpp.dir/build.make CMakeFiles/beginner_tutorials_gencpp.dir/build
 .PHONY : beginner_tutorials_gencpp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages.dir/rule
+#=============================================================================
+# Target rules for targets named beginner_tutorials_generate_messages
 
-# Convenience name for target.
-beginner_tutorials_generate_messages: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages.dir/rule
+# Build rule for target.
+beginner_tutorials_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials_generate_messages
 .PHONY : beginner_tutorials_generate_messages
 
 # fast build rule for target.
 beginner_tutorials_generate_messages/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages.dir/build.make beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages.dir/build
+	$(MAKE) -f CMakeFiles/beginner_tutorials_generate_messages.dir/build.make CMakeFiles/beginner_tutorials_generate_messages.dir/build
 .PHONY : beginner_tutorials_generate_messages/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named beginner_tutorials_generate_messages_cpp
 
-# Convenience name for target.
-beginner_tutorials_generate_messages_cpp: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/rule
+# Build rule for target.
+beginner_tutorials_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials_generate_messages_cpp
 .PHONY : beginner_tutorials_generate_messages_cpp
 
 # fast build rule for target.
 beginner_tutorials_generate_messages_cpp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/build.make beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/build
+	$(MAKE) -f CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/build.make CMakeFiles/beginner_tutorials_generate_messages_cpp.dir/build
 .PHONY : beginner_tutorials_generate_messages_cpp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named beginner_tutorials_generate_messages_lisp
 
-# Convenience name for target.
-beginner_tutorials_generate_messages_lisp: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/rule
+# Build rule for target.
+beginner_tutorials_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials_generate_messages_lisp
 .PHONY : beginner_tutorials_generate_messages_lisp
 
 # fast build rule for target.
 beginner_tutorials_generate_messages_lisp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/build.make beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/build
+	$(MAKE) -f CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/build.make CMakeFiles/beginner_tutorials_generate_messages_lisp.dir/build
 .PHONY : beginner_tutorials_generate_messages_lisp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named beginner_tutorials_generate_messages_py
 
-# Convenience name for target.
-beginner_tutorials_generate_messages_py: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/rule
+# Build rule for target.
+beginner_tutorials_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials_generate_messages_py
 .PHONY : beginner_tutorials_generate_messages_py
 
 # fast build rule for target.
 beginner_tutorials_generate_messages_py/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/build.make beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/build
+	$(MAKE) -f CMakeFiles/beginner_tutorials_generate_messages_py.dir/build.make CMakeFiles/beginner_tutorials_generate_messages_py.dir/build
 .PHONY : beginner_tutorials_generate_messages_py/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/beginner_tutorials_genlisp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/beginner_tutorials_genlisp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/beginner_tutorials_genlisp.dir/rule
+#=============================================================================
+# Target rules for targets named beginner_tutorials_genlisp
 
-# Convenience name for target.
-beginner_tutorials_genlisp: beginner_tutorials/CMakeFiles/beginner_tutorials_genlisp.dir/rule
+# Build rule for target.
+beginner_tutorials_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials_genlisp
 .PHONY : beginner_tutorials_genlisp
 
 # fast build rule for target.
 beginner_tutorials_genlisp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/beginner_tutorials_genlisp.dir/build.make beginner_tutorials/CMakeFiles/beginner_tutorials_genlisp.dir/build
+	$(MAKE) -f CMakeFiles/beginner_tutorials_genlisp.dir/build.make CMakeFiles/beginner_tutorials_genlisp.dir/build
 .PHONY : beginner_tutorials_genlisp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/beginner_tutorials_genpy.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/beginner_tutorials_genpy.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/beginner_tutorials_genpy.dir/rule
+#=============================================================================
+# Target rules for targets named beginner_tutorials_genpy
 
-# Convenience name for target.
-beginner_tutorials_genpy: beginner_tutorials/CMakeFiles/beginner_tutorials_genpy.dir/rule
+# Build rule for target.
+beginner_tutorials_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials_genpy
 .PHONY : beginner_tutorials_genpy
 
 # fast build rule for target.
 beginner_tutorials_genpy/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/beginner_tutorials_genpy.dir/build.make beginner_tutorials/CMakeFiles/beginner_tutorials_genpy.dir/build
+	$(MAKE) -f CMakeFiles/beginner_tutorials_genpy.dir/build.make CMakeFiles/beginner_tutorials_genpy.dir/build
 .PHONY : beginner_tutorials_genpy/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named clean_test_results
 
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+# Build rule for target.
+clean_test_results: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results
+.PHONY : clean_test_results
+
+# fast build rule for target.
+clean_test_results/fast:
+	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
+.PHONY : clean_test_results/fast
+
+#=============================================================================
+# Target rules for targets named download_extra_data
+
+# Build rule for target.
+download_extra_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 download_extra_data
+.PHONY : download_extra_data
+
+# fast build rule for target.
+download_extra_data/fast:
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
+.PHONY : download_extra_data/fast
+
+#=============================================================================
+# Target rules for targets named doxygen
+
+# Build rule for target.
+doxygen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 doxygen
+.PHONY : doxygen
+
+# fast build rule for target.
+doxygen/fast:
+	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
+.PHONY : doxygen/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_cpp
+
+# Build rule for target.
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
 .PHONY : geometry_msgs_generate_messages_cpp
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_lisp
 
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+# Build rule for target.
+geometry_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
 .PHONY : geometry_msgs_generate_messages_lisp
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
 
-# Convenience name for target.
-geometry_msgs_generate_messages_py: beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
 .PHONY : geometry_msgs_generate_messages_py
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make beginner_tutorials/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/listener.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/listener.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/listener.dir/rule
+#=============================================================================
+# Target rules for targets named listener
 
-# Convenience name for target.
-listener: beginner_tutorials/CMakeFiles/listener.dir/rule
+# Build rule for target.
+listener: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 listener
 .PHONY : listener
 
 # fast build rule for target.
 listener/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/listener.dir/build.make beginner_tutorials/CMakeFiles/listener.dir/build
+	$(MAKE) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/build
 .PHONY : listener/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_cpp
 
-# Convenience name for target.
-roscpp_generate_messages_cpp: beginner_tutorials/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+# Build rule for target.
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
 .PHONY : roscpp_generate_messages_cpp
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make beginner_tutorials/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
 
-# Convenience name for target.
-roscpp_generate_messages_lisp: beginner_tutorials/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
 .PHONY : roscpp_generate_messages_lisp
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make beginner_tutorials/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/roscpp_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
 
-# Convenience name for target.
-roscpp_generate_messages_py: beginner_tutorials/CMakeFiles/roscpp_generate_messages_py.dir/rule
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
 .PHONY : roscpp_generate_messages_py
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/roscpp_generate_messages_py.dir/build.make beginner_tutorials/CMakeFiles/roscpp_generate_messages_py.dir/build
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
 
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
 .PHONY : rosgraph_msgs_generate_messages_cpp
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
 
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+# Build rule for target.
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
 .PHONY : rosgraph_msgs_generate_messages_lisp
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_py
 
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+# Build rule for target.
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
 .PHONY : rosgraph_msgs_generate_messages_py
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/simple_action_client.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/simple_action_client.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/simple_action_client.dir/rule
+#=============================================================================
+# Target rules for targets named run_tests
 
-# Convenience name for target.
-simple_action_client: beginner_tutorials/CMakeFiles/simple_action_client.dir/rule
+# Build rule for target.
+run_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests
+.PHONY : run_tests
+
+# fast build rule for target.
+run_tests/fast:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
+
+#=============================================================================
+# Target rules for targets named simple_action_client
+
+# Build rule for target.
+simple_action_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_action_client
 .PHONY : simple_action_client
 
 # fast build rule for target.
 simple_action_client/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/simple_action_client.dir/build.make beginner_tutorials/CMakeFiles/simple_action_client.dir/build
+	$(MAKE) -f CMakeFiles/simple_action_client.dir/build.make CMakeFiles/simple_action_client.dir/build
 .PHONY : simple_action_client/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/simple_action_server.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/simple_action_server.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/simple_action_server.dir/rule
+#=============================================================================
+# Target rules for targets named simple_action_server
 
-# Convenience name for target.
-simple_action_server: beginner_tutorials/CMakeFiles/simple_action_server.dir/rule
+# Build rule for target.
+simple_action_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_action_server
 .PHONY : simple_action_server
 
 # fast build rule for target.
 simple_action_server/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/simple_action_server.dir/build.make beginner_tutorials/CMakeFiles/simple_action_server.dir/build
+	$(MAKE) -f CMakeFiles/simple_action_server.dir/build.make CMakeFiles/simple_action_server.dir/build
 .PHONY : simple_action_server/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_cpp
 
-# Convenience name for target.
-std_msgs_generate_messages_cpp: beginner_tutorials/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+# Build rule for target.
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
 .PHONY : std_msgs_generate_messages_cpp
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make beginner_tutorials/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
 
-# Convenience name for target.
-std_msgs_generate_messages_lisp: beginner_tutorials/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
 .PHONY : std_msgs_generate_messages_lisp
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make beginner_tutorials/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_py
 
-# Convenience name for target.
-std_msgs_generate_messages_py: beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+# Build rule for target.
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
 .PHONY : std_msgs_generate_messages_py
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/build.make beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
-# Convenience name for target.
-beginner_tutorials/CMakeFiles/talker.dir/rule:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/talker.dir/rule
-.PHONY : beginner_tutorials/CMakeFiles/talker.dir/rule
+#=============================================================================
+# Target rules for targets named talker
 
-# Convenience name for target.
-talker: beginner_tutorials/CMakeFiles/talker.dir/rule
+# Build rule for target.
+talker: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 talker
 .PHONY : talker
 
 # fast build rule for target.
 talker/fast:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/talker.dir/build.make beginner_tutorials/CMakeFiles/talker.dir/build
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
 .PHONY : talker/fast
+
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
 
 src/listener.o: src/listener.cpp.o
 .PHONY : src/listener.o
 
 # target to build an object file
 src/listener.cpp.o:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/listener.dir/build.make beginner_tutorials/CMakeFiles/listener.dir/src/listener.cpp.o
+	$(MAKE) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/src/listener.cpp.o
 .PHONY : src/listener.cpp.o
 
 src/listener.i: src/listener.cpp.i
@@ -680,7 +734,7 @@ src/listener.i: src/listener.cpp.i
 
 # target to preprocess a source file
 src/listener.cpp.i:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/listener.dir/build.make beginner_tutorials/CMakeFiles/listener.dir/src/listener.cpp.i
+	$(MAKE) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/src/listener.cpp.i
 .PHONY : src/listener.cpp.i
 
 src/listener.s: src/listener.cpp.s
@@ -688,7 +742,7 @@ src/listener.s: src/listener.cpp.s
 
 # target to generate assembly for a file
 src/listener.cpp.s:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/listener.dir/build.make beginner_tutorials/CMakeFiles/listener.dir/src/listener.cpp.s
+	$(MAKE) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/src/listener.cpp.s
 .PHONY : src/listener.cpp.s
 
 src/simple_action_client.o: src/simple_action_client.cpp.o
@@ -696,7 +750,7 @@ src/simple_action_client.o: src/simple_action_client.cpp.o
 
 # target to build an object file
 src/simple_action_client.cpp.o:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/simple_action_client.dir/build.make beginner_tutorials/CMakeFiles/simple_action_client.dir/src/simple_action_client.cpp.o
+	$(MAKE) -f CMakeFiles/simple_action_client.dir/build.make CMakeFiles/simple_action_client.dir/src/simple_action_client.cpp.o
 .PHONY : src/simple_action_client.cpp.o
 
 src/simple_action_client.i: src/simple_action_client.cpp.i
@@ -704,7 +758,7 @@ src/simple_action_client.i: src/simple_action_client.cpp.i
 
 # target to preprocess a source file
 src/simple_action_client.cpp.i:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/simple_action_client.dir/build.make beginner_tutorials/CMakeFiles/simple_action_client.dir/src/simple_action_client.cpp.i
+	$(MAKE) -f CMakeFiles/simple_action_client.dir/build.make CMakeFiles/simple_action_client.dir/src/simple_action_client.cpp.i
 .PHONY : src/simple_action_client.cpp.i
 
 src/simple_action_client.s: src/simple_action_client.cpp.s
@@ -712,7 +766,7 @@ src/simple_action_client.s: src/simple_action_client.cpp.s
 
 # target to generate assembly for a file
 src/simple_action_client.cpp.s:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/simple_action_client.dir/build.make beginner_tutorials/CMakeFiles/simple_action_client.dir/src/simple_action_client.cpp.s
+	$(MAKE) -f CMakeFiles/simple_action_client.dir/build.make CMakeFiles/simple_action_client.dir/src/simple_action_client.cpp.s
 .PHONY : src/simple_action_client.cpp.s
 
 src/simple_action_server.o: src/simple_action_server.cpp.o
@@ -720,7 +774,7 @@ src/simple_action_server.o: src/simple_action_server.cpp.o
 
 # target to build an object file
 src/simple_action_server.cpp.o:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/simple_action_server.dir/build.make beginner_tutorials/CMakeFiles/simple_action_server.dir/src/simple_action_server.cpp.o
+	$(MAKE) -f CMakeFiles/simple_action_server.dir/build.make CMakeFiles/simple_action_server.dir/src/simple_action_server.cpp.o
 .PHONY : src/simple_action_server.cpp.o
 
 src/simple_action_server.i: src/simple_action_server.cpp.i
@@ -728,7 +782,7 @@ src/simple_action_server.i: src/simple_action_server.cpp.i
 
 # target to preprocess a source file
 src/simple_action_server.cpp.i:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/simple_action_server.dir/build.make beginner_tutorials/CMakeFiles/simple_action_server.dir/src/simple_action_server.cpp.i
+	$(MAKE) -f CMakeFiles/simple_action_server.dir/build.make CMakeFiles/simple_action_server.dir/src/simple_action_server.cpp.i
 .PHONY : src/simple_action_server.cpp.i
 
 src/simple_action_server.s: src/simple_action_server.cpp.s
@@ -736,7 +790,7 @@ src/simple_action_server.s: src/simple_action_server.cpp.s
 
 # target to generate assembly for a file
 src/simple_action_server.cpp.s:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/simple_action_server.dir/build.make beginner_tutorials/CMakeFiles/simple_action_server.dir/src/simple_action_server.cpp.s
+	$(MAKE) -f CMakeFiles/simple_action_server.dir/build.make CMakeFiles/simple_action_server.dir/src/simple_action_server.cpp.s
 .PHONY : src/simple_action_server.cpp.s
 
 src/talker.o: src/talker.cpp.o
@@ -744,7 +798,7 @@ src/talker.o: src/talker.cpp.o
 
 # target to build an object file
 src/talker.cpp.o:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/talker.dir/build.make beginner_tutorials/CMakeFiles/talker.dir/src/talker.cpp.o
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.cpp.o
 .PHONY : src/talker.cpp.o
 
 src/talker.i: src/talker.cpp.i
@@ -752,7 +806,7 @@ src/talker.i: src/talker.cpp.i
 
 # target to preprocess a source file
 src/talker.cpp.i:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/talker.dir/build.make beginner_tutorials/CMakeFiles/talker.dir/src/talker.cpp.i
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.cpp.i
 .PHONY : src/talker.cpp.i
 
 src/talker.s: src/talker.cpp.s
@@ -760,7 +814,7 @@ src/talker.s: src/talker.cpp.s
 
 # target to generate assembly for a file
 src/talker.cpp.s:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(MAKE) -f beginner_tutorials/CMakeFiles/talker.dir/build.make beginner_tutorials/CMakeFiles/talker.dir/src/talker.cpp.s
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.cpp.s
 .PHONY : src/talker.cpp.s
 
 # Help Target
@@ -790,6 +844,9 @@ help:
 	@echo "... beginner_tutorials_generate_messages_py"
 	@echo "... beginner_tutorials_genlisp"
 	@echo "... beginner_tutorials_genpy"
+	@echo "... clean_test_results"
+	@echo "... download_extra_data"
+	@echo "... doxygen"
 	@echo "... edit_cache"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_lisp"
@@ -806,6 +863,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... run_tests"
 	@echo "... simple_action_client"
 	@echo "... simple_action_server"
 	@echo "... std_msgs_generate_messages_cpp"
@@ -813,6 +871,9 @@ help:
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... talker"
 	@echo "... test"
+	@echo "... tests"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... src/listener.o"
 	@echo "... src/listener.i"
 	@echo "... src/listener.s"
@@ -836,6 +897,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

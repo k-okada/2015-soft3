@@ -35,32 +35,32 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mech-user/soft3/2015-soft3/20151007/src
+CMAKE_SOURCE_DIR = /home/mech-user/soft3/2015-soft3/20151007/src/beginner_tutorials
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mech-user/soft3/2015-soft3/20151007/build
+CMAKE_BINARY_DIR = /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials
 
 # Utility rule file for beginner_tutorials_generate_messages_py.
 
 # Include the progress variables for this target.
-include beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/progress.make
+include CMakeFiles/beginner_tutorials_generate_messages_py.dir/progress.make
 
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesFeedback.py
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesAction.py
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesResult.py
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesGoal.py
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionGoal.py
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionResult.py
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionFeedback.py
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/__init__.py
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/__init__.py
+CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesFeedback.py
+CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesAction.py
+CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesResult.py
+CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesGoal.py
+CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionGoal.py
+CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionResult.py
+CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionFeedback.py
+CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py
+CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/__init__.py
+CMakeFiles/beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/__init__.py
 
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesFeedback.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesFeedback.py: /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesFeedback.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG beginner_tutorials/DoDishesFeedback"
-	cd /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesFeedback.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
+	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesFeedback.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
 
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesAction.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesAction.py: /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesAction.msg
@@ -73,30 +73,30 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mec
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesAction.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesAction.py: /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesActionGoal.msg
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesAction.py: /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesResult.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG beginner_tutorials/DoDishesAction"
-	cd /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesAction.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
+	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesAction.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
 
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesResult.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesResult.py: /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesResult.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG beginner_tutorials/DoDishesResult"
-	cd /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesResult.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
+	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesResult.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
 
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesGoal.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesGoal.py: /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesGoal.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG beginner_tutorials/DoDishesGoal"
-	cd /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesGoal.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
+	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesGoal.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
 
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionGoal.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionGoal.py: /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesActionGoal.msg
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionGoal.py: /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesGoal.msg
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionGoal.py: /opt/ros/indigo/share/actionlib_msgs/cmake/../msg/GoalID.msg
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionGoal.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG beginner_tutorials/DoDishesActionGoal"
-	cd /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesActionGoal.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
+	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesActionGoal.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
 
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionResult.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionResult.py: /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesActionResult.msg
@@ -104,9 +104,9 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mec
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionResult.py: /opt/ros/indigo/share/actionlib_msgs/cmake/../msg/GoalID.msg
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionResult.py: /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesResult.msg
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionResult.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG beginner_tutorials/DoDishesActionResult"
-	cd /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesActionResult.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
+	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesActionResult.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
 
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionFeedback.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionFeedback.py: /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesActionFeedback.msg
@@ -114,15 +114,15 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mec
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionFeedback.py: /opt/ros/indigo/share/actionlib_msgs/cmake/../msg/GoalStatus.msg
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionFeedback.py: /opt/ros/indigo/share/actionlib_msgs/cmake/../msg/GoalID.msg
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionFeedback.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG beginner_tutorials/DoDishesActionFeedback"
-	cd /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesActionFeedback.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
+	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg/DoDishesActionFeedback.msg -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg
 
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py: /home/mech-user/soft3/2015-soft3/20151007/src/beginner_tutorials/srv/AddTwoInts.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV beginner_tutorials/AddTwoInts"
-	cd /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/mech-user/soft3/2015-soft3/20151007/src/beginner_tutorials/srv/AddTwoInts.srv -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv
+	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/mech-user/soft3/2015-soft3/20151007/src/beginner_tutorials/srv/AddTwoInts.srv -Ibeginner_tutorials:/home/mech-user/soft3/2015-soft3/20151007/devel/share/beginner_tutorials/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p beginner_tutorials -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv
 
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/__init__.py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesFeedback.py
@@ -133,9 +133,9 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mec
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/__init__.py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionResult.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/__init__.py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionFeedback.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/__init__.py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for beginner_tutorials"
-	cd /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg --initpy
+	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg --initpy
 
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/__init__.py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesFeedback.py
@@ -146,11 +146,11 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py: /home/mec
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/__init__.py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionResult.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/__init__.py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesActionFeedback.py
 /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/__init__.py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python srv __init__.py for beginner_tutorials"
-	cd /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv --initpy
+	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv --initpy
 
-beginner_tutorials_generate_messages_py: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py
+beginner_tutorials_generate_messages_py: CMakeFiles/beginner_tutorials_generate_messages_py
 beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesFeedback.py
 beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesAction.py
 beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_DoDishesResult.py
@@ -161,18 +161,18 @@ beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/201510
 beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py
 beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/msg/__init__.py
 beginner_tutorials_generate_messages_py: /home/mech-user/soft3/2015-soft3/20151007/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/__init__.py
-beginner_tutorials_generate_messages_py: beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/build.make
+beginner_tutorials_generate_messages_py: CMakeFiles/beginner_tutorials_generate_messages_py.dir/build.make
 .PHONY : beginner_tutorials_generate_messages_py
 
 # Rule to build all files generated by this target.
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/build: beginner_tutorials_generate_messages_py
-.PHONY : beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/build
+CMakeFiles/beginner_tutorials_generate_messages_py.dir/build: beginner_tutorials_generate_messages_py
+.PHONY : CMakeFiles/beginner_tutorials_generate_messages_py.dir/build
 
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/clean:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials && $(CMAKE_COMMAND) -P CMakeFiles/beginner_tutorials_generate_messages_py.dir/cmake_clean.cmake
-.PHONY : beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/clean
+CMakeFiles/beginner_tutorials_generate_messages_py.dir/clean:
+	$(CMAKE_COMMAND) -P CMakeFiles/beginner_tutorials_generate_messages_py.dir/cmake_clean.cmake
+.PHONY : CMakeFiles/beginner_tutorials_generate_messages_py.dir/clean
 
-beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/depend:
-	cd /home/mech-user/soft3/2015-soft3/20151007/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mech-user/soft3/2015-soft3/20151007/src /home/mech-user/soft3/2015-soft3/20151007/src/beginner_tutorials /home/mech-user/soft3/2015-soft3/20151007/build /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/depend
+CMakeFiles/beginner_tutorials_generate_messages_py.dir/depend:
+	cd /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mech-user/soft3/2015-soft3/20151007/src/beginner_tutorials /home/mech-user/soft3/2015-soft3/20151007/src/beginner_tutorials /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials /home/mech-user/soft3/2015-soft3/20151007/build/beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : CMakeFiles/beginner_tutorials_generate_messages_py.dir/depend
 
