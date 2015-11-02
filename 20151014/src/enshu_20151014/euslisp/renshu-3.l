@@ -19,18 +19,20 @@
 
 (lisp::install-error-handler 'unittest-error)
 
-;; 
+;;removeは非破壊なのでlstそのものは変更されない
 (defun summit (lst)
-  (remove nil lst)
-  (apply #'+ lst))
+  (apply #'+ (remove nil lst)))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
+;;リストが空になっても終了せずnilをxに入れ無限ループに入ってしまう
 (defun summit (lst)
-  (let ((x (car lst)))
-    (if (null x)
-        (summit (cdr lst))
-      (+ x (summit (cdr lst))))))
+  (if lst
+      (let ((x (car lst)))
+	(if (null x)
+	    (summit (cdr lst))
+	  (+ x (summit (cdr lst)))))
+    0))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
