@@ -1,8 +1,0 @@
-prefix=/home/mech-user/soft3/2015-soft3/20150930/devel
-
-Name: beginner_tutorials
-Description: Description of beginner_tutorials
-Version: 0.0.0
-Cflags: -I/home/mech-user/soft3/2015-soft3/20150930/devel/include
-Libs: -L/home/mech-user/soft3/2015-soft3/20150930/devel/lib 
-Requires: 
