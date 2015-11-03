@@ -20,17 +20,19 @@
 ;; 2
 (defun hasa-1 (lst)(setq num 0)
   (dotimes (i 5)
-    (if (= (car lst) "a") (progn (setq num (+ 1 num))))
-      (setq lst (cdr lst)))
+    (if (equal (car lst) (quote a))(setq num (+ 1 num)))
+    (setq lst (cdr lst)))
 num)
+
 (defun hasa-2 (lst)
-(setq	num 0)
+(setq   num 0)
   (if (= (length lst) 0) 0 (progn
-                                (if (= "a" (car lst)) (setq num (+ 1 num)) num)
-                                (setq num (+ num (asses (cdr lst)) ))
-        	                )
+                                (if (equal (quote a) (car lst)) (setq num (+ 1 num)) num)
+                                (setq num (+ num (hasa-2 (cdr lst)) ))
+                                )
       )
 num)
+
 ;; 
 (assert (eq (hasa-1 '(a b c d a)) 2) "mondai 2")
 (assert (eq (hasa-2 '(a b c d a)) 2) "mondai 2")
