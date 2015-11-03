@@ -20,14 +20,14 @@
 ;; 2
 (defun hasa-1 (lst)(setq num 0)
   (dotimes (i 5)
-    (if (= (car list) "a") (progn (setq num (+ 1 num))))
-      (setq list (cdr list)))
+    (if (= (car lst) "a") (progn (setq num (+ 1 num))))
+      (setq lst (cdr lst)))
 num)
 (defun hasa-2 (lst)
 (setq	num 0)
-  (if (= (length list) 0) 0 (progn
-                                (if (= "a" (car list)) (setq num (+ 1 num)) num)
-                                (setq num (+ num (asses (cdr list)) ))
+  (if (= (length lst) 0) 0 (progn
+                                (if (= "a" (car lst)) (setq num (+ 1 num)) num)
+                                (setq num (+ num (asses (cdr lst)) ))
         	                )
       )
 num)
