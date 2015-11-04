@@ -5,6 +5,7 @@
 (send *unit-test* :clear-result)
 ;; DO NOT EDIT BEFORE THIS LINE
 
+
 (defun unittest-error (code msg1 form &optional (msg2))
   (format *error-output* "~C[1;3~Cm~A unittest-error: ~A"
 	  #x1b (+ 1 48)   *program-name* msg1)
@@ -19,12 +20,12 @@
 
 (lisp::install-error-handler 'unittest-error)
 
-;; 
+
 (defun summit (lst)
   (setq lst_rem (remove nil lst))
   (apply #'+ lst_rem))
 
-(assert (eq (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
+(assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 (defun summit (lst)
   (let ((x (car lst)))
@@ -35,7 +36,7 @@
 	  (t
 	   (+ x (summit (cdr lst)))))))
 
-(assert (eq (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
+(assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 ;;
 ;; DO NOT EDIT AFTER THIS LINE
