@@ -8,8 +8,15 @@
 
 ;; 1
 (defun dot-1 (n)
+ (do ((i 1 (+ i 1))) 
+       ((> i n) 'done) 
+       (format t ". ~%"))
   t)
 (defun dot-2 (n)
+ (if (< n 1)
+      'done 
+    (progn (format t ".~%")
+	   (dot2 (- n 1))))
   t)
 ;; 
 (assert (dot-1 3) "mondai 1")
@@ -17,8 +24,20 @@
 
 ;; 2
 (defun hasa-1 (lst)
+ (let ((sum 0))
+      (do ((i 0 (+ i 1)))
+	  ((= i (length lst))
+	   sum)
+	  (cond ((eq (nth i lst) 'a)
+		 (setq sum (+ sum 1)))))
+      sum)
   0)
 (defun hasa-2 (lst)
+ (cond ((eq lst nil)
+	 0)
+	((eq (car lst) 'a)
+	 (+ (hasa2 (cdr lst)) 1))
+	(t (hasa2 (cdr lst))))
   0)
 ;; 
 (assert (eq (hasa-1 '(a b c d a)) 2) "mondai 2")

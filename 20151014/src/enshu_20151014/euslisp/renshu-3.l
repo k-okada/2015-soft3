@@ -21,14 +21,15 @@
 
 ;; 
 (defun summit (lst)
-  (remove nil lst)
+  (setq lst (remove nil lst)) ;;removeはリストを変更しないから
   (apply #'+ lst))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 (defun summit (lst)
   (let ((x (car lst)))
-    (if (null x)
+    (if (eq lst nil) 0)  ;;lstがnilだった時の処理がないと無限ループになってしまうから
+    　(if (null x)
         (summit (cdr lst))
       (+ x (summit (cdr lst))))))
 
