@@ -36,9 +36,12 @@
   ) 
 
 (defun hasa-2 (lst)
-  (if (equal 'a (car lst))
-      (+ 1 (hasa-2 (cdr lst)))
-    (hasa-2 (cdr lst))
+  (if (null lst)
+      0
+    (if (equal 'a (car lst))
+	(+ 1 (hasa-2 (cdr lst)))
+      (hasa-2 (cdr lst))
+      )
     )
   )
 ;; 
