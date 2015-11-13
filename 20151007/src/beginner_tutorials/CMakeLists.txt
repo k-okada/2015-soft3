@@ -12,6 +12,8 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   actionlib actionlib_msgs
+
+  kobuki_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -85,6 +87,8 @@ generate_messages(
   DEPENDENCIES
   geometry_msgs
   actionlib_msgs
+
+  kobuki_msgs
 )
 
 ###################################
@@ -196,3 +200,11 @@ target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
 
 add_dependencies(add_two_ints_server ${PROJECT_NAME}_generate_messages_cpp)
 add_dependencies(add_two_ints_client ${PROJECT_NAME}_generate_messages_cpp)
+
+### For simple_action_client/server
+add_executable(simple_action_client src/simple_action_client.cpp)
+add_executable(simple_action_server src/simple_action_server.cpp)
+target_link_libraries(simple_action_client ${catkin_LIBRARIES})
+target_link_libraries(simple_action_server ${catkin_LIBRARIES})
+add_dependencies(simple_action_client ${PROJECT_NAME}_generate_messages_cpp)
+add_dependencies(simple_action_server ${PROJECT_NAME}_generate_messages_cpp)
