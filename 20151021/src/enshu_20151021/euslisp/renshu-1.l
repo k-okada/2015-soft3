@@ -18,7 +18,7 @@
 (send sun :assoc earth)
 (send earth :assoc moon)
 (objects (list sun earth moon))
-(do-until-key
+(dotimes (i 300)
   (send sun :rotate (deg2rad 1) :z)
   (send earth :rotate (deg2rad 3) :z)
   (send *irtviewer* :draw-objects)
