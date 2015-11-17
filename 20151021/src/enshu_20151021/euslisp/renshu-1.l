@@ -20,11 +20,10 @@
 (send sun :assoc earth)
 (send earth :assoc moon)
 (objects (list sun earth moon))
-(do-until-key
+(dotimes (i 1000)
  (send sun :rotate (deg2rad 0.01) :z)
  (send earth :rotate (deg2rad 3) :z)
- (send *irtviewer* :draw-objects)
- (x::window-main-one))
+ (send *irtviewer* :draw-objects))
 
 ;; DO NOT EDIT AFTER THIS LINE
 (send *unit-test* :print-result)
