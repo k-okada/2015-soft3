@@ -33,6 +33,14 @@
 (setq (x . joint-list) (list j1))
 (send x :init-ending)
 
+(objects x)
+
+(dotimes (i 10)
+  (dotimes (i 20)
+    (send j1 :joint-angle (* 30 (sin (deg2rad (* i 18)))))
+    (send *irtviewer* :draw-objects)
+    (x::window-main-one)
+ ))
 ;; DO NOT EDIT AFTER THIS LINE
 (send *unit-test* :print-result)
 (exit 1)

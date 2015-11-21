@@ -31,7 +31,7 @@
 
 (objects (list sun earth moon))
 
-(do-until-key
+(dotimes (i 1000)
   (send sun :rotate sun_revvel :z)
   (send earth :rotate earth_revvel #f(0 0 1))
   (send *irtviewer* :draw-objects)  

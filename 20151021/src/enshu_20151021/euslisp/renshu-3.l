@@ -1,8 +1,8 @@
 #!/usr/bin/env irteusgl
 
-;;(load "lib/llib/unittest.l")
-;;(init-unit-test)
-;;(send *unit-test* :clear-result)
+(load "lib/llib/unittest.l")
+(init-unit-test)
+(send *unit-test* :clear-result)
 ;; DO NOT EDIT BEFORE THIS LINE
 
 ;; 3)
@@ -96,8 +96,8 @@
 
 
 ;; DO NOT EDIT AFTER THIS LINE
-;;(send *unit-test* :print-result)
-;;(exit 1)
+(send *unit-test* :print-result)
+(exit 1)
 
 
 
