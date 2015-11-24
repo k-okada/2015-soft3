@@ -4,7 +4,7 @@
 (init-unit-test)
 (send *unit-test* :clear-result)
 ;; DO NOT EDIT BEFORE THIS LINE
-
+;;
 ;; 1)
 ;; 太陽，地球，月のモデルをつくり，太陽の周りを地球が，地球の周りを月が回っているアニメーションを作成せよ
 (setq c1 (make-sphere 100))
