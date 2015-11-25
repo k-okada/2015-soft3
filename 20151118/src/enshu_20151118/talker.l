@@ -2,8 +2,8 @@
 ;;;
 ;;; euslisp version of ros_tutorials/rospy_tutorials/001_talker_listener
 ;;;
-
 (ros::load-ros-manifest "roseus")
+
 ;;;
 
 ;;;
