@@ -1,0 +1,2 @@
+enshu_20151014:workspace
+-DCATKIN_DEVEL_PREFIX=/home/mech-user/git/2015-soft3/20151014/devel -DCMAKE_INSTALL_PREFIX=/home/mech-user/git/2015-soft3/20151014/install -G Unix Makefiles

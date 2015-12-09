@@ -1,0 +1,4 @@
+;; my-popback.l
+(defmacro my-popback (a) `(let ((x ,a))
+			    (while (cons (cddr x)) (setq x (cdr x)))
+			    (prog1 (cadr x) (setf (cdr x) nil))))
