@@ -1,0 +1,26 @@
+permutate([],Y).
+permutate([X|Xs],Y) :- select(X,Y,Ys), permutate(Xs,Ys).
+
+search :-
+    permutate([A,B,C,D,E],[1,2,3,4,5]),
+    check(A,B,C,D,E).
+
+board(X) :-
+    (X =:= 1, write('OXXXX'),nl);
+    (X =:= 2, write('XOXXX'),nl);
+    (X =:= 3, write('XXOXX'),nl);
+    (X =:= 4, write('XXXOX'),nl);
+    (X =:= 5, write('XXXXO'),nl).
+
+check(A,B,C,D,E) :-
+    A-1 =\= B, A+1 =\= B,
+    A-2 =\= B, A+2 =\= C,
+    A-3 =\= B, A+3 =\= D,
+    A-4 =\= B, A+4 =\= E,
+    B-1 =\= C, B+1 =\= C,
+    B-2 =\= D, B+2 =\= D,
+    B-3 =\= E, B+3 =\= E,
+    C-1 =\= D, C+1 =\= D,
+    C-2 =\= E, C+2 =\= E,
+    D-1 =\= E, D+1 =\= E,
+    board(A), board(B), board(C), board(D), board(E).  
