@@ -34,7 +34,7 @@ int main (int argc, char *argv[]) {
 
   CORBA_Environment  ev[1];
   CORBA_exception_init(ev);
-	
+  
   server_init (&argc, argv, &global_orb, &root_poa, ev);
   etk_abort_if_exception(ev, "failed ORB init");
 
@@ -48,7 +48,7 @@ int main (int argc, char *argv[]) {
 
   etk_name_service_bind(name_service, servant, id, ev);
   etk_abort_if_exception(ev, "failed binding of service");
-	
+  
   server_run (global_orb, ev);
   etk_abort_if_exception(ev, "failed entering main loop");
 
@@ -57,4 +57,3 @@ int main (int argc, char *argv[]) {
 
   exit (0);
 }
-
