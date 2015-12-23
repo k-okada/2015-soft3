@@ -1,1 +1,2 @@
+/*got hint from http://stackoverflow.com/questions/10255703/how-to-rotate-lists-in-prolog*/
 my_rotate([X | Xs], Z) :- append(Xs, [X], Z).
