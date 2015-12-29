@@ -1,0 +1,11 @@
+OpenJDK 64-Bit Server VM (24.91-b01) for linux-amd64 JRE (1.7.0_91-b02), built on Nov 19 2015 06:14:37 by "buildd" with gcc 4.8.2
+Memory: 4k page, physical 16118244k(14042368k free), swap 16456700k(16456700k free)
+CommandLine flags: -XX:InitialHeapSize=257891904 -XX:MaxHeapSize=4126270464 -XX:+PrintGC -XX:+PrintGCTimeStamps -XX:+UseCompressedOops -XX:+UseParallelGC 
+0.132: [GC 63488K->49861K(241664K), 0.0447020 secs]
+0.244: [GC 113349K->101508K(305152K), 0.0573070 secs]
+0.440: [GC 228484K->100961K(305152K), 0.0076390 secs]
+0.578: [GC 227937K->205734K(459776K), 0.0972290 secs]
+0.675: [Full GC 205734K->114247K(595968K), 0.4268760 secs]
+1.369: [GC 368199K->324692K(595968K), 0.1664100 secs]
+1.536: [Full GC 324692K->128016K(761856K), 0.5098110 secs]
+2.318: [GC 381968K->333572K(1029120K), 0.1567210 secs]

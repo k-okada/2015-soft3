@@ -38,10 +38,10 @@ void *_ThreadStart(void *arg){
 
 bool do_delete = true;
 
-
+#include <boost/shared_ptr.hpp>
 typedef vector<int> Elem;
-typedef vector<int>* ElemPtr;
-typedef vector<ElemPtr>* ElemPtrVec;
+typedef boost::shared_ptr<Elem> ElemPtr;
+typedef boost::shared_ptr<vector<ElemPtr>> ElemPtrVec;
 
 class Mutator : public Thread {
   bool loop;
@@ -52,7 +52,7 @@ public:
   }
   void Execute(){
     while (loop) {
-      ElemPtrVec v = ElemPtrVec(new vector<ElemPtr>());
+      ElemPtrVec v = ElemPtrVec(vector<ElemPtr>());
       // mutator
       for (int k = 0; k < 2000; k++) {
 	v->push_back(ElemPtr(new Elem(1000000)));
