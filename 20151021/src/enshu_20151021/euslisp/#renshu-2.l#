@@ -40,7 +40,7 @@
 (setq (r . links) (list g1 s1))
 (setq (r . joint-list) (list j1))
 (send r :init-ending)
-
+\
 (objects (list r))
 (send *irtviewer* :draw-objects)
 ;; DO NOT EDIT AFTER THIS LINE
