@@ -4,10 +4,7 @@
 ;;;
 
 (ros::load-ros-manifest "roseus")
-;;;
 
-;;;
-;;;
 (ros::roseus "talker")
 (ros::advertise "chatter" std_msgs::string 1)
 (ros::rate 100)
