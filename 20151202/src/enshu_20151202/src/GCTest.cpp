@@ -5,6 +5,8 @@
 #include <string.h>
 #include <pthread.h>
 #include <sys/time.h>
+#include <boost/shared_ptr.hpp>
+
 
 using namespace std;
 
@@ -38,10 +40,9 @@ void *_ThreadStart(void *arg){
 
 bool do_delete = true;
 
-
 typedef vector<int> Elem;
-typedef vector<int>* ElemPtr;
-typedef vector<ElemPtr>* ElemPtrVec;
+typedef boost::shared_ptr<vector<int> > ElemPtr;
+typedef boost::shared_ptr<vector<ElemPtr> > ElemPtrVec;
 
 class Mutator : public Thread {
   bool loop;
@@ -54,17 +55,17 @@ public:
     while (loop) {
       ElemPtrVec v = ElemPtrVec(new vector<ElemPtr>());
       // mutator
-      for (int k = 0; k < 2000; k++) {
-	v->push_back(ElemPtr(new Elem(1000000)));
+      for (int k = 0; k < 1000; k++) {
+  v->push_back(ElemPtr(new Elem(1000000)));
       }
       //
 #if 0 // usually we need this
       if ( do_delete ) {
-	for (vector<ElemPtr>::iterator i = v->begin();
-	     i != v->end(); i++){
-	       delete (*i);
-	     }
-	delete v;
+  for (vector<ElemPtr>::iterator i = v->begin();
+       i != v->end(); i++){
+         delete (*i);
+       }
+  delete v;
       }
 #endif
       usleep(0);
@@ -110,16 +111,16 @@ class Sort : public Thread {
     for (int i = a->size()-1; --i>=0; ) {
       bool swapped = false;
       for (int j = 0; j<i; j++) {
-	if ((*a)[j] > (*a)[j+1]) {
-	  int T = (*a)[j];
-	  (*a)[j] = (*a)[j+1];
-	  (*a)[j+1] = T;
-	  swapped = true;
-	}
+  if ((*a)[j] > (*a)[j+1]) {
+    int T = (*a)[j];
+    (*a)[j] = (*a)[j+1];
+    (*a)[j+1] = T;
+    swapped = true;
+  }
       }
       if ( i % 10 == 0 ) print_arr(*a);
       if (!swapped)
-	return;
+  return;
     }
   }
   
@@ -164,4 +165,3 @@ int main(int argc, char *argv[]){
   return RUN_ALL_TESTS();
   return 0;
 }
-
