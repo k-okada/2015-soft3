@@ -6,6 +6,8 @@
 #include <pthread.h>
 #include <sys/time.h>
 
+#define USE_SHARED_PTR
+
 using namespace std;
 
 void *_ThreadStart(void *arg);
@@ -39,9 +41,16 @@ void *_ThreadStart(void *arg){
 bool do_delete = true;
 
 
+#ifndef USE_SHARED_PTR
 typedef vector<int> Elem;
 typedef vector<int>* ElemPtr;
 typedef vector<ElemPtr>* ElemPtrVec;
+#else
+#include <boost/shared_ptr.hpp>
+typedef vector<int> Elem;
+typedef boost::shared_ptr<vector<int> > ElemPtr;
+typedef boost::shared_ptr<vector<ElemPtr> > ElemPtrVec;
+#endif
 
 class Mutator : public Thread {
   bool loop;
@@ -58,7 +67,7 @@ public:
 	v->push_back(ElemPtr(new Elem(1000000)));
       }
       //
-#if 0 // usually we need this
+#ifndef USE_SHARED_PTR
       if ( do_delete ) {
 	for (vector<ElemPtr>::iterator i = v->begin();
 	     i != v->end(); i++){
