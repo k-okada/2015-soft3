@@ -5,6 +5,7 @@
 #include <string.h>
 #include <pthread.h>
 #include <sys/time.h>
+//#include <boost/shared_ptr.hpp>
 
 using namespace std;
 
@@ -37,11 +38,19 @@ void *_ThreadStart(void *arg){
 ///
 
 bool do_delete = true;
-
-
+//when use shared pointer -> #if0
+//when not use shared pointer ->#if1
+#if 0
 typedef vector<int> Elem;
 typedef vector<int>* ElemPtr;
 typedef vector<ElemPtr>* ElemPtrVec;
+#else
+#include <boost/shared_ptr.hpp>
+typedef vector<int> Elem;
+typedef boost::shared_ptr<vector<int> > ElemPtr;
+typedef boost::shared_ptr<vector<ElemPtr> > ElemPtrVec;
+#endif
+
 
 class Mutator : public Thread {
   bool loop;
@@ -53,12 +62,15 @@ public:
   void Execute(){
     while (loop) {
       ElemPtrVec v = ElemPtrVec(new vector<ElemPtr>());
+
+
       // mutator
       for (int k = 0; k < 2000; k++) {
 	v->push_back(ElemPtr(new Elem(1000000)));
       }
       //
-#if 0 // usually we need this
+
+#if 0 // usually we need this //do not need this when use shared pointer
       if ( do_delete ) {
 	for (vector<ElemPtr>::iterator i = v->begin();
 	     i != v->end(); i++){
@@ -139,12 +151,12 @@ public:
   }
 };
 
-#include <gtest/gtest.h>
+//#include <gtest/gtest.h>
 // Declare a test
-TEST(TestSuite, testCase1)
-{
+//TEST(TestSuite, testCase1)
+//{
   // dummy test
-}
+//}
 
 int main(int argc, char *argv[]){
   cout << argc << endl;
@@ -160,8 +172,8 @@ int main(int argc, char *argv[]){
   mutator->end();
   mutator->Join();
 
-  testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
+  //testing::InitGoogleTest(&argc, argv);
+  //return RUN_ALL_TESTS();
   return 0;
 }
 
