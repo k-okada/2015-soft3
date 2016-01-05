@@ -1,0 +1,16 @@
+#!/usr/bin/env prolog
+
+%check with ([1,2,3], [], [])
+%always move to ([], [1,2,3], [])
+
+%return the process
+%place name (a, b, c)
+
+%hanoi([number], [start], [goal], [the rest])
+
+hanoi(1, Start, Goal, Rest) :- format('~a to ~a~n', [Start, Goal]).
+hanoi(N1, Start, Goal, Rest) :- 
+	 N2 is N1-1,
+	 hanoi(N2, Start, Rest, Goal),
+	 format('~a to ~a~n', [Start, Goal]),
+	 hanoi(N2, Rest, Goal, Start).
