@@ -75,6 +75,10 @@ int main(int argc, char **argv)
 }
 ```
 
-5)
+5) できるようになった。
 
-6)
+6) move_baseノードから以下のトピックが提供されていたことから、このノードがactionlibサーバを立ち上げていることがわかる。
+/move_base/feedback
+/move_base/goal
+/move_base/result
+このノードについて調べると、ゴール地点が与えられた時にロボットの車体をそのゴール地点に移動させようとするノードであり、そのインタフェースとしてactionlibサーバを立ち上げていることがわかる。actionlibサーバにgoalとしてゴール地点を与えると、move_baseノードが車体の移動のさせ方を計算し、車体を移動し始める。feedbackとして車体の現在位置を返してくれる。また、resultは何も返さない。
