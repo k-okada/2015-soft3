@@ -1,0 +1,46 @@
+[[36mbeginner_tutorials[0m] [1m[34m==>[0m '[1m/home/mech-user/2015-soft3/20151007/build/beginner_tutorials/build_env.sh /usr/bin/make cmake_check_build_system[0m' [30m[1min[0m '[1m/home/mech-user/2015-soft3/20151007/build/beginner_tutorials[0m'[0m
+-- The C compiler identification is GNU 4.8.2
+-- The CXX compiler identification is GNU 4.8.2
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Using CATKIN_DEVEL_PREFIX: /home/mech-user/2015-soft3/20151007/build/devel
+-- Using CMAKE_PREFIX_PATH: /home/mech-user/2015-soft3/20151007/devel;/opt/ros/indigo
+-- This workspace overlays: /home/mech-user/2015-soft3/20151007/devel;/opt/ros/indigo
+-- Found PythonInterp: /usr/bin/python (found version "2.7.6") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/mech-user/2015-soft3/20151007/build/test_results
+-- Looking for include file pthread.h
+-- Looking for include file pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.6.11
+-- Using these message generators: gencpp;genlisp;genpy
+CMake Error at /opt/ros/indigo/share/actionlib_msgs/cmake/actionlib_msgs-extras.cmake:20 (message):
+  add_action_files() directory not found:
+  /home/mech-user/2015-soft3/20151007/src/action
+Call Stack (most recent call first):
+  CMakeLists.txt:71 (add_action_files)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/mech-user/2015-soft3/20151007/build/CMakeFiles/CMakeOutput.log".
+See also "/home/mech-user/2015-soft3/20151007/build/CMakeFiles/CMakeError.log".
+make: *** [cmake_check_build_system]  1
+[[36mbeginner_tutorials[0m] [1m[31m<==[0m '[1m/home/mech-user/2015-soft3/20151007/build/beginner_tutorials/build_env.sh /usr/bin/make cmake_check_build_system[0m' [31mfailed with return code[0m '[1m2[0m'[0m
