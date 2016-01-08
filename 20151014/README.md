@@ -31,5 +31,37 @@
     	    (periods_rec (- n 1)))
         (format t "~%")))
 
+2)
+ (反復)
+    (defun count_a_iter (lst)
+      (setq count 0)
+      (dolist (x lst)
+        (if (eql x 'a) (setq count (+ count 1)) nil))
+      count)
+
+ (再帰)
+    (defun count_a_rec (lst)
+      (if (atom lst) 0
+        (+ (count_a_rec (cdr lst))
+           (if (eql 'a (car lst)) 1 0))))
+
+## summit修正
+
+1) (remove nil lst)の結果をlstに戻していないため、+がnilにも適用されてエラーとなる
+
+    (defun summit (lst)
+      (setq lst
+        (remove nil lst))
+      (apply #'+ lst))
+
+2) lstが空になった判別を行わず、そのまま再帰呼び出しを続けているため、無限回呼び出しとなってSegmetation Faultとなる
+
+    (defun summit (lst)
+      (if (atom lst) 0
+        (let ((x (car lst)))
+          (if (null x)
+              (summit (cdr lst))
+            (+ x (summit (cdr lst)))))))
+
 
 
