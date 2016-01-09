@@ -1,11 +1,16 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(enshu_20151021)
+project(beginner_tutorials)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  euslisp
+  geometry_msgs
+  message_generation
+  message_runtime
+  roscpp
+  rospy
+  std_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -65,7 +70,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
 #   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
+#   geometry_msgs#   std_msgs
 # )
 
 ################################################
@@ -97,10 +102,12 @@ find_package(catkin REQUIRED COMPONENTS
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
+add_message_files(FILES Hello.msg)
+generate_messages(DEPENDENCIES geometry_msgs)
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES enshu_20151021
-#  CATKIN_DEPENDS euslisp
+#  LIBRARIES beginner_tutorials
+#  CATKIN_DEPENDS geometry_msgs message_generation message_runtime roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 
@@ -116,24 +123,24 @@ include_directories(
 )
 
 ## Declare a C++ library
-# add_library(enshu_20151021
-#   src/${PROJECT_NAME}/enshu_20151021.cpp
+# add_library(beginner_tutorials
+#   src/${PROJECT_NAME}/beginner_tutorials.cpp
 # )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(enshu_20151021 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(beginner_tutorials ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-# add_executable(enshu_20151021_node src/enshu_20151021_node.cpp)
+# add_executable(beginner_tutorials_node src/beginner_tutorials_node.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(enshu_20151021_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(beginner_tutorials_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(enshu_20151021_node
+# target_link_libraries(beginner_tutorials_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -152,7 +159,7 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS enshu_20151021 enshu_20151021_node
+# install(TARGETS beginner_tutorials beginner_tutorials_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -177,10 +184,15 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_enshu_20151021.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_beginner_tutorials.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+add_executable(listener src/listener.cpp)
+target_link_libraries(listener ${catkin_LIBRARIES})
+add_executable(listener2 src/listener2.cpp)
+target_link_libraries(listener2 ${catkin_LIBRARIES})
