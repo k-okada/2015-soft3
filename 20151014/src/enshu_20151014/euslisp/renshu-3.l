@@ -19,18 +19,20 @@
 
 (lisp::install-error-handler 'unittest-error)
 
-;; 
+;; removeは破壊的変更でないので、setqを使ってnilを取り除いたものを操作する必要がある 
 (defun summit (lst)
-  (remove nil lst)
-  (apply #'+ lst))
+  (setq tmp (remove nil lst))
+  (apply #'+ tmp)
+)
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
-
+;; 無限ループになってしまうので、lstが空のとき再帰を止める
 (defun summit (lst)
   (let ((x (car lst)))
+    (if (null lst) 0
     (if (null x)
         (summit (cdr lst))
-      (+ x (summit (cdr lst))))))
+      (+ x (summit (cdr lst)))))))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
