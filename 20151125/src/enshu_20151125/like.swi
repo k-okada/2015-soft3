@@ -3,6 +3,15 @@
 % check with
 % prolog -f ./like.swi -t 'like(X,Y).'
 
+like(taro, coffee).
+like(hanako, tea).
+like(taro, cocoa).
+
+fly(X) :- airplane(X).
+fly(Y) :- superman(X).
+airplane(jet_plane).
+superman(taro).
+
 
 
 
