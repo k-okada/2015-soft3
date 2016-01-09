@@ -30,12 +30,11 @@
     (dolist (i lst) 
       (when (eq i 'a) 
 	(setq sum (+ sum 1))))sum))
-
 (defun hasa-2 (lst)
   (if (null lst)
       0
     (if (eq (car lst) 'a)
-	(+ 1 (hasa-2 (cdr lst)))
+	(+ 1 hasa-2 (cdr lst))
       (hasa-2 (cdr lst)))))
 ;; 
 (assert (eq (hasa-1 '(a b c d a)) 2) "mondai 2")
