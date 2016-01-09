@@ -1,9 +1,3 @@
-/* << echo-server.c >>
- * echo-server program. Hacked from Echo test suite by
- * <birney@sanger.ac.uk>, ORBit2 udpate by Frank Rehberger
- * <F.Rehberger@xtradyne.de>
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -13,48 +7,47 @@
 #include "echo-skelimpl.c"
 #include "examples-toolkit.h"
 
-CORBA_ORB          global_orb = CORBA_OBJECT_NIL; /* global orb */
-PortableServer_POA root_poa   = CORBA_OBJECT_NIL; /* root POA */
+CORBA_ORB          global_orb = CORBA_OBJECT_NIL;
+PortableServer_POA root_poa   = CORBA_OBJECT_NIL;
 
-CORBA_Object server_activate_service(CORBA_ORB orb, PortableServer_POA  poa,
-                                     CORBA_Environment  *ev) {
-  EchoApp_Echo  ref = CORBA_OBJECT_NIL; 
+CORBA_Object server_activate_service(CORBA_ORB orb, PortableServer_POA poa,
+				     CORBA_Environment *ev) {
+  EchoApp_Echo ref = CORBA_OBJECT_NIL;
 
-  ref = impl_EchoApp_Echo__create (poa, ev);
-  if (etk_raised_exception(ev))
+  ref = impl_EchoApp_Echo__create (poa,ev);
+  if(etk_raised_exception(ev))
     return CORBA_OBJECT_NIL;
   return ref;
 }
 
-int main (int argc, char *argv[]) {
+int main(int argc, char *argv[]){
   CORBA_Object servant = CORBA_OBJECT_NIL;
   CosNaming_NamingContext name_service = CORBA_OBJECT_NIL;
-
+  
   gchar *id[] = {"EchoApp", "Echo", NULL};
-
-  CORBA_Environment  ev[1];
+  
+  CORBA_Environment ev[1];
   CORBA_exception_init(ev);
-	
+
   server_init (&argc, argv, &global_orb, &root_poa, ev);
-  etk_abort_if_exception(ev, "failed ORB init");
+  etk_abort_if_exception(ev, "failerd ORB init");
 
-  servant = server_activate_service (global_orb, root_poa, ev);
+  servant = server_activate_service(global_orb, root_poa, ev);
   etk_abort_if_exception(ev, "failed activating service");
+  
+  g_print("Binding service reference from name-service with id\"%s\"\n", id[0]);
 
-  g_print ("Binding service reference from neme-service with id\"%s\"\n", id[0]);
+  name_service = etk_get_name_service(global_orb, ev);
+  etk_abort_if_exception(ev, "failed resolving name-service");
 
-  name_service = etk_get_name_service (global_orb, ev);
-  etk_abort_if_exception(ev, "failed resolveing name-service");
-
-  etk_name_service_bind(name_service, servant, id, ev);
+  etk_name_service_bind(name_service, servant,id, ev);
   etk_abort_if_exception(ev, "failed binding of service");
-	
-  server_run (global_orb, ev);
+
+  server_run(global_orb, ev);
   etk_abort_if_exception(ev, "failed entering main loop");
 
-  server_cleanup (global_orb, root_poa, servant, ev);
+  server_cleanup(global_orb, root_poa, servant, ev);
   etk_abort_if_exception(ev, "failed cleanup");
 
-  exit (0);
+  exit(0);
 }
-
