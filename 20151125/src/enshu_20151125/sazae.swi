@@ -1,0 +1,24 @@
+parent_of(X,Y) :-father_of(X,Y).
+parent_of(X,Y) :-mother_of(X,Y).
+grand_parent_of(X,Y) :-parent_of(Z,Y),father_of(X,Z).
+grand_parent_of(X,Y) :-parent_of(Z,Y),mother_of(X,Z).
+sun_of(X,Y) :- parent_of(Y,X),male(X).
+daughter_of(X,Y) :- parent_of(Y,X),female(X).
+
+male(namihei).
+male(katuo).
+male(masuo).
+male(tarao).
+female(hune).
+female(wakame).
+female(sazae).
+father_of(namihei,katuo).
+father_of(namihei,wakame).
+father_of(namihei,sazae).
+father_of(masuo,tarao).
+mother_of(hune,katuo).
+mother_of(hune,wakame).
+mother_of(hune,sazae).
+mother_of(sazae,tarao).
+wife_of(sazae,masuo).
+husband(masuo,sazae).
