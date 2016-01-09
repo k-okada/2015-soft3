@@ -1,0 +1,23 @@
+import EchoApp.*;
+import org.omg.CosNaming.*;
+import org.omg.CosNaming.NamingContextPackage.*;
+import org.omg.CORBA.*;
+
+public class EchoClient{
+    public static void main(String argv[]){
+	try{
+	    ORB orb=orb.init(args,null);	    
+	    org.omg.CORBA.Object objref = orb.resolve_initial_reference("NameService");
+	    NamingContextExt ncRef=NamingContextExtHelper.narrow(objref);
+
+	    String name="EchoApp/Echo";
+	    echoImpl=EchoHelper.narrow(ncRef.resolve_str(name));
+	    System.out.println("Obtained a handle on server object: " + echoImpl);
+	    echoImpl.echoString("hello world this is test");
+	}
+	catch(Exception e){
+	    System.err.println("ERROR: " + e);
+	    e.printStackTrace(System.out);
+	}
+    }
+}
