@@ -21,8 +21,7 @@
 
 ;; 
 (defun summit (lst)
-  (remove nil lst)
-  (apply #'+ lst))
+  (apply #'+ (remove nil lst)))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
