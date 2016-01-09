@@ -1,0 +1,10 @@
+tarai(X, Y, Z, Y) :- X =< Y.
+
+tarai(X, Y, Z, V) :-
+	 X1 is X - 1,
+	 tarai(X1, Y, Z, V1),
+	 Y1 is Y - 1,
+	 tarai(Y1, Z, X, V2),
+	 Z1 is Z - 1,
+	 tarai(Z1, X, Y, V3),
+	 tarai(V1, V2, V3, V).
