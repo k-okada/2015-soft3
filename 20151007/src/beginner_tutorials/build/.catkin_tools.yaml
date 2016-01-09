@@ -1,0 +1,6 @@
+devel_space: /home/mech-user/2015-soft3/20151007/src/beginner_tutorials/devel
+install: false
+install_space: /home/mech-user/2015-soft3/20151007/src/beginner_tutorials/install
+profile: default
+source_space: /home/mech-user/2015-soft3/20151007/src/beginner_tutorials/src
+workspace: /home/mech-user/2015-soft3/20151007/src/beginner_tutorials
