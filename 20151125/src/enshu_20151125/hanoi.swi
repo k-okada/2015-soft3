@@ -1,0 +1,6 @@
+hanoi(1, From, To, Via) :- format('1 : ~a to ~a~n', [From, To]).
+hanoi(N, From, To, Via) :- 
+	   N1 is N - 1, 
+	   hanoi(N1, From, Via, To), 
+	   format('~d : ~a to ~a~n', [N, From, To]), 
+           hanoi(N1, Via, To, From). 

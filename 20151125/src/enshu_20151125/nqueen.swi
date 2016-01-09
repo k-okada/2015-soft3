@@ -1,0 +1,26 @@
+notconflict([],Y,N):- true.
+
+notconflict([X|State],Y,N):-
+	not(N =:= abs(X - Y); X =:= Y)->
+	N1 is N+1, notconflict(State,Y,N1).
+	
+check(State, Y):- notconflict(State,Y,1).
+
+
+makelist(1,[1]).
+
+makelist(N,List):- N1 is N-1, makelist(N1, List1), append(List1,[N],List).
+
+
+
+nqueen(N,F):- makelist(N,List), setqueen([],List,F).
+
+setqueen(State,List,F):-
+	select(Y,List,Rest),
+	check(State,Y),
+	setqueen([Y|State],Rest,F).
+
+setqueen(State, [], State).
+
+
+f_nqueen(N,F):- nqueen(N,F), write(F), nl, fail.
