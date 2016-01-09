@@ -7,7 +7,7 @@
 
 
 ;; 1
-(defun dot-1 (n) 
+(defun dot-1 (n)
   (do ((i 0 (+ i  1)))
       ((> i n) 'done)
       (print '.)))
