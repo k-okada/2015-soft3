@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "workspace")
+set(workspace_MAINTAINER "mech-user <mech-user@todo.todo>")
+set(workspace_DEPRECATED "")
+set(workspace_VERSION "0.0.0")
+set(workspace_BUILD_DEPENDS "geometry_msgs" "kobuki_msgs" "message_generation" "roscpp" "rospy" "std_msgs")
+set(workspace_RUN_DEPENDS "geometry_msgs" "kobuki_msgs" "message_runtime" "roscpp" "rospy" "std_msgs")
+set(workspace_BUILDTOOL_DEPENDS "catkin")

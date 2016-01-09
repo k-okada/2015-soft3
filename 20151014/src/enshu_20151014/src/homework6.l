@@ -1,0 +1,11 @@
+;(defun summit (lst)
+;  (let ((x (car lst)))
+;    (if (null x)
+;        (summit (cdr lst))
+;      (+ x (summit (cdr lst))))))
+(defun summit (lst)
+  (if (atom lst) 0
+    (let ((x (car lst)))
+      (if (null x)
+	  (summit (cdr lst))
+	(+ x (summit (cdr lst)))))))

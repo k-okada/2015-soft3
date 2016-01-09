@@ -8,8 +8,16 @@
 
 ;; 1
 (defun dot-1 (n)
+  (do ((i n (- i 1)))
+      ((= i 0) (format t "~%"))
+      (format t "."))
   t)
 (defun dot-2 (n)
+  (if (> n 0)
+      (progn
+	(format t ".")
+	(dot-2 (- n 1)))
+    (format t "~%"))
   t)
 ;; 
 (assert (dot-1 3) "mondai 1")
@@ -17,9 +25,15 @@
 
 ;; 2
 (defun hasa-1 (lst)
-  0)
+  (setq count 0)
+  (dolist (x lst)
+    (if (eql x 'a)
+	(setq count (+ count 1)) nil))
+  count)
 (defun hasa-2 (lst)
-  0)
+  (if (atom lst) 0
+    (+ (hasa-2 (cdr lst))
+       (if (eql 'a (car lst)) 1 0))))
 ;; 
 (assert (eq (hasa-1 '(a b c d a)) 2) "mondai 2")
 (assert (eq (hasa-2 '(a b c d a)) 2) "mondai 2")

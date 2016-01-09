@@ -1,0 +1,5 @@
+(setq s (connect-server "www.jsk.t.u-tokyo.ac.jp" 80))
+(format s "GET / HTTP1.1~%")
+(format s "~%")
+(read-line s nil)
+(while (setq l (read-line s nil)) (print l))

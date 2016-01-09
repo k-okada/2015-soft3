@@ -1,0 +1,6 @@
+; (defun summit (lst)
+;    (remove nil lst)
+;    (apply #'+ lst))
+(defun summit (lst)
+  (setq lst (remove nil lst))
+  (apply #'+ lst))

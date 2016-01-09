@@ -1,0 +1,8 @@
+prefix=/home/mech-user/git/2015-soft3/20151014/install
+
+Name: workspace
+Description: Description of workspace
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mech-user/git/2015-soft3/20151014/install/lib 
+Requires: 
