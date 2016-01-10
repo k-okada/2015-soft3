@@ -1,12 +1,3 @@
-#!/usr/bin/env irteusgl
-
-(load "lib/llib/unittest.l")
-(init-unit-test)
-(send *unit-test* :clear-result)
-;; DO NOT EDIT BEFORE THIS LINE
-
-;; 2)
-;; サーボモジュールを参考に直動ジョイント(linear-joint)を使ったアクチュエータを作ってみよ．
 (defun make-servo nil
 	(let (b1 b2)
 		(setq b1 (make-cube 35 20 46))
@@ -18,7 +9,7 @@
 		b1))
 
 (defun make-hinji nil
-	(let ((b2 (make-cube 100 16 58)) (b1 (make-cube 110 20 54)))
+	(let ((b2 (make-cube 22 16 58)) (b1 (make-cube 26 20 54)))
 		(send b2 :locate #f(-4 0 0))
 		(setq b2 (body- b2 b1))
 		(send b1 :set-color :gray80)
@@ -26,7 +17,7 @@
 
 (setq h1 (instance bodyset-link :init (make-cascoords) :bodies (list (make-hinji))))
 (setq s1 (instance bodyset-link :init (make-cascoords) :bodies (list (make-servo))))
-(setq j1 (instance linear-joint :init :parent-link h1 :child-link s1 :axis :x))
+(setq j1 (instance rotational-joint :init :parent-link h1 :child-link s1 :axis :z))
 (setq r (instance cascaded-link :init))
 (send r :assoc h1)
 (send h1 :assoc s1)
@@ -39,12 +30,3 @@
 (dotimes (i 50)
 	(send r :angle-vector (float-vector i))
 	(send *irtviewer* :draw-objects))
-
-
-;; DO NOT EDIT AFTER THIS LINE
-(send *unit-test* :print-result)
-(exit 1)
-
-
-
-
