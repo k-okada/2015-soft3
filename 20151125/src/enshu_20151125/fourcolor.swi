@@ -1,0 +1,12 @@
+colormap(A, B, C, D, E, F, G) :-
+      select(A, [green, blue, red, yellow], As),
+      select(B, [green, blue, red, yellow], Bs),
+      select(C, [green, blue, red, yellow], Cs),
+      select(D, [green, blue, red, yellow], Ds),
+      select(E, [green, blue, red, yellow], Es),
+      select(F, [green, blue, red, yellow], Fs),
+      select(G, [green, blue, red, yellow], Gs),
+       A\==B, A\==C, A\==D, A\==E,
+       B\==C, C\==D, D\==E, E\==B,
+       F\==B, F\==C, F\==D, F\==G,
+       G\==D, G\==E, G\==B.
