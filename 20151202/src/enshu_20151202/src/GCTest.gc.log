@@ -1,0 +1,11 @@
+Java HotSpot(TM) 64-Bit Server VM (24.80-b11) for linux-amd64 JRE (1.7.0_80-b15), built on Apr 10 2015 19:53:14 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+Memory: 4k page, physical 16118244k(11073220k free), swap 16456700k(16456700k free)
+CommandLine flags: -XX:InitialHeapSize=257891904 -XX:MaxHeapSize=4126270464 -XX:+PrintGC -XX:+PrintGCTimeStamps -XX:+UseCompressedOops -XX:+UseParallelGC 
+0.121: [GC 63488K->49877K(241664K), 0.0534560 secs]
+0.246: [GC 113365K->101410K(305152K), 0.0785200 secs]
+0.471: [GC 228386K->100882K(305152K), 0.0084500 secs]
+0.615: [GC 227858K->205744K(461824K), 0.1163010 secs]
+0.731: [Full GC 205744K->114238K(575488K), 0.5721170 secs]
+1.587: [GC 368190K->324690K(581120K), 0.2124480 secs]
+1.799: [Full GC 324690K->128006K(743936K), 0.5150340 secs]
+2.591: [GC 381958K->334142K(1010176K), 0.1646480 secs]
