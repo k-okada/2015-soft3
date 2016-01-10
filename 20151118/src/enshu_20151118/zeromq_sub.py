@@ -10,4 +10,5 @@ subscriber.setsockopt(zmq.SUBSCRIBE, "4")
  
 while True:
     message = subscriber.recv()
-    print message
+    print message 
+
