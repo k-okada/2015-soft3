@@ -58,7 +58,7 @@ public:
 	v->push_back(ElemPtr(new Elem(1000000)));
       }
       //
-#if 0 // usually we need this
+#if 1 // usually we need this
       if ( do_delete ) {
 	for (vector<ElemPtr>::iterator i = v->begin();
 	     i != v->end(); i++){
