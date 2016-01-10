@@ -1,1 +1,0 @@
-/usr/bin/c++       CMakeFiles/GCTest.dir/src/GCTest.cpp.o  -o /home/mech-user/2015-soft3/20151202/devel/lib/enshu_20151202/GCTest -rdynamic -lpthread gtest/libgtest.so -lpthread -Wl,-rpath,/home/mech-user/2015-soft3/20151202/build/enshu_20151202/gtest 
