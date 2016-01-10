@@ -21,16 +21,19 @@
 
 ;; 
 (defun summit (lst)
-  (remove nil lst)
-  (apply #'+ lst))
+  (setq buf (remove nil lst)) 
+  (apply #'+ buf))
+;;remove does not chage the lst itself but only processes a modified array, so the new array have to be set into another variable.
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 (defun summit (lst)
-  (let ((x (car lst)))
-    (if (null x)
-        (summit (cdr lst))
-      (+ x (summit (cdr lst))))))
+  (if (eq lst nil) 0
+    (let ((x (car lst)))
+      (if (null x)
+	  (summit (cdr lst))
+	(+ x (summit (cdr lst)))))))
+;;The behavior when the lst is nil is not defined, so the last value in the recursive process is not yielded, which cause the process not to come to the end. 
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
