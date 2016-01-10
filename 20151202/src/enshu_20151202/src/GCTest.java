@@ -2,7 +2,7 @@ import java.util.*;
 
 class Mutator extends Thread {
   boolean loop = true;
-  
+
   public void run() {
     while ( loop ) {
       Vector v = new Vector();
@@ -20,7 +20,7 @@ class Mutator extends Thread {
       v = null;
     }
   }
-    
+
   public void end() {
     loop = false;
   }
@@ -83,7 +83,7 @@ class Sort extends Thread {
     System.out.println("** done Sort ********");
   }
 }
-	
+
 class GCTest {
 
   public static void main(String[] args) {
@@ -100,4 +100,3 @@ class GCTest {
     }
   }
 }
-
