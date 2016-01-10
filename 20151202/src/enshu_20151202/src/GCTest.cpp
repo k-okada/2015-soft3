@@ -5,6 +5,8 @@
 #include <string.h>
 #include <pthread.h>
 #include <sys/time.h>
+#include <gtest/gtest.h>
+#include <boost/shared_ptr.hpp>
 
 using namespace std;
 
@@ -40,8 +42,10 @@ bool do_delete = true;
 
 
 typedef vector<int> Elem;
-typedef vector<int>* ElemPtr;
-typedef vector<ElemPtr>* ElemPtrVec;
+//typedef vector<int>* ElemPtr;
+//typedef vector<ElemPtr>* ElemPtrVec;
+typedef boost::shared_ptr<int>* SPtr;
+typedef vector<SPtr>* SPtrVec;
 
 class Mutator : public Thread {
   bool loop;
@@ -52,18 +56,18 @@ public:
   }
   void Execute(){
     while (loop) {
-      ElemPtrVec v = ElemPtrVec(new vector<ElemPtr>());
+      SPtrVec v = SPtrVec(new vector<SPtr>());
       // mutator
-      for (int k = 0; k < 2000; k++) {
-	v->push_back(ElemPtr(new Elem(1000000)));
+      for (int k = 0; k < 1000; k++) {
+	v->push_back(SPtr(new Elem(1000000)));
       }
       //
 #if 0 // usually we need this
       if ( do_delete ) {
 	for (vector<ElemPtr>::iterator i = v->begin();
 	     i != v->end(); i++){
-	       delete (*i);
-	     }
+	  delete (*i);
+	}
 	delete v;
       }
 #endif
@@ -84,7 +88,7 @@ class Sort : public Thread {
   float time;
 
   void print_arr(vector<int> a){
-    for (int i = 0; i< a.size(); i+=1000) {
+    for (int i = 0; i< a.size(); i+=300) {
       cout << a[i];
     }
     gettimeofday(&tv, &tz);
@@ -127,7 +131,7 @@ public:
   vector<int> arr;
   Sort(){}
   void Setup (){
-    arr.resize(50000);
+    arr.resize(25000);
   }
   void Execute(){
     cout << "** start Sort *****" << endl;
@@ -139,7 +143,7 @@ public:
   }
 };
 
-#include <gtest/gtest.h>
+
 // Declare a test
 TEST(TestSuite, testCase1)
 {
