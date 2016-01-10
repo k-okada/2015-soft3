@@ -1,12 +1,3 @@
-#!/usr/bin/env irteusgl
-
-(load "lib/llib/unittest.l")
-(init-unit-test)
-(send *unit-test* :clear-result)
-;; DO NOT EDIT BEFORE THIS LINE
-
-;; 3)
-;; ascaded-linkを使ったモデルを作成せよ．ロボットに限らず可動構造を持つものであれば（例えば家具等）何でもよい．
 (defclass ufo-robot
 	:super cascaded-link
 	:slots (end-coords l1 l2 l3 l4 j1 j2 j3))
@@ -83,12 +74,3 @@
 	(x::window-main-one)
 	(send *irtviewer* :draw-objects :flush nil)
 	(send c :draw-on :flush t))
-
-
-;; DO NOT EDIT AFTER THIS LINE
-(send *unit-test* :print-result)
-(exit 1)
-
-
-
-
