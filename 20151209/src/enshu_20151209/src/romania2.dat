@@ -1,0 +1,20 @@
+# Romanian Cities and Road Network Graph
+Oradea 380 Zerind 71 Sibiu 151
+Arad 366 Zerind 71 Sibiu 140 Timisoara 118
+Zerind 374 Arad 75 Oradea 71
+Timisoara 329 Arad 118 Lugoj 111
+Sibiu 253 Oradea 151 Arad 140 Fagaras 99 Rimnicu-Vilcea 80
+Lugoj 244 Timisoara 111 Mehadia 70
+Mehadia 241 Lugoj 70 Dobreta 75
+Dobreta 242 Mehadia 75 Craiova 120
+Craiova 160 Rimnicu-Vilcea 146 Pitesti 138 Dobreta 120
+Pitesti 100 Rimnicu-Vilcea 97 Craiova 138 Bucharest 101
+Rimniu-Vilcea 193 Sibiu 80 Craiova 146 Pitesti 97
+Fagaras 176 Sibiu 99 Bucharest 211
+Bucharest 0 Fagaras 211 Giurgiu 90 Urziceni 85 Pitesti 101
+Giurgiu 77 Bucharest 90
+Urziceni 80 Bucharest 85 Hirsova 98 Vaslui 142
+Vaslui 199 Iasi 92 Urziceni 142
+Iasi 227 Neamt 87 Vaslui 92
+Naemt 234 Iasi 87
+Hirsova 151 Urziceni 98 Eforie
