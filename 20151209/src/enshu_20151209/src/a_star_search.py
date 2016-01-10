@@ -1,7 +1,7 @@
 # encoding: utf-8
+# solve 8puzzle
 
 from heapq import heappush, heappop
-
 
 class Node():
     def __init__(self,state,parent,operator,depth,path_cost):
@@ -84,7 +84,7 @@ def astar():
     return sol, times
 
 
-
+#manhatan距離を求める
 def h(state_array):
     manhattan = 0
     for i in state_array:
@@ -94,7 +94,7 @@ def h(state_array):
         manhattan += abs(x - goal_x) + abs(y - goal_y)
     return manhattan
 
-
+#空のマスをスライド可能なx,y座標を求める
 def next_XYs(x,y):
     next_XYs = [[x,y]]
 
@@ -109,7 +109,7 @@ def next_XYs(x,y):
 
     return next_XYs
 
-
+#arrayの添字からx,y座標への変換
 def calc_XY(index):
     x = index % board_size
     y = index / board_size
