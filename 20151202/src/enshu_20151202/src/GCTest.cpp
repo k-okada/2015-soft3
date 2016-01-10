@@ -5,6 +5,8 @@
 #include <string.h>
 #include <pthread.h>
 #include <sys/time.h>
+#include <gtest/gtest.h>
+#include <boost/shared_ptr.hpp>
 
 using namespace std;
 
@@ -40,8 +42,10 @@ bool do_delete = true;
 
 
 typedef vector<int> Elem;
-typedef vector<int>* ElemPtr;
-typedef vector<ElemPtr>* ElemPtrVec;
+//typedef vector<int>* ElemPtr;
+//typedef vector<ElemPtr>* ElemPtrVec;
+typedef boost::shared_ptr<int>* Share;
+typedef vector<Share>* ShareVec;
 
 class Mutator : public Thread {
   bool loop;
@@ -49,24 +53,25 @@ public:
   Mutator(){}
   void Setup (){
     loop = true;
-  }
+  };
   void Execute(){
     while (loop) {
-      ElemPtrVec v = ElemPtrVec(new vector<ElemPtr>());
-      // mutator
-      for (int k = 0; k < 2000; k++) {
-	v->push_back(ElemPtr(new Elem(1000000)));
+      //      ElemPtrVec v = ElemPtrVec(new vector<ElemPtr>());
+      ShareVec v = ShareVec(new vector<Share>());
+      for (int k = 0; k < 1000; k++) {
+        v->push_back(Share(new Elem(1000000)));
       }
-      //
-#if 0 // usually we need this
-      if ( do_delete ) {
+
+      // mutator
+      /*    if ( do_delete ) {
 	for (vector<ElemPtr>::iterator i = v->begin();
 	     i != v->end(); i++){
 	       delete (*i);
 	     }
 	delete v;
       }
-#endif
+      */
+    //#endif
       usleep(0);
       cout << '\b' << "-";
     }
@@ -139,7 +144,6 @@ public:
   }
 };
 
-#include <gtest/gtest.h>
 // Declare a test
 TEST(TestSuite, testCase1)
 {
