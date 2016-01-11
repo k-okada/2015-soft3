@@ -20,16 +20,29 @@
 (lisp::install-error-handler 'unittest-error)
 
 ;; 
+;;(remove nil lst)ではlstからnillを取り除いたものが返り値となるだけで、lstそのものは変更されないため、nilが残って足し算がうまく行かなかった。
+;;(defun summit (lst)
+;;  (remove nil lst)
+;;  (apply #'+ lst))
+;;以下のように変更すれば良い。
 (defun summit (lst)
-  (remove nil lst)
-  (apply #'+ lst))
+  (apply #'+ (remove nil lst)))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
+;;lstが空になると(null x)がずっとtのままとなり、無限ループに入るため正しく動かない。
+;;(defun summit (lst)
+;;  (let ((x (car lst)))
+;;    (if (null x)
+;;        (summit (cdr lst))
+;;      (+ x (summit (cdr lst))))))
+;;以下のように変更すれば良い。
 (defun summit (lst)
-  (let ((x (car lst)))
+  (let ((x (car lst))(y (cdr lst)))
     (if (null x)
-        (summit (cdr lst))
+        (if y
+	     (summit (cdr lst))
+	   0)
       (+ x (summit (cdr lst))))))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
