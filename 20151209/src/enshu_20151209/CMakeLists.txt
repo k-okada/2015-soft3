@@ -5,3 +5,4 @@ find_package(catkin REQUIRED COMPONENTS)
 catkin_package()
 
 add_executable(graphsearch src/graphsearch.cpp)
+add_executable(informedsearch src/informedsearch.cpp)
