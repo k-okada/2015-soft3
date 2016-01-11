@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+from datetime import datetime
 import zmq
 import time
 context = zmq.Context()
@@ -9,7 +9,7 @@ publisher.bind ("tcp://127.0.0.1:8888")
  
 i = 0
 while True:
-    message = str(i) + " hello world"
+    message = str(datetime.now()) + "current time"
     print(message)
     publisher.send (message)
     i = 0 if ( i >= 10) else i + 1
