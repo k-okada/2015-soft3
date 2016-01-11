@@ -1,0 +1,15 @@
+first([X | Ys],X).
+rest([X | Ys],Ys).
+add_to_list(X,L,[X | L]).
+retrieve(1,[X | Ls],X).
+retrieve(N,[Y | Ls],X) :- N > 1, N1 is N-1,retrieve(N1,Ls,X).
+insert_at(1,X,Ls,[X | Ls]).
+insert_at(N,X,[Y | Ls],[Y | Zs]) :- N > 1,N1 is N-1,insert_at(N1,X,Ls,Zs).
+remove_at(0,[X | Ls],Ls).
+remove_at(N,[X | Ls],[X | Zs]) :- N > 0,N1 is N-1,remove_at(N1,Ls,Zs).
+my_length([],0).
+my_length([X | Ls],N) :- my_length(Ls,N1),N is N1 + 1.
+my_append([],Xs,Xs).
+my_append([X | Ls], Ys,[X | Zs]) :- my_append(Ls,Ys,Zs).
+my_reverse([],[]).
+my_reverse([X | Xs],Ys) :- my_reverse(Xs,Zs),append(Zs,[X],Ys).
