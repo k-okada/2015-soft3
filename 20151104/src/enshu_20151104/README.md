@@ -1,0 +1,1 @@
+Cameraの場合はRvizが/usb_cam/camera_infoというtopicをsubscribeしており、ここからtfなどの情報を得ていると考えられる。一方Imageの場合はそのtopicがsubscribeされないためImageの座標情報が分からず、tf情報のオーバーレイはできない
