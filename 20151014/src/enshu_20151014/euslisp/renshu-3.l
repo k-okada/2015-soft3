@@ -22,7 +22,7 @@
 ;; 
 (defun summit (lst)
   (remove nil lst)
-  (apply #'+ lst))
+  (apply #'+ (remove nil lst))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
@@ -30,7 +30,7 @@
   (let ((x (car lst)))
     (if (null x)
         (summit (cdr lst))
-      (+ x (summit (cdr lst))))))
+      (+ (or (car lst) 0) (summit (cdr lst))))))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
