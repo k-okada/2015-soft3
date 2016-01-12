@@ -1,0 +1,22 @@
+#!/usr/bin/env prolog
+
+%最初は左上の端に配置
+%必ず一つの行（列）に一つ配置される
+%場所を決めるごとにルールに外れていないかチェックする
+
+%queen([1,2,3,4,5,6,7,8], [], 1) から始める。2行目以降の列を決めていくイメージ。簡単のため右から一列目と入れていく。
+%二項目が決まった配列。第三項目は今はどこ決めているか。
+%Qが(i,j)にあったとする。(_,j),(i+a,j+a),(i+a,j-a)には置けない
+
+queen(Q) :- queen_([1,2,3,4,5,6,7,8], [], Q).
+
+attack(X, A) :- attack_(X, 1, A).
+attack_(X, N, [Y|Ys]) :- (X =:= Y+N ; X =:= Y-N).
+attack_(X, N, [Y|Ys]) :- N1 is N+1, attack_(X, N1, Ys).
+
+queen_(L, A, Q) :- 
+	  select(X, L, Rest),
+	  not(attack(X, A)),
+	  queen_(Rest, [X | A], Q).
+queen_([], Q, Q).
+ 
