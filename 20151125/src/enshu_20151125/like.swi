@@ -6,3 +6,14 @@
 
 
 
+%like(taro,coffee).
+%like(hanako,tea).
+%like(taro,cocoa).
+
+head :- goal1, goal2, ..., goalN.
+
+fly(X) :- airplane(X).
+fly(X) :- superman(X).
+airplane(jet_plane).
+airplane(helicopter).
+superman(taro).

@@ -5,6 +5,8 @@
 #include <string.h>
 #include <pthread.h>
 #include <sys/time.h>
+//#include <gtest/gtest.h>
+#include <boost/shared_ptr.hpp>
 
 using namespace std;
 
@@ -38,10 +40,10 @@ void *_ThreadStart(void *arg){
 
 bool do_delete = true;
 
-
 typedef vector<int> Elem;
-typedef vector<int>* ElemPtr;
-typedef vector<ElemPtr>* ElemPtrVec;
+typedef boost::shared_ptr<vector<int> > ElemPtr;
+typedef boost::shared_ptr<vector<ElemPtr> > ElemPtrVec;
+
 
 class Mutator : public Thread {
   bool loop;
@@ -54,11 +56,11 @@ public:
     while (loop) {
       ElemPtrVec v = ElemPtrVec(new vector<ElemPtr>());
       // mutator
-      for (int k = 0; k < 2000; k++) {
+      for (int k = 0; k < 1000; k++) {
 	v->push_back(ElemPtr(new Elem(1000000)));
       }
       //
-#if 0 // usually we need this
+#if 0
       if ( do_delete ) {
 	for (vector<ElemPtr>::iterator i = v->begin();
 	     i != v->end(); i++){
@@ -84,7 +86,7 @@ class Sort : public Thread {
   float time;
 
   void print_arr(vector<int> a){
-    for (int i = 0; i< a.size(); i+=1000) {
+    for (int i = 0; i< a.size(); i+=300) {
       cout << a[i];
     }
     gettimeofday(&tv, &tz);
@@ -117,7 +119,7 @@ class Sort : public Thread {
 	  swapped = true;
 	}
       }
-      if ( i % 10 == 0 ) print_arr(*a);
+      if ( i % 50 == 0 ) print_arr(*a);
       if (!swapped)
 	return;
     }
@@ -127,7 +129,7 @@ public:
   vector<int> arr;
   Sort(){}
   void Setup (){
-    arr.resize(50000);
+    arr.resize(25000);
   }
   void Execute(){
     cout << "** start Sort *****" << endl;
@@ -139,12 +141,11 @@ public:
   }
 };
 
-#include <gtest/gtest.h>
-// Declare a test
+/*// Declare a test
 TEST(TestSuite, testCase1)
 {
-  // dummy test
-}
+// dummy test
+}*/
 
 int main(int argc, char *argv[]){
   cout << argc << endl;
@@ -159,9 +160,9 @@ int main(int argc, char *argv[]){
   sort->Join();
   mutator->end();
   mutator->Join();
-
-  testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
+  
+  //testing::InitGoogleTest(&argc, argv);
+  //return RUN_ALL_TESTS();
   return 0;
 }
 
