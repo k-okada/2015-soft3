@@ -5,7 +5,7 @@
 #include <string.h>
 #include <pthread.h>
 #include <sys/time.h>
-#include <gtest/gtest.h>
+//#include <gtest/gtest.h>
 #include <boost/shared_ptr.hpp>
 
 using namespace std;
@@ -141,11 +141,11 @@ public:
   }
 };
 
-// Declare a test
+/*// Declare a test
 TEST(TestSuite, testCase1)
 {
 // dummy test
-}
+}*/
 
 int main(int argc, char *argv[]){
   cout << argc << endl;
@@ -161,8 +161,8 @@ int main(int argc, char *argv[]){
   mutator->end();
   mutator->Join();
   
-  testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
+  //testing::InitGoogleTest(&argc, argv);
+  //return RUN_ALL_TESTS();
   return 0;
 }
 
