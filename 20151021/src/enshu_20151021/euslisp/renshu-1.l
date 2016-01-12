@@ -7,6 +7,27 @@
 
 ;; 1)
 ;; 太陽，地球，月のモデルをつくり，太陽の周りを地球が，地球の周りを月が回っているアニメーションを作成せよ
+(if (not (boundp `*irtvier*)) (make-irtviewer))
+
+(setq c1 (make-sphere 100))
+(send c1 :set-color :red)
+(setq c2 (make-sphere 50))
+(send c2 :set-color :blue)
+(send c2 :locate #f(1000 0 0))
+(setq c3 (make-sphere 10))
+(send c3 :set-color :gray)
+(send c3 :locate #f(1100 0 0))
+(send c1 :assoc c2)
+(send c2 :assoc c3)
+
+(objects (list c1 c2 c3))
+(do-until-key
+ (send c1 :rotate (deg2rad 1) :z)
+ (send c2 :rotate (deg2rad 1) :z)
+ (send *irtviewer* :draw-objects)
+ (x::window-main-one))
+
+
 
 ;; DO NOT EDIT AFTER THIS LINE
 (send *unit-test* :print-result)
