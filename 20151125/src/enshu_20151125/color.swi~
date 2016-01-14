@@ -1,0 +1,25 @@
+%color(X) X=red,blue,yellow,green.
+%output paint pattern of under graph
+%        b
+%      / | \
+%     c--a--e
+%      \ | /
+%        d
+
+next(a,b). next(a,c). next(a,d). next(a,e).
+next(b,c). next(b,e). next(c,d). next(d,e).
+path(X,Y) :- next(X,Y).
+path(X,Y) :- next(Y,X).
+search(5,Path,End) :-
+	       reverse(Ans,Path), write(Ans),nl,!,fail.
+search(N,[Pos|Rest],End) :-
+		     path(Pos,NextPos),
+		     N < 4,
+		     not(member(NextPos,Rest)),
+		     N1 is N+1,
+		     search(N1,[NextPos,Pos|Rest],End).
+		     path(Pos,NextPos),
+		     N=4,
+		     NextPos=End,
+		     N1 is N+1,
+		     path(N1,[NextPos,Pos|Rest],End).

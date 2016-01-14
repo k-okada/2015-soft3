@@ -1,0 +1,6 @@
+hanoi(1,From,To,_) :- write([From, to,To]), nl.
+hanoi(N,From,To,Through) :- 
+			 N1 is N-1, 
+			 hanoi(N1,From,Through,To),
+			 write([From, to,To]), nl,
+			 hanoi(N1,Through,To,From).
