@@ -1,0 +1,11 @@
+POST /api/sample.php  HTTP/1.0
+User-Agent: Test/0.0
+Host: xmlrpc-c.sourceforge.net
+Content-Type: text/xml
+Content-length: 130
+
+<?xml version="1.0"?>
+<methodCall>
+    <methodName>system.listMethods</methodName>
+    <params></params>
+</methodCall>

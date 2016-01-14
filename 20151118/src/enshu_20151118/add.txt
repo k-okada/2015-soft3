@@ -1,0 +1,15 @@
+POST /api/sample.php HTTP/1.0
+User-Agent: Test/0.0
+Host: xmlrpc-c.sourceforge.net
+Content-Type: text/xml
+Content-length: 230
+
+<?xml version="1.0"?>
+<methodCall>
+        <methodName>sample.add</methodName>
+        <params>
+        <param><value><i4>4</i4></value></params>
+        <param><value><i4>7</i4></value></params>
+        </params>
+        </methodCall>
+        
