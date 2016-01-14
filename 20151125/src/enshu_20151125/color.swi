@@ -1,0 +1,33 @@
+%output path of under graph
+%        b
+%      / | \
+%     c--a--e
+%      \ | /
+%        d
+%search(0,[START],START).
+%---example---
+%?- search(0,[a],a).
+%[a,b,c,d,e,a]
+%[a,b,e,d,c,a]
+%[a,c,d,e,b,a]
+%[a,c,b,e,d,a]
+%[a,d,e,b,c,a]
+%[a,d,c,b,e,a]
+%[a,e,b,c,d,a]
+%[a,e,d,c,b,a]
+
+
+next(a,b). next(a,c). next(a,d). next(a,e).
+next(b,c). next(b,e). next(c,d). next(d,e).
+path(X,Y) :- next(X,Y).
+path(X,Y) :- next(Y,X).
+search(5,Path,End) :-
+	       reverse(Ans,Path), write(Ans),nl,!,fail.
+search(N,[Pos|Rest],End) :-
+		     path(Pos,NextPos),
+		     ((N < 4,
+		     not(member(NextPos,Rest)));
+		     (N =:= 4,
+		     NextPos=End)),
+		     N1 is N+1,
+		     search(N1,[NextPos,Pos|Rest],End).
