@@ -41,7 +41,7 @@ int main (int argc, char *argv[]) {
   servant = server_activate_service (global_orb, root_poa, ev);
   etk_abort_if_exception(ev, "failed activating service");
 
-  g_print ("Binding service reference from neme-service with id\"%s\"\n", id[0]);
+  g_print ("Binding service reference from name-service with id\"%s\"\n", id[0]);
 
   name_service = etk_get_name_service (global_orb, ev);
   etk_abort_if_exception(ev, "failed resolveing name-service");

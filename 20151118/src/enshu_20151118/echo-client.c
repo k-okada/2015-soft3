@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
   client_init (&argc, argv, &global_orb, ev);
   etk_abort_if_exception(ev, "init failed");
 
-  g_print ("Resolving service reference from neme-service with id\"%s\"\n", id[0]);
+  g_print ("Resolving service reference from name-service with id\"%s\"\n", id[0]);
 
   name_service = etk_get_name_service (global_orb, ev);
   etk_abort_if_exception(ev, "failed resolving name-service");

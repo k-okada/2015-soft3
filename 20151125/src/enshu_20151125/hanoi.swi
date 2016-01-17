@@ -1,0 +1,5 @@
+move(1, From, Work, To) :-print([From, to, To]), nl.
+move(N, From, Work, To) :-
+        N > 1, N1 is N -1, move(N1, From, To, Work),
+        print([From, to, To]), nl,
+        move(N1, Work, From, To).
