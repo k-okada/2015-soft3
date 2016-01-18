@@ -2,7 +2,13 @@
 
 % check with
 % prolog -f ./like.swi -t 'like(X,Y).'
+<<<<<<< HEAD
+like(taro,coffee).
+like(hanako,tea).
+like(taro,cocoa).
+=======
 
 
 
 
+>>>>>>> upstream/master
