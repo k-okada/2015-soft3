@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "enshu_20151104")
+set(enshu_20151104_MAINTAINER "k-okada <k-okada@todo.todo>")
+set(enshu_20151104_DEPRECATED "")
+set(enshu_20151104_VERSION "0.0.0")
+set(enshu_20151104_BUILD_DEPENDS "roseus" "jsk_recognition" "image_view2")
+set(enshu_20151104_RUN_DEPENDS "roseus" "jsk_recognition")
+set(enshu_20151104_BUILDTOOL_DEPENDS "catkin")

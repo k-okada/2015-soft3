@@ -1,0 +1,11 @@
+(defun make-chair nil
+  (let (b1 b2)
+    (setq b1 (make-cube 50 50 50))
+    (setq b2 (make-cube 40 50 40))
+    (send b1 :locate #f(0 0 51))
+    (send b2 :locate #f(5 0 56))
+    (send b1 :set-color :grey20)
+    (send b2 :set-color :grey20)
+    (setq b1 (body- b1 b2))
+    b1))
+(setq s1 (instance bodyset-link :init (make-cascoords :
