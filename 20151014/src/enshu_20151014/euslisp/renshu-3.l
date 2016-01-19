@@ -19,18 +19,21 @@
 
 (lisp::install-error-handler 'unittest-error)
 
-;; 
+;; removeでの返り値を変数に保存してやればよい。
 (defun summit (lst)
-  (remove nil lst)
-  (apply #'+ lst))
+  (setq newlst (remove nil lst))
+  (apply #'+ newlst))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
+;; リストの最後まで数え終わった時の動作を書いてやればよい。
 (defun summit (lst)
   (let ((x (car lst)))
-    (if (null x)
-        (summit (cdr lst))
-      (+ x (summit (cdr lst))))))
+    (if (null lst)
+	0
+      (if (null x)
+	  (summit (cdr lst))
+	(+ x (summit (cdr lst)))))))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
