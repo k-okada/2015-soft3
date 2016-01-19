@@ -1,0 +1,52 @@
+[[36menshu_20151104[0m] [1m[34m==>[0m '[1m/home/mech-user/2015-soft3/20151104/build/enshu_20151104/build_env.sh /usr/bin/make cmake_check_build_system[0m' [30m[1min[0m '[1m/home/mech-user/2015-soft3/20151104/build/enshu_20151104[0m'[0m
+-- Using CATKIN_DEVEL_PREFIX: /home/mech-user/2015-soft3/20151104/devel
+-- Using CMAKE_PREFIX_PATH: /home/mech-user/2015-soft3/20151104/devel;/home/mech-user/catkin_ws/devel;/opt/ros/indigo
+-- This workspace overlays: /home/mech-user/2015-soft3/20151104/devel;/home/mech-user/catkin_ws/devel;/opt/ros/indigo
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/mech-user/2015-soft3/20151104/build/enshu_20151104/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.6.14
+-- Using these message generators: gencpp;geneus;genlisp;genpy
+-- [roseus.cmake] loading roseus.cmake from enshu_20151104
+-- [roseus.cmake] roseus 1.3.9
+-- [roseus.cmake] jskeus 
+-- [roseus.cmake] euslisp 
+-- [roseus.cmake] geneus 2.2.4
+-- [roseus.cmake] genmsg 0.5.6
+-- [roseus.cmake] message_generation Requires: gencpp;genlisp;genmsg;genpy
+-- [roseus.cmake] generate all roseus messages
+-- [roseus.cmake] enshu_20151104 depends on std_msgs;actionlib_msgs;bond;diagnostic_msgs;geometry_msgs;jsk_footstep_msgs;octomap_msgs;rosgraph_msgs;roscpp;actionlib;dynamic_reconfigure;driver_base;ml_classifiers;nodelet;roscpp_tutorials;sensor_msgs;pcl_msgs;jsk_recognition_msgs;posedetection_msgs;shape_msgs;object_recognition_msgs;std_srvs;stereo_msgs;tf;dynamic_tf_publisher;image_view2;laser_assembler;tf2_msgs;topic_tools;jsk_topic_tools;trajectory_msgs;moveit_msgs;visualization_msgs;jsk_pcl_ros
+-- [roseus.cmake] enshu_20151104 will compile bond;diagnostic_msgs;jsk_footstep_msgs;octomap_msgs;driver_base;ml_classifiers;nodelet;roscpp_tutorials;pcl_msgs;jsk_recognition_msgs;posedetection_msgs;shape_msgs;object_recognition_msgs;stereo_msgs;dynamic_tf_publisher;image_view2;laser_assembler;jsk_topic_tools;trajectory_msgs;moveit_msgs;jsk_pcl_ros;enshu_20151104
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mech-user/2015-soft3/20151104/build/enshu_20151104
+[[36menshu_20151104[0m] [32m<==[0m '[1m/home/mech-user/2015-soft3/20151104/build/enshu_20151104/build_env.sh /usr/bin/make cmake_check_build_system[0m' finished with return code '[1m0[0m'[0m
+[[36menshu_20151104[0m] [1m[34m==>[0m '[1m/home/mech-user/2015-soft3/20151104/build/enshu_20151104/build_env.sh /usr/bin/make --jobserver-fds=3,5 -j[0m' [30m[1min[0m '[1m/home/mech-user/2015-soft3/20151104/build/enshu_20151104[0m'[0m
+[  0%] Built target bond_generate_messages_eus
+[  0%] Built target diagnostic_msgs_generate_messages_eus
+[  1%] Built target jsk_footstep_msgs_generate_messages_eus
+[  2%] Built target driver_base_generate_messages_eus
+[  3%] Built target ml_classifiers_generate_messages_eus
+[  7%] Built target jsk_recognition_msgs_generate_messages_eus
+[ 13%] [ 15%] Built target dynamic_tf_publisher_generate_messages_eus
+Built target nodelet_generate_messages_eus
+[ 21%] Built target image_view2_generate_messages_eus
+[ 28%] Built target laser_assembler_generate_messages_eus
+[ 34%] Built target jsk_topic_tools_generate_messages_eus
+[ 35%] [ 53%] [ 56%] [ 67%] [ 73%] Built target moveit_msgs_generate_messages_eus
+Built target enshu_20151104_generate_messages_eus
+Built target object_recognition_msgs_generate_messages_eus
+Built target jsk_pcl_ros_generate_messages_eus
+Built target octomap_msgs_generate_messages_eus
+[ 75%] Built target pcl_msgs_generate_messages_eus
+[ 80%] Built target posedetection_msgs_generate_messages_eus
+[ 82%] Built target roscpp_tutorials_generate_messages_eus
+[ 87%] Built target shape_msgs_generate_messages_eus
+[ 94%] Built target trajectory_msgs_generate_messages_eus
+[100%] Built target stereo_msgs_generate_messages_eus
+[[36menshu_20151104[0m] [32m<==[0m '[1m/home/mech-user/2015-soft3/20151104/build/enshu_20151104/build_env.sh /usr/bin/make --jobserver-fds=3,5 -j[0m' finished with return code '[1m0[0m'[0m

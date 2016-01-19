@@ -1,0 +1,8 @@
+prefix=/home/mech-user/2015-soft3/20150930/install
+
+Name: beginner_tutorials
+Description: Description of beginner_tutorials
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mech-user/2015-soft3/20150930/install/lib 
+Requires: 
