@@ -21,16 +21,18 @@
 
 ;; 
 (defun summit (lst)
-  (remove nil lst)
+  (setq lst (remove nil lst))
   (apply #'+ lst))
-
+;removeは引数のリストを変更しないため、置き換えてやる必要がある
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 (defun summit (lst)
   (let ((x (car lst)))
-    (if (null x)
-        (summit (cdr lst))
-      (+ x (summit (cdr lst))))))
+    (if (null lst) 0
+      (if (null x)
+	  (summit (cdr lst))
+	(+ x (summit (cdr lst)))))))
+;リストが空になったときの処理がないので、入れてやる必要がある
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
