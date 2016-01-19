@@ -1,0 +1,8 @@
+prefix=/home/mech-user/2015-soft3/20151118/devel
+
+Name: enshu_20151118
+Description: Description of enshu_20151118
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mech-user/2015-soft3/20151118/devel/lib 
+Requires: 
