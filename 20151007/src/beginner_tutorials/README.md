@@ -1,0 +1,48 @@
+1-1)catkin_makeは、makeに比べてビルドのプロセスがそれぞれ異なるROSのパッケージを簡単にビルドできるように、様々な方式やツールが用いられている。
+1-2)pythonはインタプリタを起動して用いればインタプリタ言語として処理できるが、今回はpythonインタプリタ上ではなくROSで実行するから。
+1-3)ros::Spin()ではすべてのコールバック関数が呼ばれ、そのプログラムが終了するまで呼ばれ続けるが、ros::SpinOnce()ではros::SpinOnce()が実行されている時点で待機しているコールバック関数が呼ばれる。
+1-4)actionファイルをコンパイルするとGoal, Result, Feedbackで構成された通信インターフェースの型ができ、それはactionファイルで定義された形となる。DoDishes.actionでは、Goalはuint32型のdishwasher_id(どのディッシュウォッシャーを使うか定義する)、Resultはuint32型のtotal_dishes_cleaned(最終的に洗い終わる皿の枚数)、Feedbackはfloat32型のpercent_complete(皿洗いの進行率)となっている。
+2)keyop.launchを起動することで十字キーを用いて操作することができた。
+3)rosnode info /keyopによって調べた結果は以下の通り。
+Node [/keyop]
+Publications: 
+ * /mobile_base/commands/velocity [geometry_msgs/Twist]
+ * /rosout [rosgraph_msgs/Log]
+ * /mobile_base/commands/motor_power [kobuki_msgs/MotorPower]
+
+Subscriptions: 
+ * /keyop/teleop [unknown type]
+ * /clock [rosgraph_msgs/Clock]
+
+Services: 
+ * /keyop/get_loggers
+ * /keyop/set_logger_level
+
+
+contacting node http://test1-pc:39579/ ...
+Pid: 4159
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base/commands/velocity
+    * to: /gazebo
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base/commands/motor_power
+    * to: /gazebo
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://test1-pc:40977/)
+    * direction: inbound
+    * transport: TCPROS
+
+このうちロボットの操作メッセージを送っているのは/mobile_base/commands/velocityであり、messageはgeometry_msgs/Twistである。
+
+4)前進、後進、左右回転ができるmykeyop.pyを作った。scripts/にある
+
+5)おこなった。
+
+6)ナビゲーションの状況(「ゴールに辿り着いた」など)を伝える機能を提供している。

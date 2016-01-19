@@ -36,3 +36,4 @@ after_failure:
   - find src/ -type d -name .git -prune -o -type f -exec ls -l {} \;
   - rostest -t beginner_tutorials check1.test
   - rostest -t beginner_tutorials check2.test
+
