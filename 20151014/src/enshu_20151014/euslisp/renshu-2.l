@@ -8,18 +8,37 @@
 
 ;; 1
 (defun dot-1 (n)
-  t)
+  (do ((i n (- i 1)))
+      ((eq i 0) t)
+      (format t "~A" ".")))
+;  t)
 (defun dot-2 (n)
-  t)
+  (format t "~A" ".")
+  (if (eq n 1)
+      t
+    (dot-2 (- n 1))))
+;  t)
 ;; 
 (assert (dot-1 3) "mondai 1")
 (assert (dot-2 3) "mondai 1")
 
 ;; 2
 (defun hasa-1 (lst)
-  0)
+  (let ((cnt 0))
+    (dolist (i lst)
+      (if (equal i 'a)
+	  (setq cnt (+ cnt 1))))
+    cnt))
+
+;  0)
 (defun hasa-2 (lst)
-  0)
+  (labels 
+   ((hma (c list)
+	 (cond ((equal (car list) 'a) (hma (+ c 1) (cdr list)))
+	       ((null list) c)
+	       (t (hma c (cdr list))))))
+   (hma 0 lst)))
+;  0)
 ;; 
 (assert (eq (hasa-1 '(a b c d a)) 2) "mondai 2")
 (assert (eq (hasa-2 '(a b c d a)) 2) "mondai 2")
