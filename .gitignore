@@ -1,0 +1,6 @@
+.DS_Store
+*~
+*.swap
+201*/devel/
+201*/build/
+201*/.catkin_tools/
