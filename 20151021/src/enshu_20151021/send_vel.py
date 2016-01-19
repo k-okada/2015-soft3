@@ -42,7 +42,7 @@ Press 'q' to quit
             if key in ['q', 27]:
                 break
             elif key in move.keys():
-                print key.move[key]()
+                print key,move[key]()
                 cmd = Twist()
                 cmd.linear.x = move[key]()[0]
                 cmd.linear.y = move[key]()[1]
