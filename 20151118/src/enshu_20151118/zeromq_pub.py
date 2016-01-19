@@ -8,8 +8,18 @@ publisher = context.socket (zmq.PUB)
 publisher.bind ("tcp://127.0.0.1:8888")
  
 i = 0
+
+print "Are you hungry?"
+yesorno = raw_input()
+
 while True:
-    message = str(i) + " hello world"
+    if yesorno == yes:
+        message = "The publisher is hungry."
+    elif yesorno == no:
+        message = "The publisher is not hungry."
+    else:
+        message = "The publisher is crazy."
+    
     print(message)
     publisher.send (message)
     i = 0 if ( i >= 10) else i + 1
