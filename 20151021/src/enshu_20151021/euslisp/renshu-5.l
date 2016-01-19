@@ -139,8 +139,8 @@
 	:link-list (send r :link-list (send r :end-coords :parent))
 	:move-target (send r :end-coords)
 	:translation-axis t
-	:rotation-axis nil
-	:debug-view t)
+	:rotation-axis nil)
+	;;:debug-view t)
   (send *irtviewer* :draw-objects :flush nil)
   (send c :draw-on :flush t)
 )
