@@ -1,0 +1,13 @@
+/*got hint from http://stackoverflow.com/questions/745095/towers-of-hanoi-puzzle-prolog*/
+
+move([A],X,Y,_) :-
+	      write(A),
+	      write(' : '),
+	      write(X),	   
+	      write(' -> '),
+	      write(Y),
+	      nl.
+move([A|Bs],X,Y,Z) :-
+	      move(Bs,X,Z,Y),
+	      move([A],X,Y,_),
+	      move(Bs,Z,Y,X).

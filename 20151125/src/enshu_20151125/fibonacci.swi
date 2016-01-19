@@ -1,0 +1,9 @@
+fibo(1,1).
+fibo(0,0).
+fibo(N,Result) :-
+	       M is N-1,
+	       L is N-2,
+	       fibo(M,Result1),
+ 	       fibo(L,Result2),	
+	       Result is Result1+Result2.
+	     
