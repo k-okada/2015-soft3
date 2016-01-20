@@ -1,0 +1,59 @@
+% missionaries and cannibals
+
+% GameBoard : status of the boat and each shore
+% [Boat, M_lft, C_lft, M_rgt, C_rgt]
+
+% Num of ppl on boat
+boat(1, 0).
+boat(0, 1).
+boat(1, 1).
+boat(2, 0).
+boat(0, 2).
+
+% Move to the right shore and update GameBoard
+move_boat([lft,A,B,C,D], [rgt,A1,B1,C1,D1]) :-
+    boat(X, Y),
+    A1 is A - X,
+    A1 >= 0,
+    B1 is B - Y, 
+    B1 >= 0,
+    C1 is C + X,
+    D1 is D + Y.
+
+% Move to the left shore and update GameBoard
+move_boat([rgt,A,B,C,D], [lft,A1,B1,C1,D1]) :-
+    boat(X, Y),
+    C1 is C - X,
+    C1 >= 0,
+    D1 is D - Y,
+    D1 >= 0,
+    A1 is A + X,
+    B1 is B + Y.
+
+% Checks if it's safe
+safe([_,A,B,C,D]) :- A >= B, C >= D.
+safe([_,0,_,_,_]).
+safe([_,_,_,0,_]).
+
+% Display steps
+print_ans([]) :- !.
+print_ans([State | Rest]) :-
+		 print_ans(Rest), write(State), nl.
+
+% Depth Search
+depth_search(Limit, Limit, [State | History]) :-
+		    State == [rgt,0,0,3,3],
+		    format('----- ~d -----~n', Limit),
+		    print_ans([State | History]).
+
+depth_search(N, Limit, [State | History]) :-
+		N < Limit,
+		move_boat(State, NewState),
+		safe(NewState),
+		not(member(NewState, History)),
+		N1 is N + 1,
+		depth_search(N1, Limit, [NewState, State | History]).
+
+solve :-
+     between(1, 15, N),
+     depth_search(0, N, [[lft,3,3,0,0]]).
