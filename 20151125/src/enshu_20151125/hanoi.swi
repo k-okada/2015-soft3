@@ -1,0 +1,10 @@
+#!/usr/bin/env prolog
+
+% check with
+% prolog -f ./hanoi.swi -t 'hanoi(3, a, b, c).'
+
+hanoi(1, From, To, _) :- format('~a to ~a~n', [From, To]).
+hanoi(N, From, To, Via) :-
+        N1 is N - 1, hanoi(N1, From, Via, To),
+        format('~a to ~a~n', [From, To]),
+        hanoi(N1, Via, To, From).
