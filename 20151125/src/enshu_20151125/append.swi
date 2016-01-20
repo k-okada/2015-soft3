@@ -1,5 +1,8 @@
 #!/usr/bin/env prolog
 
+my_append([], Xs, Xs).
+my_append([X | Ls], Ys, [X | Zs]) :- my_append(Ls, Ys, Zs).
+
 % check with
 % prolog -f ./append.swi -t 'my_append("[a,b,c]", "[d,e,f]", X).'
 
