@@ -1,0 +1,6 @@
+/home/mech-user/2015-soft3/20150930/src/beginner_tutorials/build/CMakeFiles/clean_test_results.dir
+/home/mech-user/2015-soft3/20150930/src/beginner_tutorials/build/CMakeFiles/doxygen.dir
+/home/mech-user/2015-soft3/20150930/src/beginner_tutorials/build/gtest/CMakeFiles/gtest.dir
+/home/mech-user/2015-soft3/20150930/src/beginner_tutorials/build/gtest/CMakeFiles/gtest_main.dir
+/home/mech-user/2015-soft3/20150930/src/beginner_tutorials/build/CMakeFiles/run_tests.dir
+/home/mech-user/2015-soft3/20150930/src/beginner_tutorials/build/CMakeFiles/tests.dir

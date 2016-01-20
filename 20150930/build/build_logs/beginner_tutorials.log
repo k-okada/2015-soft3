@@ -1,0 +1,41 @@
+[[36mbeginner_tutorials[0m] [1m[34m==>[0m '[1m/home/mech-user/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make cmake_check_build_system[0m' [30m[1min[0m '[1m/home/mech-user/2015-soft3/20150930/build/beginner_tutorials[0m'[0m
+-- Using CATKIN_DEVEL_PREFIX: /home/mech-user/2015-soft3/20150930/devel
+-- Using CMAKE_PREFIX_PATH: /home/mech-user/2015-soft3/20150930/devel;/opt/ros/indigo
+-- This workspace overlays: /home/mech-user/2015-soft3/20150930/devel;/opt/ros/indigo
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/mech-user/2015-soft3/20150930/build/beginner_tutorials/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.6.11
+-- Using these message generators: gencpp;genlisp;genpy
+-- beginner_tutorials: 1 messages, 0 services
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mech-user/2015-soft3/20150930/build/beginner_tutorials
+[[36mbeginner_tutorials[0m] [32m<==[0m '[1m/home/mech-user/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make cmake_check_build_system[0m' finished with return code '[1m0[0m'[0m
+[[36mbeginner_tutorials[0m] [1m[34m==>[0m '[1m/home/mech-user/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make --jobserver-fds=3,5 -j[0m' [30m[1min[0m '[1m/home/mech-user/2015-soft3/20150930/build/beginner_tutorials[0m'[0m
+[35m[1mScanning dependencies of target listener
+[  0%] [  0%] [  0%] Built target geometry_msgs_generate_messages_py
+Built target geometry_msgs_generate_messages_cpp
+Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target _beginner_tutorials_generate_messages_check_deps_Hello
+[ 16%] [0m[34m[1mGenerating Lisp code from beginner_tutorials/Hello.msg
+[0m[ 33%] [32mBuilding CXX object CMakeFiles/listener.dir/src/listener.cpp.o
+[0m[35m[1mScanning dependencies of target listener2
+[ 66%] [ 66%] [34m[1mGenerating Python from MSG beginner_tutorials/Hello
+[34m[1mGenerating C++ code from beginner_tutorials/Hello.msg
+[0m[0m[ 66%] Built target beginner_tutorials_generate_messages_lisp
+[ 83%] [34m[1mGenerating Python msg __init__.py for beginner_tutorials
+[0m[ 83%] Built target beginner_tutorials_generate_messages_py
+[0m[100%] [32mBuilding CXX object CMakeFiles/listener2.dir/src/listener2.cpp.o
+[0m[100%] Built target beginner_tutorials_generate_messages_cpp
+[100%] Built target beginner_tutorials_generate_messages
+[31m[1mLinking CXX executable /home/mech-user/2015-soft3/20150930/devel/lib/beginner_tutorials/listener2
+[31m[1mLinking CXX executable /home/mech-user/2015-soft3/20150930/devel/lib/beginner_tutorials/listener
+[0m[0m[100%] Built target listener2
+[100%] Built target listener
+[[36mbeginner_tutorials[0m] [32m<==[0m '[1m/home/mech-user/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make --jobserver-fds=3,5 -j[0m' finished with return code '[1m0[0m'[0m
