@@ -1,0 +1,6 @@
+%ハノイの塔の問題を解く(Bfは初期位置となる棒, Btは目的地となる棒, Bvは仮置き場となるもう一本の棒)
+hanoi(1, Bf, Bt, Bv) :- write([Bf, to, Bt]), nl. %一枚目的地に移す動作をしてそのことを表示
+hanoi(N, Bf, Bt, Bv) :-
+	 N1 is N - 1, hanoi(N1, Bf, Bv, Bt), %一番下の板以外をとりあえずBvのほうにどかす操作に相当
+	 write([Bf, to, Bt]), nl, %一番下の板をBtに移す動作をしてそのことを表示することに相当
+	 hanoi(N1, Bv, Bt, Bf). %Bvにどかした板をBtに移す動作に相当

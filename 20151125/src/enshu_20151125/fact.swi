@@ -1,0 +1,5 @@
+%階乗を表示する
+fact(N) :- fact_sub(N, 1).
+fact_sub(1, R) :- write(R), nl.
+fact_sub(N1, R1) :- 
+	    N2 is N1 - 1, R2 is R1 * N1, fact_sub(N2, R2).
