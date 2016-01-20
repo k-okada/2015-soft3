@@ -38,10 +38,15 @@ void *_ThreadStart(void *arg){
 
 bool do_delete = true;
 
-
+/*
 typedef vector<int> Elem;
 typedef vector<int>* ElemPtr;
 typedef vector<ElemPtr>* ElemPtrVec;
+*/
+#include <boost/shared_ptr.hpp>
+typedef vector<int> Elem;
+typedef boost::shared_ptr<vector<int> > ElemPtr;
+typedef boost::shared_ptr<vector<ElemPtr> > ElemPtrVec;
 
 class Mutator : public Thread {
   bool loop;
