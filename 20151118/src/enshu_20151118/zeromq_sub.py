@@ -6,8 +6,8 @@ context = zmq.Context()
  
 subscriber = context.socket (zmq.SUB)
 subscriber.connect ("tcp://127.0.0.1:8888")
-subscriber.setsockopt(zmq.SUBSCRIBE, "4")
+subscriber.setsockopt(zmq.SUBSCRIBE, "")
  
 while True:
     message = subscriber.recv()
-    print message
+    print (int(message) * int(message))
