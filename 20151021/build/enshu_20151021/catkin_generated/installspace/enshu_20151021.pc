@@ -1,0 +1,8 @@
+prefix=/home/shuta/git/2015-soft3/2015-soft3/20151021/install
+
+Name: enshu_20151021
+Description: Description of enshu_20151021
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/shuta/git/2015-soft3/2015-soft3/20151021/install/lib 
+Requires: 

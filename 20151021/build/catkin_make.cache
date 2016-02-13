@@ -1,0 +1,2 @@
+enshu_20151021
+-DCATKIN_DEVEL_PREFIX=/home/shuta/git/2015-soft3/2015-soft3/20151021/devel -DCMAKE_INSTALL_PREFIX=/home/shuta/git/2015-soft3/2015-soft3/20151021/install -G Unix Makefiles
