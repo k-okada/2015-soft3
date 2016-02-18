@@ -1,0 +1,13 @@
+(sys::make-thread 4)
+(setq g 0)
+(defun test(l)
+  (while (>= g 0)
+    (format t "l = ~A, g = ~A~%" l g) (unix:sleep 1)))
+
+(sys::thread-no-wait #'test 0)
+(unix:sleep 10)
+(setq g 1)
+(unix:sleep 10)
+(sys::thread-no-wait #'test 1)
+(unix:sleep 10)
+(setq g -1)

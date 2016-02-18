@@ -1,0 +1,7 @@
+(if (not (boundp '*irtviewer*)) (make-irtviewer))
+
+(load "demo/sample-arm-model.l")
+(setq *sarm* (instance sarmclass :init))
+(send *sarm* :reset-pose)
+(setq *target* (make-coords :pos #f(350 200 400)))
+(objects (list *sarm* *target*))
