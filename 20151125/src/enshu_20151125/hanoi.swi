@@ -1,0 +1,9 @@
+#!/usr/bin/env prolog
+
+hanoi(1, From, To, Via) :- write([From,to,To]), nl.
+hanoi(N, From, To, Via) :- 
+    N > 1,N1 is N - 1, hanoi(N1,From,Via,To), 
+    print([From,to,To]), nl,
+    hanoi(N1,Via,To,From).
+
+

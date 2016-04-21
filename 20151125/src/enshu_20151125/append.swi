@@ -7,4 +7,5 @@
 my_append([a,b,c], [d,e,f], X).
 % X == [a,b,c,f,e,f].
 
-
+my_append([],Ys,Ys).
+my_append([X | Ls],Ys,[X | Zs]) :- my_append(Ls,Ys,Zs).
