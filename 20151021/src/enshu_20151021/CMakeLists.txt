@@ -5,7 +5,8 @@ project(enshu_20151021)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  euslisp
+  roseus
+  rospy
 )
 
 ## System dependencies are found with CMake's conventions
@@ -63,10 +64,11 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
+#generate_messages(
 #   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+#   std_msgs
+#   geometry_msgs # Or other packages containing msgs
+   # )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
