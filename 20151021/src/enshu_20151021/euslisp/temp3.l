@@ -1,12 +1,3 @@
-#!/usr/bin/env irteusgl
-
-(load "lib/llib/unittest.l")
-(init-unit-test)
-(send *unit-test* :clear-result)
-;; DO NOT EDIT BEFORE THIS LINE
-
-;; 3)
-;; ascaded-linkを使ったモデルを作成せよ．ロボットに限らず可動構造を持つものであれば（例えば家具等）何でもよい．
 (defun make-part1 nil
   (let (b1 b2 b3)
 	(setq b1 (make-cube 100 100 200))
@@ -70,11 +61,11 @@
 	  (send self :init-ending)
 	  )))
 
-
-;; DO NOT EDIT AFTER THIS LINE
-(send *unit-test* :print-result)
-(exit 1)
-
-
-
-
+(setq r (instance fridge-model :init))
+(objects (list r))
+(setq i 0)
+(do-until-key
+  (send r :angle-vector (float-vector (+ 45 (* 45 (sin (/ i 20.0)))) (+ 40 (- 0 (* 40 (cos (/ i 25.0)))))))
+  (send *irtviewer* :draw-objects)
+  (x::window-main-one)
+  (incf i))
