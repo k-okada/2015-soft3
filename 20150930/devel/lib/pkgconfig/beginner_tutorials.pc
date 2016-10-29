@@ -1,0 +1,12 @@
+prefix=/home/yasu-k2/work/2015-soft3/20150930/devel
+
+Name: beginner_tutorials
+Description: Description of beginner_tutorials
+Version: 0.0.0
+<<<<<<< HEAD
+Cflags: -I/home/yasu-k2/work/2015-soft3/20150930/devel/include
+=======
+Cflags: 
+>>>>>>> master
+Libs: -L/home/yasu-k2/work/2015-soft3/20150930/devel/lib 
+Requires: 

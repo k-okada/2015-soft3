@@ -1,0 +1,8 @@
+[[36mbeginner_tutorials[0m] [1m[34m==>[0m '[1m/home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make cmake_check_build_system[0m' [30m[1min[0m '[1m/home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials[0m'[0m
+  File "/home/yasu-k2/work/2015-soft3/20150930/devel/_setup_util.py", line 263
+    <<<<<<< HEAD
+    ^
+IndentationError: unexpected unindent
+Failed to run '"/home/yasu-k2/work/2015-soft3/20150930/devel/_setup_util.py" --extend': return code 1
+Makefile:153: *** .  .
+[[36mbeginner_tutorials[0m] [1m[31m<==[0m '[1m/home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make cmake_check_build_system[0m' [31mfailed with return code[0m '[1m2[0m'[0m

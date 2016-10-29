@@ -1,0 +1,88 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp
+
+<<<<<<< HEAD
+Run Build Command:/usr/bin/make "cmTryCompileExec2433279300/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2433279300.dir/build.make CMakeFiles/cmTryCompileExec2433279300.dir/build
+make[1]: ディレクトリ `/home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp' に入ります
+/usr/bin/cmake -E cmake_progress_report /home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2433279300.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2433279300.dir/CheckSymbolExists.c.o   -c /home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2433279300
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2433279300.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2433279300.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2433279300 -rdynamic 
+CMakeFiles/cmTryCompileExec2433279300.dir/CheckSymbolExists.c.o: 関数 `main' 内:
+CheckSymbolExists.c:(.text+0x16): `pthread_create' に対する定義されていない参照です
+collect2: error: ld returned 1 exit status
+make[1]: ディレクトリ `/home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp' から出ます
+make[1]: *** [cmTryCompileExec2433279300] エラー 1
+make: *** [cmTryCompileExec2433279300/fast] エラー 2
+=======
+Run Build Command:/usr/bin/make "cmTryCompileExec3757094217/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3757094217.dir/build.make CMakeFiles/cmTryCompileExec3757094217.dir/build
+make[1]: ディレクトリ `/home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp' に入ります
+/usr/bin/cmake -E cmake_progress_report /home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3757094217.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3757094217.dir/CheckSymbolExists.c.o   -c /home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3757094217
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3757094217.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3757094217.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3757094217 -rdynamic 
+CMakeFiles/cmTryCompileExec3757094217.dir/CheckSymbolExists.c.o: 関数 `main' 内:
+CheckSymbolExists.c:(.text+0x16): `pthread_create' に対する定義されていない参照です
+make[1]: ディレクトリ `/home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp' から出ます
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec3757094217] エラー 1
+make: *** [cmTryCompileExec3757094217/fast] エラー 2
+>>>>>>> master
+
+File /home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp
+
+<<<<<<< HEAD
+Run Build Command:/usr/bin/make "cmTryCompileExec2653275409/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2653275409.dir/build.make CMakeFiles/cmTryCompileExec2653275409.dir/build
+make[1]: ディレクトリ `/home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp' に入ります
+/usr/bin/cmake -E cmake_progress_report /home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2653275409.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2653275409.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2653275409
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2653275409.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2653275409.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2653275409 -rdynamic -lpthreads 
+/usr/bin/ld: -lpthreads が見つかりません
+collect2: error: ld returned 1 exit status
+make[1]: ディレクトリ `/home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp' から出ます
+make[1]: *** [cmTryCompileExec2653275409] エラー 1
+make: *** [cmTryCompileExec2653275409/fast] エラー 2
+=======
+Run Build Command:/usr/bin/make "cmTryCompileExec1946990425/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1946990425.dir/build.make CMakeFiles/cmTryCompileExec1946990425.dir/build
+make[1]: ディレクトリ `/home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp' に入ります
+/usr/bin/cmake -E cmake_progress_report /home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1946990425.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1946990425.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1946990425
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1946990425.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1946990425.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1946990425 -rdynamic -lpthreads 
+/usr/bin/ld: -lpthreads が見つかりません
+make[1]: ディレクトリ `/home/yasu-k2/work/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp' から出ます
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec1946990425] エラー 1
+make: *** [cmTryCompileExec1946990425/fast] エラー 2
+>>>>>>> master
+
+
