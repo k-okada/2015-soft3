@@ -1,0 +1,20 @@
+add_to_list(V, [], [V]).
+add_to_list(V, Ls, [V|Ls]).
+
+maze(X, G, G, Xs) :- add_to_list(G, [], X).
+maze(X, S, G, Xs) :-
+	add_to_list(S, Xs, Zs),
+	next(S, Y),
+	not(member(Y, Zs)),
+	maze(Z, Y, G, Zs),
+	add_to_list(S, Z, X).
+
+next(1, 2). 
+next(2, 1). next(2, 3). 
+next(3, 2). next(3, 6). 
+next(4, 5). next(4, 7).
+next(5, 4). next(5, 6). next(5, 8).
+next(6, 3). next(6, 5).
+next(7, 4).
+next(8, 5). next(8, 9).
+next(9, 8).
