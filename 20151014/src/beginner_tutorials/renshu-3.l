@@ -20,12 +20,12 @@
 (lisp::install-error-handler 'unittest-error)
 
 ;;
-;;  (remove nil lst)をしてもlst自体が変わるわけでわないので、setqによりlst自体が変わるようにした。
+;;  (remove nil lst)をしてもlst自体が変わるわけでわないので、setqによりlst自体が変わるようにした
 (defun summit (lst)
   (setq lst (remove nil lst))
   (apply #'+ lst))
 
-(assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
+(assert (eq (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 ;;終了条件がないために無限に回ってしまっていたので終了条件を加えた
 (defun summit (lst)
@@ -35,7 +35,7 @@
      ((null x) (summit (cdr lst)))
      (t (+ x (summit (cdr lst)))))))
 
-(assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
+(assert (eq (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 ;;
 ;; DO NOT EDIT AFTER THIS LINE
