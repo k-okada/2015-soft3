@@ -1,0 +1,33 @@
+% 覆面算
+%   DONALD
+% + GERALD
+% = ROBERT
+% variables:A, B, D, E, G, L, N, O, R, T 
+%
+% search.で実行
+%   526485
+% + 197485
+% = 723970
+% answer:4,3,5,9,1,8,6,2,7,0
+
+permutate([],Y).
+permutate([X|Xs],Y) :- select(X,Y,Ys), permutate(Xs,Ys).
+
+%nth(1,[X|Ls],X).
+%nth(N,[Y|Ls],X) :-
+%    N>1,
+%    N1 is N-1,
+%    nth(N1,Ls,X).
+
+search :-
+    permutate([A,B,D,E,G,L,N,O,R,T],[0,1,2,3,4,5,6,7,8,9]),
+    check(A,B,D,E,G,L,N,O,R,T).
+
+check(A,B,D,E,G,L,N,O,R,T) :-
+    DONALD is D*100001 + O*10000 + N*1000 + A*100 + L*10,
+    GERALD is G*100000 + E*10000 + R*1000 + A*100 + L*10 + D,
+    ROBERT is R*100010 + O*10000 + B*1000 + E*100 + T,
+    (ROBERT =:= DONALD + GERALD,
+    write('  '), write(DONALD), nl,
+    write('+ '), write(GERALD), nl,
+    write('= '), write(ROBERT)).
