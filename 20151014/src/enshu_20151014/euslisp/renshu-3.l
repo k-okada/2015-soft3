@@ -19,18 +19,19 @@
 
 (lisp::install-error-handler 'unittest-error)
 
-;; 
+;
 (defun summit (lst)
-  (remove nil lst)
+  (setq lst (remove nil lst))
+; (remove nil lst)
   (apply #'+ lst))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
 (defun summit (lst)
   (let ((x (car lst)))
-    (if (null x)
-        (summit (cdr lst))
-      (+ x (summit (cdr lst))))))
+    (cond ((null lst) 0)
+	  ((null x) (summit (cdr lst)))
+	  (t (+ x (summit (cdr lst)))))))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
@@ -38,9 +39,3 @@
 ;; DO NOT EDIT AFTER THIS LINE
 (send *unit-test* :print-result)
 (exit 1)
-
-
-
-
-
-
