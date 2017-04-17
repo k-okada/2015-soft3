@@ -5,9 +5,9 @@
 (send *unit-test* :clear-result)
 ;; DO NOT EDIT BEFORE THIS LINE
 
-;; 3)
-;; ascaded-linkを使ったモデルを作成せよ．ロボットに限らず可動構造を持つものであれば（例えば家具等）何でもよい．
-(defun make-servo nil
+;; 4)
+;; cascaded-linkを使ったモデルを用いてアニメーションさせてみよ．その際必ず２つ以上の物体を画面に配置し，assoc/dissocが行われること．
+(defun make-box nil
   (let (b1 b2)
     (setq b1 (make-cube 6 40 34))
     (send b1 :locate #f(0 0 0))
@@ -34,7 +34,7 @@
     b2))
 
 (setq h1 (instance bodyset-link :init (make-cascoords) :bodies (list (make-hinji))))
-(setq s1 (instance bodyset-link :init (make-cascoords) :bodies (list (make-servo))))
+(setq s1 (instance bodyset-link :init (make-cascoords) :bodies (list (make-box))))
 (setq j1 (instance rotational-joint :init :parent-link h1 :child-link s1 :axis :z))
 
 (setq r (instance cascaded-link :init))
@@ -44,9 +44,17 @@
 (setq (r . joint-list) (list j1))
 (send r :init-ending)
 (objects (list r))
+
+(setq i 0)
+(do-until-key
+ (send r :angle-vector (float-vector (* -90 (abs (sin (/ i 100.0))))))
+ (send *irtviewer* :draw-objects)
+ (incf i))
+	
 ;; DO NOT EDIT AFTER THIS LINE
 (send *unit-test* :print-result)
 (exit 1)
+
 
 
 
