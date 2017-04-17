@@ -3,7 +3,6 @@ import EchoApp.*;
 import org.omg.CosNaming.*;
 import org.omg.CosNaming.NamingContextPackage.*;
 import org.omg.CORBA.*;
-import java.io.*;
 
 public class EchoClient
 {
@@ -23,9 +22,7 @@ public class EchoClient
 	    String name = "EchoApp/Echo";
 	    echoImpl = EchoHelper.narrow(ncRef.resolve_str(name));
 	    System.out.println("Obtained a handle on server object: " + echoImpl);
-	　　　　BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-	    //echoImpl.echoString("hello world this is test");
-	    echoImpl.echoString(in.readLine());
+	    echoImpl.echoString("hello world this is test");
 	} catch (Exception e) {
 	    System.out.println("ERROR : " + e);
 	    e.printStackTrace(System.out);
