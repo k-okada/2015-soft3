@@ -1,0 +1,1 @@
+my_rotate([X | Xs], Z) :- append(Xs, [X], Z).
