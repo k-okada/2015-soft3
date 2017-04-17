@@ -1,5 +1,5 @@
 #!/usr/bin/env irteusgl
-
+nn
 (load "lib/llib/unittest.l")
 (init-unit-test)
 (send *unit-test* :clear-result)
@@ -21,6 +21,7 @@
 
 ;; 
 (defun summit (lst)
+  (setq lst (remove nil lst))
   (remove nil lst)
   (apply #'+ lst))
 
@@ -28,9 +29,10 @@
 
 (defun summit (lst)
   (let ((x (car lst)))
-    (if (null x)
+    (if (atom lst) 0
+      (if (null x)
         (summit (cdr lst))
-      (+ x (summit (cdr lst))))))
+	(+ x (summit (cdr lst)))))))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
