@@ -19,18 +19,25 @@
 
 (lisp::install-error-handler 'unittest-error)
 
-;; 
+;;lstをsetqで更新していないため 
 (defun summit (lst)
-  (remove nil lst)
+  (setq lst (remove nil lst))
   (apply #'+ lst))
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
+;;(cdr list) = nil かつ(car lst) = nilのときに0をいれていないと足し合わせることはできない
 (defun summit (lst)
   (let ((x (car lst)))
     (if (null x)
+      (if (null (cdr lst))
+        0
         (summit (cdr lst))
-      (+ x (summit (cdr lst))))))
+      )
+      (+ x (summit (cdr lst)))
+    )
+  )
+)
 
 (assert (equal (summit '(1 2 nil 3 4 nil)) 10) "mondai 1")
 
