@@ -1,0 +1,17 @@
+[[36mbeginner_tutorials[0m] [1m[34m==>[0m '[1m/home/mech-user/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make cmake_check_build_system[0m' [30m[1min[0m '[1m/home/mech-user/2015-soft3/20150930/build/beginner_tutorials[0m'[0m
+[[36mbeginner_tutorials[0m] [32m<==[0m '[1m/home/mech-user/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make cmake_check_build_system[0m' finished with return code '[1m0[0m'[0m
+[[36mbeginner_tutorials[0m] [1m[34m==>[0m '[1m/home/mech-user/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make --jobserver-fds=3,5 -j[0m' [30m[1min[0m '[1m/home/mech-user/2015-soft3/20150930/build/beginner_tutorials[0m'[0m
+[35m[1mScanning dependencies of target listener2
+[  0%] [  0%] Built target geometry_msgs_generate_messages_lisp
+[0mBuilt target geometry_msgs_generate_messages_py
+[  0%] [ 16%] Built target geometry_msgs_generate_messages_cpp
+[ 33%] Built target listener
+[32mBuilding CXX object CMakeFiles/listener2.dir/src/listener2.cpp.o
+[0m[ 33%] Built target _beginner_tutorials_generate_messages_check_deps_Hello
+[ 66%] [ 83%] Built target beginner_tutorials_generate_messages_py
+Built target beginner_tutorials_generate_messages_lisp
+[100%] Built target beginner_tutorials_generate_messages_cpp
+[100%] Built target beginner_tutorials_generate_messages
+[31m[1mLinking CXX executable /home/mech-user/2015-soft3/20150930/devel/lib/beginner_tutorials/listener2
+[0m[100%] Built target listener2
+[[36mbeginner_tutorials[0m] [32m<==[0m '[1m/home/mech-user/2015-soft3/20150930/build/beginner_tutorials/build_env.sh /usr/bin/make --jobserver-fds=3,5 -j[0m' finished with return code '[1m0[0m'[0m

@@ -1,0 +1,53 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/mech-user/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2468071474/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2468071474.dir/build.make CMakeFiles/cmTryCompileExec2468071474.dir/build
+make[1]: ディレクトリ `/home/mech-user/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp' に入ります
+/usr/bin/cmake -E cmake_progress_report /home/mech-user/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2468071474.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2468071474.dir/CheckSymbolExists.c.o   -c /home/mech-user/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2468071474
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2468071474.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2468071474.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2468071474 -rdynamic 
+CMakeFiles/cmTryCompileExec2468071474.dir/CheckSymbolExists.c.o: 関数 `main' 内:
+CheckSymbolExists.c:(.text+0x16): `pthread_create' に対する定義されていない参照です
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec2468071474] エラー 1
+make[1]: ディレクトリ `/home/mech-user/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp' から出ます
+make: *** [cmTryCompileExec2468071474/fast] エラー 2
+
+File /home/mech-user/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/mech-user/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3868417033/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3868417033.dir/build.make CMakeFiles/cmTryCompileExec3868417033.dir/build
+make[1]: ディレクトリ `/home/mech-user/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp' に入ります
+/usr/bin/cmake -E cmake_progress_report /home/mech-user/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3868417033.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3868417033.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3868417033
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3868417033.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec3868417033.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3868417033 -rdynamic -lpthreads 
+/usr/bin/ld: -lpthreads が見つかりません
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec3868417033] エラー 1
+make[1]: ディレクトリ `/home/mech-user/2015-soft3/20150930/build/beginner_tutorials/CMakeFiles/CMakeTmp' から出ます
+make: *** [cmTryCompileExec3868417033/fast] エラー 2
+
+
