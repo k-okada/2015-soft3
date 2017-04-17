@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "begineer_tutorials")
+set(begineer_tutorials_MAINTAINER "mech-user <mech-user@todo.todo>")
+set(begineer_tutorials_DEPRECATED "")
+set(begineer_tutorials_VERSION "0.0.0")
+set(begineer_tutorials_BUILD_DEPENDS "geometry_msgs" "message_generation" "roscpp" "rospy" "std_msgs")
+set(begineer_tutorials_RUN_DEPENDS "geometry_msgs" "message_runtime" "roscpp" "rospy" "std_msgs")
+set(begineer_tutorials_BUILDTOOL_DEPENDS "catkin")
